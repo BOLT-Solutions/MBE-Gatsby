@@ -9,6 +9,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { pages } from "../../gatsby-node"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -26,8 +27,10 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
-
+    const defaultTitle = site.siteMetadata?.title
+    console.log(site)
+    console.log("pages",pages)
+    console.log("site")
   return (
     <Helmet
       htmlAttributes={{
@@ -87,3 +90,4 @@ SEO.propTypes = {
 }
 
 export default SEO
+
