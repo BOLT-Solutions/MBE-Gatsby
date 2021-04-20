@@ -12,7 +12,7 @@ module.exports = {
               accessToken: `MC5ZSHhPYXhFQUFDQUFWbjhP.77-9Nxwy77-9QO-_vXkn77-9Y1_vv73vv73vv73vv70hYe-_vX8NfypPcyAZ77-9de-_vR3vv70`,
               linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
               schemas: {
-                  post: require("./src/schemas/post.json"),
+                  post: require("./src/schemas/homepage.json"),
               },
           },
     },
