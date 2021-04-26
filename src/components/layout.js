@@ -26,15 +26,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
+         <main role="main">{children}</main>
+          <div id="preloader"></div>
+          <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+          <footer
           style={{
             marginTop: `2rem`,
           }}
@@ -43,7 +38,7 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
-      </div>
+      
     </>
   )
 }

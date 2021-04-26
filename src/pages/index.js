@@ -4,16 +4,23 @@ import { StaticImage } from "gatsby-plugin-image"
 import { RichText } from 'prismic-reactjs'
 import SEO from "../components/seo"
 import { graphql } from 'gatsby'
-
-
-
-
-
+import Layout from "../components/layout"
+import HomeBanner from "../components/HomeBanner"
+import ContactUs from "../components/ContactUs"
+import Solutions from "../components/Solutions"
+import Industries from "../components/Industries"
+import Services from "../components/Services"
+import LifeCycle from "../components/LifeCycle"
+import About from "../components/About"
+import Products from "../components/Products"
+import GrindingAndCrushing from "../components/GrindingAndCrushing"
+import ClientStories from "../components/ClientStories"
+import ProductsBrief from "../components/ProductsBrief"
 const IndexPage = ({data}) => {
 
 
   if (!data) return null
-  const document = data.allPrismicHomepage.edges[0].node.data.body[0].items[0].description
+  const document = data
 
   console.log(document)
 
@@ -23,23 +30,22 @@ const IndexPage = ({data}) => {
 
 
   return (
-    <React.StrictMode>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>{RichText.asText(homeDescription.description)}</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+      <React.StrictMode>
+          <Layout>
+              <main role="main">
+                  <HomeBanner />
+                  <ProductsBrief/>
+                  <Solutions/>
+                  <Industries/>
+                  <Services/>
+                  <LifeCycle/>
+                  <Products/>
+                  <GrindingAndCrushing/>
+                  {/* <ClientStories/> */}
+                  <About/>
+                  <ContactUs/>
+              </main>
+          </Layout>
     </React.StrictMode>
   )
 
@@ -48,25 +54,21 @@ const IndexPage = ({data}) => {
 
 
 
-  export const query = graphql`
-    query MyQuery {
-      allPrismicHomepage {
-        edges {
-          node {
-            data {
-              body {
-                items {
-                  description {
-                    text
-                  }
-                }
-              }
+export const query = graphql`
+query MyQuery {
+  allPrismicPost {
+    edges {
+      node {
+        data {
+          image_carousel {
+            banner_image {
+              url
             }
           }
         }
       }
     }
+  }
+}
 `
-
-
 export default IndexPage
