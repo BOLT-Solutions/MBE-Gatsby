@@ -1,0 +1,86 @@
+{
+  "Main" : {
+    "banner_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "banner_image"
+      }
+    },
+    "icon" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 200,
+          "height" : 200
+        },
+        "thumbnails" : [ ],
+        "label" : "Icon"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "title"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "description"
+      }
+    },
+    "classification_products_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "classification_products_title"
+      }
+    },
+    "classification_products" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "side_image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "side_image"
+            }
+          },
+          "classification_product_title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading1",
+              "label" : "classification_product_title"
+            }
+          },
+          "classfication_product_description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph",
+              "label" : "classfication_product_description"
+            }
+          },
+          "download_brochure_link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "download_brochure_link"
+            }
+          },
+          "request_information_link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "request_information_link"
+            }
+          }
+        },
+        "label" : "classification_products"
+      }
+    }
+  }
+}

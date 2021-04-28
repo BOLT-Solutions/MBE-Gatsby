@@ -1,0 +1,25 @@
+{
+  "Main" : {
+    "location" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "location"
+      }
+    },
+    "email" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "email"
+      }
+    },
+    "phone_numbers" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "list-item",
+        "label" : "phone_numbers"
+      }
+    }
+  }
+}

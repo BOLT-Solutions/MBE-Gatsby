@@ -1,0 +1,27 @@
+{
+  "Main" : {
+    "client_stories" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Image"
+            }
+          },
+          "description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "paragraph",
+              "label" : "description"
+            }
+          }
+        },
+        "label" : "client_stories"
+      }
+    }
+  }
+}

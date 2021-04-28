@@ -1,0 +1,25 @@
+{
+  "Main" : {
+    "first_paragraph" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "first_paragraph"
+      }
+    },
+    "second_paragraph" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "second_paragraph"
+      }
+    },
+    "third_paragraph" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "third_paragraph"
+      }
+    }
+  }
+}
