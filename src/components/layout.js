@@ -63,12 +63,12 @@ const Layout = ({ children }) => {
                   defer
               />
 
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/node_modules/jquery/dist/jquery.js"></script>
 <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
 <link rel="stylesheet" href="/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" />
 
-<script src="/node_modules/jquery/dist/jquery.js"></script>
-<script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-<script src="/bower_components/jquery/dist/jquery.js"></script>
+
 <script src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
            </Helmet>
 
