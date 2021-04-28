@@ -9,10 +9,10 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
           options: {
               repositoryName: `mbecontent`,
-              accessToken: `MC5ZSHhPYXhFQUFDQUFWbjhP.77-9Nxwy77-9QO-_vXkn77-9Y1_vv73vv73vv73vv70hYe-_vX8NfypPcyAZ77-9de-_vR3vv70`,
+              accessToken: `MC5ZSWdEMHhBQUFDTUFNRVFu.77-9Ce-_vT7vv70q77-9Ee-_vW3vv73vv73vv73vv73vv70sZBHvv73vv70T77-9Ue-_vXjvv71dce-_ve-_vWB0`,
               linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
               schemas: {
-                  post: require("./src/schemas/homepage.json"),
+                  post: require("./src/schemas/homeheader.json"),
               },
           },
     },
@@ -43,5 +43,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    
   ],
 }

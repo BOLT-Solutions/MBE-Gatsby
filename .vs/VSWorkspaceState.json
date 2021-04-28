@@ -2,15 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\assets\\js",
-    "\\src\\assets\\vendor",
-    "\\src\\assets\\vendor\\bootstrap",
-    "\\src\\assets\\vendor\\icofont",
-    "\\src\\assets\\vendor\\venobox",
-    "\\src\\assets\\vendor\\waypoints",
     "\\src\\components",
-    "\\src\\pages"
+    "\\src\\pages",
+    "\\src\\schemas"
   ],
-  "SelectedNode": "\\src\\components\\Solutions.js",
+  "SelectedNode": "\\src\\schemas\\homeheader.json",
   "PreviewInSolutionExplorer": false
 }

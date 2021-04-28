@@ -1,0 +1,33 @@
+{
+  "Main" : {
+    "image_carousel" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "banner_image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "banner_image"
+            }
+          },
+          "banner_title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading2",
+              "label" : "banner_title"
+            }
+          },
+          "read_more_link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "read_more_link"
+            }
+          }
+        },
+        "label" : "Image Carousel"
+      }
+    }
+  }
+}

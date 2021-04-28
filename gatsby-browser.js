@@ -10,4 +10,7 @@ import 'boxicons/dist/boxicons.js';
 import "boxicons/css/boxicons.min.css"
 import "/src/assets/vendor/icofont/icofont.min.css"
 import "/src/assets/vendor/php-email-form/validate.js"
+import "/src/assets/vendor/owl.carousel/assets/owl.carousel.min.css"
 import 'jquery'
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
