@@ -42,7 +42,7 @@ const IndexPage = ({data}) => {
                   <LifeCycle/>
                   <Products/>
                   <GrindingAndCrushing/>
-                  <ClientStories/> 
+                  {/* <ClientStories/>  */}
                   <About/>
                   <ContactUs/>
               </main>
