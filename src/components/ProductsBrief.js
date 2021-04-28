@@ -1,10 +1,25 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { graphql } from 'gatsby'
+import { RichText } from 'prismic-reactjs'
 
 import logo from '../assets/img/logo (2).png';
 
-const ProductsBrief = ({ siteTitle }) => {
+const ProductsBrief = ({ data }) => {
+
+    console.log("***ProductsBreif***");
+    console.log(data);
+
+    if (!data) return null
+    const document = data.prismicProductsBreif.data
+
+    const productsBreifContent = {
+      firstParagraph: document.first_paragrah.raw,
+      secondParagraph: document.first_paragrah.raw,
+      thirdParagraph: document.first_paragrah.raw,
+    }
+
     return (
 
     <>
@@ -15,15 +30,15 @@ const ProductsBrief = ({ siteTitle }) => {
                             <div className="col-md-6 left-txt" data-aos="zoom-out">
                                 <img src={logo} className="logo-graph" />
                                 <p>
-                                    We have 40+ years of industry experience. We are your minerals processing partner for the long-term. We help you succeed in your curreni business or transition to a new one.
+                                {RichText.asText(productsBreifContent.firstParagraph)}
                         </p>
                             </div>
                             <div className="col-md-6 right-txt" data-aos="zoom-out">
                                 <div className="top-right-txt">
-                                    We have 40+ years of industry experience. We are your minerals processing partner for the long-term. We help you succeed in your curreni business or transition to a new one.
+                                {RichText.asText(productsBreifContent.secondParagraph)}
                         </div>
                                 <div className="bottom-right-txt" data-aos="zoom-out">
-                                    We have 40+ years of industry experience. We are your minerals processing partner for the long-term. We help you succeed in your curreni business or transition to a new one.
+                                {RichText.asText(productsBreifContent.thirdParagraph)}
                         </div>
                             </div>
                         </div>
@@ -31,6 +46,30 @@ const ProductsBrief = ({ siteTitle }) => {
                 </section>
     </>
 )}
+
+
+
+export const query = graphql`
+query Amr {
+    allPrismicProductsbreif {
+      edges {
+        node {
+          data {
+            first_paragraph {
+              raw
+            }
+            second_paragraph {
+              raw
+            }
+            third_paragraph {
+              raw
+            }
+          }
+        }
+      }
+    }
+  }  
+`
 
 
 export default ProductsBrief

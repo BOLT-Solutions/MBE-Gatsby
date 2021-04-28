@@ -19,6 +19,8 @@ import ProductsBrief from "../components/ProductsBrief"
 
 const IndexPage = ({data}) => {
 
+  console.log("****Index***");
+  console.log(data);
 
   if (!data) return null
   const document = data
@@ -52,7 +54,7 @@ const IndexPage = ({data}) => {
   )
 
 
-  }
+}
 
 
 
