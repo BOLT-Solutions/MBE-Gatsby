@@ -1,0 +1,76 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "title"
+      }
+    },
+    "subtitle" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "subtitle"
+      }
+    },
+    "section_one_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "section_one_title"
+      }
+    },
+    "first_content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "section_one_content"
+      }
+    },
+    "section_two_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "section_two_title"
+      }
+    },
+    "section_two_content" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "section_two_content"
+      }
+    },
+    "solutions" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "solution_icon" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "solution_icon"
+            }
+          },
+          "solution_title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading2",
+              "label" : "solution_title"
+            }
+          },
+          "solution_description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "paragraph",
+              "label" : "solution_description"
+            }
+          }
+        },
+        "label" : "Solutions"
+      }
+    }
+  }
+}

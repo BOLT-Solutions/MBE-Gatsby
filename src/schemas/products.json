@@ -1,0 +1,63 @@
+{
+  "Main" : {
+    "title_part_one" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "title_part_one"
+      }
+    },
+    "title_part_two" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "title_part_two"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "description"
+      }
+    },
+    "side_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "side_image"
+      }
+    },
+    "products" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "product_icon" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "product_icon"
+            }
+          },
+          "product_title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading1",
+              "label" : "product_title"
+            }
+          },
+          "product_description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph",
+              "label" : "product_description"
+            }
+          }
+        },
+        "label" : "Products"
+      }
+    }
+  }
+}

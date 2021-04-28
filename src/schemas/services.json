@@ -1,0 +1,75 @@
+{
+  "Main" : {
+    "banner_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "banner_image"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading3",
+        "label" : "title"
+      }
+    },
+    "subtitle" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "subtitle"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "description"
+      }
+    },
+    "services" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "service_icon" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "service_icon"
+            }
+          },
+          "service_title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading3",
+              "label" : "service_title"
+            }
+          },
+          "service_description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph",
+              "label" : "service_description"
+            }
+          },
+          "request_info_link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "request_info_link"
+            }
+          },
+          "see_more_link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "see_more_link"
+            }
+          }
+        },
+        "label" : "Services"
+      }
+    }
+  }
+}
