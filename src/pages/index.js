@@ -35,7 +35,7 @@ const IndexPage = ({data}) => {
           <Layout>
               <main role="main">
                   <HomeBanner />
-                  <ProductsBrief/>
+                  <About/>
                   <Solutions/>
                   <Industries/>
                   <Services/>
@@ -43,7 +43,7 @@ const IndexPage = ({data}) => {
                   <Products/>
                   <GrindingAndCrushing/>
                   {/* <ClientStories/>  */}
-                  <About/>
+                  <ProductsBrief/>
                   <ContactUs/>
               </main>
           </Layout>
