@@ -16,7 +16,7 @@ module.exports = {
                   classification: require("./src/schemas/classification.json"),
                   clientstories: require("./src/schemas/clientstories.json"),
                   contactus: require("./src/schemas/contactus.json"),
-                  crushingandgrinding: require("./src/schemas/crushingandgrinding.json"),
+                  curshingandgrinding: require("./src/schemas/curshingandgrinding.json"),
                   industries: require("./src/schemas/industries.json"),
                   lifecycle: require("./src/schemas/lifecycle.json"),
                   process: require("./src/schemas/process.json"),

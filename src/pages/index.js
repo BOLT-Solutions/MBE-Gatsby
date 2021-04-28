@@ -58,15 +58,17 @@ const IndexPage = ({data}) => {
 
 export const query = graphql`
 query MyQuery {
-  allPrismicPost {
-    edges {
-      node {
-        data {
-          image_carousel {
-            banner_image {
-              url
-            }
-          }
+  prismicHomeheader {
+    data {
+      image_carousel {
+        banner_image {
+          url
+        }
+        banner_title {
+          text
+        }
+        read_more_link {
+          url
         }
       }
     }
