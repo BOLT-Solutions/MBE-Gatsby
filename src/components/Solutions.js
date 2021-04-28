@@ -5,7 +5,16 @@ import { Link } from "gatsby"
 import solution1 from '../assets/img/Icons/solution1.png';
 import solution2 from '../assets/img/Icons/solution2.png';
 import solution3 from '../assets/img/Icons/solution3.png';
-const Solutions = ({ siteTitle }) => {
+const Solutions = ({ data }) => {
+    if (!data) return null
+    const document = data
+  
+    console.log("solutions",document)
+  
+    const homeDescription = {
+      description: document,
+    }
+  
     return (
 
     <>
@@ -71,3 +80,6 @@ const Solutions = ({ siteTitle }) => {
 
 
 export default Solutions
+
+
+
