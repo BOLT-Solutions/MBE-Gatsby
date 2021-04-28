@@ -2,23 +2,15 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 // note: you don't need the whole path to node_modules.. just the package name
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import jQuery from 'jquery'
 
-window.jQuery = jQuery
-
-// dynamically require owl
-require('owl.carousel')
 const ClientStories = ({ siteTitle }) => {
     return (
 
         < >
-   <section id="testimonials" className="testimonials">
+    <section id="testimonials" className="testimonials">
                     <div className="container" data-aos="zoom-in">
 
-                        <OwlCarousel className="owl-carousel owl-theme testimonials-carousel" nav='false' items='1' autoplay loop dots>
+                        <div className="owl-carousel owl-theme testimonials-carousel" >
 
                             <div className="testimonial-item">
                                 <h3>JSC Polyus Krasnoyarsk, Russia </h3>
@@ -49,7 +41,7 @@ const ClientStories = ({ siteTitle }) => {
                                 </p>
                             </div>
 
-                        </OwlCarousel>
+                        </div>
 
                     </div>
                 </section>
