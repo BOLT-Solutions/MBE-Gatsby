@@ -13,8 +13,8 @@ const Products = ({ siteTitle }) => {
        <section id="products" className="products section-bg">
                     <div className="container" data-aos="fade-up">
 
-                        <div className="section-title">
-                            <h3><span>Our Products</span> are the orignal equipment designers </h3>
+                        <div className="section-title" >
+                            <h3 style={{fontSize: '50px'}} ><span>Our Products</span> are the orignal equipment designers </h3>
                             <p>Sustainable production is part of our DNA. From the initial concept design, we ensure our products are built to last, deliver maximum efficiencies, and solve your business challenges. We support our customers through all stages of
                         minerals processing. </p>
                         </div>
@@ -30,7 +30,7 @@ const Products = ({ siteTitle }) => {
                                         <li>
                                             <img src={products13} className="icoImage" />
                                             <div>
-                                                <h5>CRUSHING, GRINDING AND MILLING </h5>
+                                                <h5 style={{color: '#00A1ED'}}>CRUSHING, GRINDING AND MILLING </h5>
                                                 <p>Our proprietary equipment is used to break the valuable mineral grains free of gangue minerals. Our solutions engineers help to select the best processes to extract the highest quantity and quality of valuable minerals.
                                         </p>
                                             </div>
@@ -40,7 +40,7 @@ const Products = ({ siteTitle }) => {
                                         <li>
                                             <img src={products14} className="icoImage" />
                                             <div>
-                                                <h5>CLASSIFICATION - JIGS/SCREENS </h5>
+                                                <h5 style={{color: '#FC9200'}}>CLASSIFICATION - JIGS/SCREENS </h5>
                                                 <p>Our linear and circular vibrating screens are used to sort materials into required sizes. The high-quality and accuracy of our machines allow for quick and efficient processing. </p>
                                             </div>
                                         </li>
@@ -49,7 +49,7 @@ const Products = ({ siteTitle }) => {
                                         <li>
                                             <img src={products15} className="icoImage" />
                                             <div>
-                                                <h5>SEGREGATION AND SEPARATION </h5>
+                                                <h5 style={{color: '#962C17'}}>SEGREGATION AND SEPARATION </h5>
                                                 <p>Our range of products provides materials sorting using wet and dry separation using both magnetic or pneumatic techniques. We ensure you get the best out of your materials to positively impact business </p>
                                             </div>
                                         </li>
