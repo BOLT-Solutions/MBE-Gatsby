@@ -5,52 +5,123 @@ import products13 from '../assets/img/Icons/products-13.png';
 import products14 from '../assets/img/Icons/products-14.png';
 import products15 from '../assets/img/Icons/products-15.png';
 import AdobeStockPreview2 from '../assets/img/AdobeStock_383254182_Preview.jpeg';
+import { useStaticQuery, graphql } from "gatsby"
 
-const Products = ({ siteTitle }) => {
-    return (
 
-    <>
-       <section id="products" className="products section-bg">
+export default function Products() {
+  const {allPrismicProducts} = useStaticQuery(graphql`
+  query ProductsQuery {
+    allPrismicProducts {
+      edges {
+        node {
+          data {
+            description {
+              text
+            }
+            first_product_description {
+              text
+            }
+            first_product_icon {
+              url
+            }
+            first_product_title {
+              text
+            }
+            second_product_description {
+              text
+            }
+            second_product_icon {
+              url
+            }
+            second_product_title {
+              text
+            }
+            side_image {
+              url
+            }
+            third_product_description {
+              text
+            }
+            third_product_icon {
+              url
+            }
+            third_product_title {
+              text
+            }
+            title_part_one {
+              text
+            }
+            title_part_two {
+              text
+            }
+          }
+        }
+      }
+    }
+  }
+`) 
+
+
+console.log('******Products*******')
+console.log(allPrismicProducts)
+
+
+let title_part_one = allPrismicProducts.edges[0].node.data.title_part_one.text
+let title_part_two = allPrismicProducts.edges[0].node.data.title_part_two.text
+let description = allPrismicProducts.edges[0].node.data.description.text
+let first_product_title = allPrismicProducts.edges[0].node.data.first_product_title.text
+let first_product_description = allPrismicProducts.edges[0].node.data.first_product_description.text
+let first_product_icon = allPrismicProducts.edges[0].node.data.first_product_icon.url
+let second_product_title = allPrismicProducts.edges[0].node.data.second_product_title.text
+let second_product_description = allPrismicProducts.edges[0].node.data.second_product_description.text
+let second_product_icon = allPrismicProducts.edges[0].node.data.second_product_icon.url
+let third_product_title = allPrismicProducts.edges[0].node.data.third_product_title.text
+let third_product_description = allPrismicProducts.edges[0].node.data.third_product_description.text
+let third_product_icon = allPrismicProducts.edges[0].node.data.third_product_icon.url
+let side_image = allPrismicProducts.edges[0].node.data.side_image.url
+
+   return (
+   <>
+          <section id="products" className="products section-bg">
                     <div className="container" data-aos="fade-up">
 
                         <div className="section-title" >
-                            <h3 style={{fontSize: '50px'}} ><span>Our Products</span> are the orignal equipment designers </h3>
-                            <p>Sustainable production is part of our DNA. From the initial concept design, we ensure our products are built to last, deliver maximum efficiencies, and solve your business challenges. We support our customers through all stages of
-                        minerals processing. </p>
+                            <h3 style={{fontSize: '50px'}} ><span>{title_part_one}</span> {title_part_two}</h3>
+                            <p>{description}</p>
                         </div>
 
                         <div className="row">
                             <div className="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
-                                <img src={AdobeStockPreview2} className="img-fluid" alt="" />
+                                <img src={side_image} className="img-fluid" alt="" />
                             </div>
                             <div className="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
                                 <ul>
                                     <a href="#crushing" className="itm-link">
                                         <li>
-                                            <img src={products13} className="icoImage" />
+                                            <img  style={{width: '75px' , height: '75px'}}  src={first_product_icon} className="icoImage" />
                                             <div>
-                                                <h5 style={{color: '#00A1ED'}}>CRUSHING, GRINDING AND MILLING </h5>
-                                                <p>Our proprietary equipment is used to break the valuable mineral grains free of gangue minerals. Our solutions engineers help to select the best processes to extract the highest quantity and quality of valuable minerals.
+                                                <h5 style={{color: '#00A1ED' , fontSize: '25px', fontWeight:'bold' }}>{first_product_title}</h5>
+                                                <p>{first_product_description}
                                         </p>
                                             </div>
                                         </li>
                                     </a>
                                     <a href="#classification" className="itm-link">
                                         <li>
-                                            <img src={products14} className="icoImage" />
+                                            <img  style={{width: '75px' , height: '75px'}}  src={second_product_icon} className="icoImage" />
                                             <div>
-                                                <h5 style={{color: '#FC9200'}}>CLASSIFICATION - JIGS/SCREENS </h5>
-                                                <p>Our linear and circular vibrating screens are used to sort materials into required sizes. The high-quality and accuracy of our machines allow for quick and efficient processing. </p>
+                                                <h5 style={{color: '#FC9200' , fontSize: '25px' , fontWeight:'bold' }}>{second_product_title}</h5>
+                                                <p>{second_product_description}</p>
                                             </div>
                                         </li>
                                     </a>
                                     <a href="#segregation" className="itm-link">
                                         <li>
-                                            <img src={products15} className="icoImage" />
+                                            <img style={{width: '75px' , height: '75px'}}  src={third_product_icon} className="icoImage" />
                                             <div>
-                                                <h5 style={{color: '#962C17'}}>SEGREGATION AND SEPARATION </h5>
-                                                <p>Our range of products provides materials sorting using wet and dry separation using both magnetic or pneumatic techniques. We ensure you get the best out of your materials to positively impact business </p>
+                                                <h5 style={{color: '#962C17' , fontSize: '25px' , fontWeight:'bold' }}>{third_product_title}</h5>
+                                                <p>{third_product_description}</p>
                                             </div>
                                         </li>
                                     </a>
@@ -61,8 +132,6 @@ const Products = ({ siteTitle }) => {
 
                     </div>
                 </section>
-    </>
+   </>
+
 )}
-
-
-export default Products
