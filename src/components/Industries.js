@@ -1,12 +1,69 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import industies4 from '../assets/img/Icons/industies4.png';
 import industies5 from '../assets/img/Icons/industies5.png';
 import industies6 from '../assets/img/Icons/industies6.png';
 import AdobeStockPreview from '../assets/img/AdobeStock_219100685_Preview.jpeg';
 
-const Industries = ({ siteTitle }) => {
+export default function Industries() {
+const {allPrismicIndustries} = useStaticQuery(graphql`
+query Industries {
+    allPrismicIndustries {
+      edges {
+        node {
+          data {
+            banner_image {
+              url
+            }
+            description {
+              text
+            }
+            industries {
+              first_paragph {
+                text
+              }
+              industry_icon {
+                url
+              }
+              industry_title {
+                text
+              }
+              request_info_link {
+                url
+              }
+              second_paragraph {
+                text
+              }
+              see_more_link {
+                url
+              }
+            }
+            subtitle {
+              text
+            }
+            title {
+              text
+            }
+          }
+        }
+      }
+    }
+  }
+  
+ `)
+let data =allPrismicIndustries.edges[0].node.data
+let banner_image =allPrismicIndustries.edges[0].node.data.banner_image.url
+let description =allPrismicIndustries.edges[0].node.data.description.text
+// let section_two_title =allPrismicIndustries.edges[0].node.data.section_two_title.text
+// let subtitle =allPrismicIndustries.edges[0].node.data.subtitle.text    
+// let title =allPrismicIndustries.edges[0].node.data.title.text    
+// let content_solution1 =allPrismicIndustries.edges[0].node.data.solutions[0]   
+// let content_solution2 =allPrismicIndustries.edges[0].node.data.solutions[1]   
+// let content_solution3 =allPrismicIndustries.edges[0].node.data.solutions[2]   
+// let content_solution4 =allPrismicIndustries.edges[0].node.data.solutions[3]   
+console.log(data );
+console.log("data");
     return (
 
     < >
@@ -86,4 +143,4 @@ const Industries = ({ siteTitle }) => {
 )}
 
 
-export default Industries
+
