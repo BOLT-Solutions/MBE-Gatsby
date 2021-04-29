@@ -1,24 +1,43 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { graphql } from 'gatsby'
+import { useStaticQuery, graphql } from "gatsby"
 import { RichText } from 'prismic-reactjs'
 
 import logo from '../assets/img/logo (2).png';
 
-const ProductsBrief = ({ data }) => {
+const ProductsBrief = () => {
 
-    console.log("***ProductsBreif***");
-    console.log(data);
+    const prismicData = useStaticQuery(graphql`
+    query Amr {
+        prismicProductsbreif {
+          data {
+            first_paragraph {
+              text
+            }
+            second_paragraph {
+              text
+            }
+            third_paragraph {
+              text
+            }
+          }
+        }
+      } 
+    ` )
 
-    if (!data) return null
-    const document = data.prismicProductsBreif.data
+    const document = prismicData.prismicProductsbreif.data.first_paragrah
+
+  
+    
+    console.log("********ProductsBreif********")
+    console.log(document);
 
     const productsBreifContent = {
-      firstParagraph: document.first_paragrah.raw,
-      secondParagraph: document.first_paragrah.raw,
-      thirdParagraph: document.first_paragrah.raw,
-    }
+        firstParagraph: document.first_paragrah.text,
+        secondParagraph: document.first_paragrah.text,
+        thirdParagraph: document.first_paragrah.text,
+      }
 
     return (
 
@@ -30,7 +49,7 @@ const ProductsBrief = ({ data }) => {
                             <div className="col-md-6 left-txt" data-aos="zoom-out">
                                 <img src={logo} className="logo-graph" />
                                 <p>
-                                {RichText.asText(productsBreifContent.firstParagraph)}
+                                {RichText.asText(document.firstParagraph)}
                         </p>
                             </div>
                             <div className="col-md-6 right-txt" data-aos="zoom-out">
@@ -46,30 +65,5 @@ const ProductsBrief = ({ data }) => {
                 </section>
     </>
 )}
-
-
-
-export const query = graphql`
-query Amr {
-    allPrismicProductsbreif {
-      edges {
-        node {
-          data {
-            first_paragraph {
-              raw
-            }
-            second_paragraph {
-              raw
-            }
-            third_paragraph {
-              raw
-            }
-          }
-        }
-      }
-    }
-  }  
-`
-
 
 export default ProductsBrief
