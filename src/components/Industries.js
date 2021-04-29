@@ -58,12 +58,7 @@ let description =allPrismicIndustries.edges[0].node.data.description.text
 let subtitle =allPrismicIndustries.edges[0].node.data.subtitle.text
 let title =allPrismicIndustries.edges[0].node.data.title.text    
 let content_industries=allPrismicIndustries.edges[0].node.data.industries
-// let content_solution1 =allPrismicIndustries.edges[0].node.data.solutions[0]   
-// let content_solution2 =allPrismicIndustries.edges[0].node.data.solutions[1]   
-// let content_solution3 =allPrismicIndustries.edges[0].node.data.solutions[2]   
-// let content_solution4 =allPrismicIndustries.edges[0].node.data.solutions[3]   
-console.log(data );
-console.log("data");
+
 
     return (
 
@@ -87,7 +82,7 @@ console.log("data");
                               <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
                                   <h4 className="title"><a href="">{content_industry.industry_title.text} </a></h4>
                                   <div className="icon">
-                                      <img src={industies4} className="icoImage" />
+                                      <img src={content_industry.industry_icon.url} className="icoImage" />
                                   </div>
                                   <p className="description">
                                       <span>

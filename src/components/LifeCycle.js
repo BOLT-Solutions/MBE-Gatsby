@@ -1,23 +1,75 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import solution1 from '../assets/img/Icons/solution1.png';
 import solution2 from '../assets/img/Icons/solution2.png';
 import solution3 from '../assets/img/Icons/solution3.png';
 import AdobeStockPreview2 from '../assets/img/AdobeStock_383254182_Preview.jpeg';
 
-const LifeCycle = ({ siteTitle }) => {
+    
+export default function LifeCycle() {
+    const {allPrismicLifecycle} = useStaticQuery(graphql`
+    query Lifecycle {
+        allPrismicLifecycle {
+          edges {
+            node {
+              data {
+                banner_image {
+                  url
+                }
+                description {
+                  text
+                }
+                subtitle {
+                  text
+                }
+                support_options {
+                  request_info_link {
+                    url
+                  }
+                  see_more_link {
+                    url
+                  }
+                  support_option_description {
+                    text
+                  }
+                  support_option_icon {
+                    url
+                  }
+                  support_option_title {
+                    text
+                  }
+                }
+                title {
+                  text
+                }
+              }
+            }
+          }
+        }
+      }
+      
+     `)
+    let data =allPrismicLifecycle.edges[0].node.data
+    let banner_image =allPrismicLifecycle.edges[0].node.data.banner_image.url
+    let description =allPrismicLifecycle.edges[0].node.data.description.text
+    let subtitle =allPrismicLifecycle.edges[0].node.data.subtitle.text
+    let title =allPrismicLifecycle.edges[0].node.data.title.text    
+    let content_cycle=allPrismicLifecycle.edges[0].node.data.support_options
+
+    console.log(data );
+
     return (
 
     < >
-     <section id="lifecycle" className="d-flex align-items-center hero2" style={{ background: `url(${AdobeStockPreview2})` }} >
+     <section id="lifecycle" className="d-flex align-items-center hero2" style={{ background: `url(${banner_image})` }} >
                     <div className="container" data-aos="zoom-out" data-aos-delay="100">
-                        <h1> <span>Life Cycle</span> Support
+                        <h1> {title}
                         </h1>
-                        <h2>You are in safe hands</h2>
+                        <h2>{subtitle}</h2>
                         <p>
-                            We support you throughout your joarney to ensure you have a robust, reliable and sustainable solution.
-                          </p>
+                            {description}
+                        </p>
                     </div>
                 </section>
 
@@ -25,47 +77,25 @@ const LifeCycle = ({ siteTitle }) => {
                     <div className="container" data-aos="fade-up">
 
                         <div className="row">
-                            <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
-                                    <h4 className="title"><a href="">Customer Support </a></h4>
-                                    <div className="icon">
-                                        <img src={solution1} className="icoImage" />
-                                    </div>
-                                    <p className="description">
-                                        We support our customers throughout the whole life cycle of our equipment. After supplying the equipment. we make sure it is fully integrated in the existing plant or working smoothly in a new plant. We stock and supply a full range of wear and spare
-                                        parts. We provide maintenance and advice to ensure equipment productivity and efficiency remain high.
-                            </p>
-                                </div>
-                            </div>
-
-                            <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
-                                    <h4 className="title"><a href="">Wear Parts </a></h4>
-                                    <div className="icon">
-                                        <img src={solution2} className="icoImage" />
-                                    </div>
-                                    <p className="description">
-                                        Sustainable design is part of our DNA. Our solutions maximize the recovery of valuable concentrates and sellable product streams from waste products and with the help of innovative process designs - density. magnetic separation. selective grinding & flotation
-                                        - we achieve the global targets of the circular resource economy.
-                            </p>
-                                </div>
-                            </div>
-
-                            <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
-                                    <h4 className="title"><a href="">Spare Parts </a></h4>
-                                    <div className="icon">
-                                        <img src={solution3} className="icoImage" />
-                                    </div>
-                                    <p className="description">
-                                        Our deep understanding of equipment engineering and processing enables us to adapt our proprietary equipment to service new industries. Our deep understanding of equipment engineering and processing enables us to adapt our proprietary equipment to service
-                                        new industries.
-                            </p>
-                                </div>
-                            </div>
-
-
-
+                        {
+                           content_cycle.map(cycle => (
+                             <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                              <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                  <h4 className="title"><a href="">{cycle.support_option_title.text} </a></h4>
+                                  <div className="icon">
+                                      <img src={cycle.support_option_icon.url} className="icoImage" />
+                                  </div>
+                                  <p className="description">
+                                      <span>
+                                          {cycle.support_option_description.text}
+                                       </span> 
+                                      
+                                    </p>
+                              </div>
+                          </div>
+                            ))
+                        }
+                            
                         </div>
 
                     </div>
@@ -73,5 +103,3 @@ const LifeCycle = ({ siteTitle }) => {
     </>
 )}
 
-
-export default LifeCycle

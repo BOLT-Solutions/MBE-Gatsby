@@ -1,10 +1,39 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import phpValidate from "../assets/vendor/php-email-form/validate.js";
 
-
-const ContactUs = () => {
+    export default function ContactUs() {
+        const {allPrismicContactus} = useStaticQuery(graphql`
+            query ContactUs {
+                allPrismicContactus {
+                    edges {
+                      node {
+                        data {
+                          email {
+                            text
+                          }
+                          location {
+                            text
+                          }
+                          phone_numbers {
+                            phone_number {
+                              text
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                
+                `)
+            let data =allPrismicContactus.edges[0].node.data
+            let email =allPrismicContactus.edges[0].node.data.email.text
+            let location =allPrismicContactus.edges[0].node.data.location.text
+            let phone_numbers =allPrismicContactus.edges[0].node.data.phone_numbers
+        
+        
     return (
 
     < >
@@ -23,7 +52,7 @@ const ContactUs = () => {
                                 <div className="info-box mb-4">
                                     <i className="bx bx-map"></i>
                                     <h3>Our Address</h3>
-                                    <p>A108 Adam Street, New York, NY 535022</p>
+                                    <p>{location}</p>
                                 </div>
                             </div>
 
@@ -31,7 +60,7 @@ const ContactUs = () => {
                                 <div className="info-box  mb-4">
                                     <i className="bx bx-envelope"></i>
                                     <h3>Email Us</h3>
-                                    <p>contact@example.com</p>
+                                    <p>{email}</p>
                                 </div>
                             </div>
 
@@ -39,7 +68,10 @@ const ContactUs = () => {
                                 <div className="info-box  mb-4">
                                     <i className="bx bx-phone-call"></i>
                                     <h3>Call Us</h3>
-                                    <p>+1 5589 55488 55</p>
+                                    {phone_numbers.map(phone => (
+                                    <p>{phone.phone_number.text}</p>
+                                    ))
+                                    }
                                 </div>
                             </div>
 
@@ -89,5 +121,3 @@ const ContactUs = () => {
     </>
 )}
 
-
-export default ContactUs

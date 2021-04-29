@@ -73,7 +73,9 @@ const Layout = ({ children }) => {
            </Helmet>
 
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      
          <main role="main">{children}</main>
+
           <div id="preloader"></div>
           <a href="#" className="back-to-top"><i className="icofont-simple-up"></i></a>
           <footer

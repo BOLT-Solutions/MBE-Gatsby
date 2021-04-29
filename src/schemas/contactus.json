@@ -15,9 +15,18 @@
       }
     },
     "phone_numbers" : {
-      "type" : "StructuredText",
+      "type" : "Group",
       "config" : {
-        "multi" : "list-item",
+        "fields" : {
+          "phone_number" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+              "label" : "phone_number",
+              "placeholder" : "phone_ number"
+            }
+          }
+        },
         "label" : "phone_numbers"
       }
     }

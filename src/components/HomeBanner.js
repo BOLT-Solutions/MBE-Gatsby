@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import logo from '../assets/img/logo (2).png';
 import slide1 from '../assets/img/slide/slide-1.jpg';
 import slide2 from '../assets/img/slide/slide-2.jpg';
@@ -10,6 +10,32 @@ import mbeText16 from '../assets/img/MBE-text-16.png';
 
 
 export default function HomeBanner() {
+    const {allPrismicHomeheader} = useStaticQuery(graphql`
+    query HomeBanner {
+        allPrismicHomeheader {
+            edges {
+              node {
+                data {
+                  image_carousel {
+                    banner_image {
+                      url
+                    }
+                    banner_title {
+                      text
+                    }
+                    read_more_link {
+                      url
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        `)
+    let image_carousel =allPrismicHomeheader.edges[0].node.data.image_carousel
+
+    console.log(image_carousel );
 
 let slideIndex = 1
 
@@ -18,6 +44,7 @@ const plusDivs = (n) => {
     showDivs(slideIndex += n);
 };
 const currentDiv = (n) => {
+    console.log(n)
 
     showDivs(slideIndex = n);
 };
@@ -64,15 +91,22 @@ useEffect(() => {
   
                                   <div className="slider">
                                       <div className="w3-content w3-display-container">
-                                          <img className="mySlides" src={slide1} style={{ width: '100%' }} />
-                                          <img className="mySlides" src={slide2} style={{ width: '100%' }} />
-                                          <img className="mySlides" src={slide3} style={{ width: '100%' }} />
+                                      {image_carousel.map(image => (
+                                        
+                                          <img className="mySlides" src={image.banner_image.url} style={{ width: '100%' }} />
+                                            ))
+                                          }
+                                          {/* <img className="mySlides" src={slide2} style={{ width: '100%' }} />
+                                          <img className="mySlides" src={slide3} style={{ width: '100%' }} /> */}
                                           <div className="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style={{ width: '100%' }}>
                                               <div className="w3-left w3-hover-text-khaki" onClick={() => { plusDivs(-1) }}>&#10094;</div>
                                               <div className="w3-right w3-hover-text-khaki" onClick={() => { plusDivs(1) }}>&#10095;</div>
-                                              <span className="w3-badge demo w3-border w3-transparent w3-hover-white" onClick={() => { currentDiv(1) }}></span>
-                                              <span className="w3-badge demo w3-border w3-transparent w3-hover-white" onClick={() => { currentDiv(2) }}></span>
-                                              <span className="w3-badge demo w3-border w3-transparent w3-hover-white" onClick={() => { currentDiv(3) }}></span>
+                                              {image_carousel.map((image, index)  => (
+                                             
+                                        // <img className="mySlides" src={image.banner_image.url} style={{ width: '100%' }} />
+                                        <span className="w3-badge demo w3-border w3-transparent w3-hover-white" onClick={() => { let n=index+1 ; currentDiv(n) }}></span>
+                                            ))
+                                           }
                                           </div>
                                       </div>
                                   </div>
