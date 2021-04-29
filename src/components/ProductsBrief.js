@@ -17,7 +17,7 @@ export default function ProductsBrief() {
               text
             }
             second_paragraph {
-              textss
+              text
             }
             third_paragraph {
               text
