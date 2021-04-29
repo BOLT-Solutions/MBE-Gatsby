@@ -17,7 +17,7 @@ export default function ProductsBrief() {
               text
             }
             second_paragraph {
-              text
+              textss
             }
             third_paragraph {
               text
@@ -32,11 +32,6 @@ export default function ProductsBrief() {
   let first_paragraph = allPrismicProductsbreif.edges[0].node.data.first_paragraph.text
   let second_paragraph = allPrismicProductsbreif.edges[0].node.data.second_paragraph.text
   let third_paragraph = allPrismicProductsbreif.edges[0].node.data.third_paragraph.text
-
-  console.log("********ProductsBreif********")
-  console.log(first_paragraph);
-  console.log(second_paragraph);
-  console.log(third_paragraph);
 
     return (
     <>
