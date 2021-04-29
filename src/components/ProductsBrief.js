@@ -34,16 +34,16 @@ const ProductsBrief = () => {
     console.log(document);
 
     const productsBreifContent = {
-        firstParagraph: document.first_paragrah.text,
-        secondParagraph: document.first_paragrah.text,
-        thirdParagraph: document.first_paragrah.text,
+        // firstParagraph: document.first_paragrah.text,
+        // secondParagraph: document.first_paragrah.text,
+        // thirdParagraph: document.first_paragrah.text,
       }
 
     return (
 
     <>
     
-                <section id="graph" className="graph">
+                {/* <section id="graph" className="graph">
                     <div className="container" data-aos="zoom-out" data-aos-delay="100">
                         <div className="row">
                             <div className="col-md-6 left-txt" data-aos="zoom-out">
@@ -62,7 +62,7 @@ const ProductsBrief = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
     </>
 )}
 
