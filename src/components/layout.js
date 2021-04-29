@@ -75,7 +75,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
          <main role="main">{children}</main>
           <div id="preloader"></div>
-          <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+          <a href="#" className="back-to-top"><i className="icofont-simple-up"></i></a>
           <footer
           style={{
             marginTop: `2rem`,
