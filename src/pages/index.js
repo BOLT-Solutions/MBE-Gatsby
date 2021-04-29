@@ -45,7 +45,6 @@ const IndexPage = ({data}) => {
                   <ContactUs/>
               </main>
           </Layout>
-    
     </React.StrictMode>
   )
 
