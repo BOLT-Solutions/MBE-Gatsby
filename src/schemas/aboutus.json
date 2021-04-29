@@ -1,61 +1,85 @@
 {
-  "Main" : {
-    "title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "label" : "title"
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "title"
       }
     },
-    "image_carousel" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "image" : {
-            "type" : "Image",
-            "config" : {
-              "constraint" : { },
-              "thumbnails" : [ ],
-              "label" : "image"
-            }
-          }
-        },
-        "label" : "image_carousel"
+    "first_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "first_image"
       }
     },
-    "subtitle" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading2",
-        "label" : "subtitle"
+    "second_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "second_image"
       }
     },
-    "first_paragraph" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "first_paragraph"
+    "third_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "third_image"
       }
     },
-    "second_paragraph" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "second_paragraph"
+    "fourth_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "fourth_image"
       }
     },
-    "third_paragraph" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "third_paragraph"
+    "fifth_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "fifth_image"
       }
     },
-    "fourth_paragraph" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "fourth_paragraph"
+    "subtitle": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading2",
+        "label": "subtitle"
+      }
+    },
+    "first_paragraph": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "first_paragraph"
+      }
+    },
+    "second_paragraph": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "second_paragraph"
+      }
+    },
+    "third_paragraph": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "third_paragraph"
+      }
+    },
+    "fourth_paragraph": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "fourth_paragraph"
       }
     }
   }
