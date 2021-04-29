@@ -1,8 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { RichText } from 'prismic-reactjs'
-import SEO from "../components/seo"
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import HomeBanner from "../components/HomeBanner"
@@ -16,17 +12,9 @@ import GrindingAndCrushing from "../components/GrindingAndCrushing"
 import ClientStories from "../components/ClientStories"
 import ProductsBrief from "../components/ProductsBrief"
 import Services from "../components/Services"
+import Process from "../components/Process"
 
-const IndexPage = ({data}) => {
-
-
-  if (!data) return null
-  const document = data
-
-  const homeDescription = {
-    description: document,
-  }
-
+const IndexPage = () => {
 
   return (
       <React.StrictMode>
@@ -34,6 +22,7 @@ const IndexPage = ({data}) => {
               <main role="main">
                   <HomeBanner />
                   <About/>
+                  <Process/>
                   <Solutions/>
                   <Industries/>
                   <Services/>
@@ -52,25 +41,5 @@ const IndexPage = ({data}) => {
 }
 
 
-
-export const query = graphql`
-query MyQuery {
-  prismicHomeheader {
-    data {
-      image_carousel {
-        banner_image {
-          url
-        }
-        banner_title {
-          text
-        }
-        read_more_link {
-          url
-        }
-      }
-    }
-  }
-}
-`
 export default IndexPage
 
