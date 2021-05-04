@@ -25,6 +25,7 @@ module.exports = {
                   separation: require("./src/schemas/separation.json"),
                   services: require("./src/schemas/services.json"),
                   solutions: require("./src/schemas/solutions.json"),
+                  footer: require("./src/schemas/footer.json"),
               },
           },
     },
