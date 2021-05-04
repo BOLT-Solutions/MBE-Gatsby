@@ -8,7 +8,6 @@ import Industries from "../components/Industries"
 import LifeCycle from "../components/LifeCycle"
 import About from "../components/About"
 import Products from "../components/Products"
-import GrindingAndCrushing from "../components/GrindingAndCrushing"
 import ClientStories from "../components/ClientStories"
 import ProductsBrief from "../components/ProductsBrief"
 import Services from "../components/Services"
@@ -29,7 +28,7 @@ const IndexPage = () => {
                   <Services/>
                   <LifeCycle/>
                   <Products/>
-                  <GrindingAndCrushing/>
+             
                   {/* <ClientStories/>  */}
                   <ProductsBrief/>
                   <ContactUs/>

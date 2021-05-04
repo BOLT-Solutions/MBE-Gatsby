@@ -55,7 +55,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
         return (
     
         < >
-         <section id="lifecycle" className="d-flex align-items-center hero2" style={{ background: `url(${banner_image})` }} >
+                <section id="lifecycle" className="d-flex align-items-center hero2" style={{ background: `url(${banner_image})` }} >
                         <div className="container" data-aos="zoom-out" data-aos-delay="100">
                             <h1> {title}
                             </h1>
@@ -73,7 +73,8 @@ import { graphql, Link, useStaticQuery } from "gatsby"
                             {
                                content_Processes.map(process => (
                                  <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-                                  <div className="icon-box" data-aos="fade-up" data-aos-delay="100">
+                                       <div className="icon-box d-flex flex-column justify-content-between" data-aos="fade-up" data-aos-delay="100">
+                                           <div>
                                       <h4 className="title"><a href="">{process.title.text} </a></h4>
                                       <div className="icon">
                                           <img src={process.icon.url} className="icoImage" />
@@ -83,7 +84,11 @@ import { graphql, Link, useStaticQuery } from "gatsby"
                                               {process.description.text}
                                            </span> 
                                           
-                                        </p>
+                                      </p>
+                                               </div>
+
+                                           <p className="request mb-0">Request more Information
+                                           </p> 
                                   </div>
                               </div>
                                 ))
@@ -95,4 +100,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
                     </section>
         </>
     )}
-    
+const mystyle = {
+      backgroundAttachment: 'fixed',
+    backgroundSize: 'cover',
+};
