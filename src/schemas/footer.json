@@ -1,0 +1,72 @@
+{
+  "Main": {
+    "mbe_icon": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "mbe_icon"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "description"
+      }
+    },
+    "address_icon": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "address_icon"
+      }
+    },
+    "address": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "address"
+      }
+    },
+    "inquiry_mail_icon": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "inquiry_mail_icon"
+      }
+    },
+    "inquiry_mail": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "inquiry_mail"
+      }
+    },
+    "phone_numbers_icon": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "phone_numbers_icon"
+      }
+    },
+    "phone_numbers": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "phone_number": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1",
+              "label": "phone_number"
+            }
+          }
+        },
+        "label": "phone_numbers"
+      }
+    }
+  }
+}
