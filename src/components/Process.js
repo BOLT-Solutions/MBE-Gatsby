@@ -55,7 +55,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
         return (
     
         < >
-         <section id="lifecycle" className="d-flex align-items-center hero2" style={{ background: `url(${banner_image})` }} >
+                <section id="lifecycle" className="d-flex align-items-center hero2" style={{ background: `url(${banner_image})`; }} >
                         <div className="container" data-aos="zoom-out" data-aos-delay="100">
                             <h1> {title}
                             </h1>

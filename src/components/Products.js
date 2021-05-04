@@ -96,8 +96,9 @@ let side_image = allPrismicProducts.edges[0].node.data.side_image.url
                             </div>
                             <div className="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
-                                <ul>
-                                    <a href="#crushing" className="itm-link">
+                           <ul>
+                              
+                                   <a className="itm-link" href="/CrushingPage">
                                         <li>
                                             <img  style={{width: '75px' , height: '75px'}}  src={first_product_icon} className="icoImage" />
                                             <div>
@@ -106,8 +107,9 @@ let side_image = allPrismicProducts.edges[0].node.data.side_image.url
                                         </p>
                                             </div>
                                         </li>
-                                    </a>
-                                    <a href="#classification" className="itm-link">
+                                   </a>
+                         
+                                   <a href="/ClassificationPage" className="itm-link">
                                         <li>
                                             <img  style={{width: '75px' , height: '75px'}}  src={second_product_icon} className="icoImage" />
                                             <div>
@@ -115,8 +117,9 @@ let side_image = allPrismicProducts.edges[0].node.data.side_image.url
                                                 <p>{second_product_description}</p>
                                             </div>
                                         </li>
-                                    </a>
-                                    <a href="#segregation" className="itm-link">
+                                   </a>
+                               
+                               <a href="/SeperationPage" className="itm-link">
                                         <li>
                                             <img style={{width: '75px' , height: '75px'}}  src={third_product_icon} className="icoImage" />
                                             <div>
@@ -124,7 +127,8 @@ let side_image = allPrismicProducts.edges[0].node.data.side_image.url
                                                 <p>{third_product_description}</p>
                                             </div>
                                         </li>
-                                    </a>
+                               </a>
+
                                 </ul>
 
                             </div>
