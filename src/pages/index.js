@@ -13,6 +13,7 @@ import ClientStories from "../components/ClientStories"
 import ProductsBrief from "../components/ProductsBrief"
 import Services from "../components/Services"
 import Process from "../components/Process"
+import Footer from "../components/Footer"
 
 const IndexPage = () => {
 
@@ -32,6 +33,7 @@ const IndexPage = () => {
                   {/* <ClientStories/>  */}
                   <ProductsBrief/>
                   <ContactUs/>
+                  <Footer/>
               </main>
           </Layout>
     </React.StrictMode>
