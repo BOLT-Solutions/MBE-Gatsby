@@ -1,12 +1,12 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./style.css"
 
 export default function ClassificationPage() {
     const { allPrismicClassification } = useStaticQuery(graphql`
-        query ProductsQuery {
+        query ClassificationPage {
             allPrismicClassification {
                 edges {
                   node {
@@ -62,6 +62,19 @@ export default function ClassificationPage() {
     let classification_products = allPrismicClassification.edges[0].node.data.classification_products
 
     return <Layout>
+<div className="background" style={{ background: `url(${banner_image})`, backgroundSize:"cover",height:"60vh" }}></div>
+            <section className="container">
+                <h1><strong>{title}</strong></h1>
+                <div className="d-flex mt-5">
+                    <div className="imgContainer mr-5">
 
+                    <img src={icon}/>
+                    </div>
+                    <div className="pl-5 ml5" style={{borderLeft:"2px solid #0BA5ED"}}>
+
+                    <p><strong>{description}</strong></p>
+                    </div>
+                </div>
+            </section>
     </Layout>
 }
