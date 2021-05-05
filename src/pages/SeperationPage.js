@@ -1,12 +1,12 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
     export default function SeperationPage() {
         const { allPrismicSeperation } = useStaticQuery(graphql`
-            query ProductsQuery {
+            query SeperationPage {
                 allPrismicSeperation {
                     edges {
                       node {

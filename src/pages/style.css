@@ -1,0 +1,17 @@
+.background{
+    
+}
+h1{
+    color: #0BA5ED;
+}
+p{
+    color: #464749;
+    font-size: 20px;
+    line-height: 1.2;
+}
+.imgContainer{
+    width: 230px;
+}
+img{
+    width: 100%;
+}
