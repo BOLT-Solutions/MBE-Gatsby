@@ -18,9 +18,9 @@ const Header = ({ siteTitle }) => (
                     </li>
                     <li className="drop-down"><a href="#products">Products</a>
                         <ul>
-                            <li><a href="#crushing">Crushing</a></li>
-                            <li><a href="#classification">Classification</a></li>
-                            <li><a href="#segregation">Segregation</a></li>
+                            <li><a href="/CrushingPage">Crushing</a></li>
+                            <li><a href="/ClassificationPage">Classification</a></li>
+                            <li><a href="/SeperationPage">Segregation</a></li>
                         </ul>
                     </li>
                     <li><a href="#testimonials">Client stories</a></li>

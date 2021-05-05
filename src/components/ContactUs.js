@@ -25,9 +25,8 @@ import '../components/style/ContactUs.css'
                       }
                     }
                   }
-                }
-                
-                `)
+                }`)
+
             let data =allPrismicContactus.edges[0].node.data
             let email =allPrismicContactus.edges[0].node.data.email.text
             let location =allPrismicContactus.edges[0].node.data.location.text
@@ -117,7 +116,6 @@ import '../components/style/ContactUs.css'
 
                     </div>
                 </section>
-
     </>
 )}
 
