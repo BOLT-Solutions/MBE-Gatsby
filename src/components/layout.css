@@ -9,7 +9,10 @@
     src: url("/assets/vendor/icofont/optima/Linotype\ -\ OptimaLTPro-Medium.otf");
 }
 
+*{
+    font-family: "optima";
 
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -895,6 +898,7 @@ section {
 
         .graph .left-txt p {
             width: 250px;
+            color: #fff;
         }
 
     .graph .right-txt {
@@ -1138,8 +1142,11 @@ section {
 .about-us-sec {
     background-color: #00AEEF;
     font-size: 18px;
+  
 }
-
+.about-us  p{
+    color: #fff;
+}
 .about-us {
     color: #fff;
     padding: 50px 0;
