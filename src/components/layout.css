@@ -1299,15 +1299,15 @@ section {
 
     .contact .info-box i {
         font-size: 32px;
-        color: #00AEEF;
+        /* color: #00AEEF; */
         border-radius: 50%;
         padding: 8px;
-        border: 2px dotted #b3d1fa;
+        border: none !important;
     }
 
     .contact .info-box h3 {
         font-size: 20px;
-        color: #777777;
+        color: #00A1ED;
         font-weight: 700;
         margin: 10px 0;
     }

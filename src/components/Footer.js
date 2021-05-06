@@ -73,8 +73,8 @@ let description  =allPrismicFooter.edges[0].node.data.description.text
           <div className="row" style={{ justifyContent: 'space-around', padding:' 15px' , marginTop: '3%' }}>
 
             <div className="col-5 d-inline-flex justify-content-around" >
-               <img src={mbe_icon} alt="Girl in a jacket"  width='100' height = '100'  style={{ marginRight: '5%' , marginTop: '5%'}}/>
-               <p style={{ width: ' 65%' , height: ' 250px', fontSize: '12px' , color: '#F7F8F8' , fontWeight: 'bold'}}>
+               <img src={mbe_icon} alt="Girl in a jacket"  width='100' height = '100'  style={{ width:'102px'}}/>
+               <p style={{ width: ' 65%' , height: ' 250px', fontSize: '14px' , color: '#F7F8F8' , fontWeight: 'bold',lineHeight:'1.6'}}>
                {description}
               </p>
             </div>
@@ -108,17 +108,22 @@ let description  =allPrismicFooter.edges[0].node.data.description.text
             <div className="col-4" style={{ color: '#F7F8F8' , fontWeight: 'bold' , fontSize : '20px'}}>
               
               <div className="container-fluid d-inline-flex">
-                <img src={address_icon} alt="Girl in a jacket" width="75" height="75"  style = {{marginRight:'7%'}}/>
+                {/* <img src={address_icon} alt="Girl in a jacket" width="75" height="75"  style = {{marginRight:'7%'}}/> */}
+                <i class='bx bxs-map' style={{color:'#ffffff',fontSize:'45px',paddingRight:'10px'}} ></i>
+               
                 <h5>{address}</h5>
               </div>
 
               <div className="container-fluid d-inline-flex"> 
-                <img src={inquiry_mail_icon} alt="Girl in a jacket" width="75" height="75" style = {{marginRight:'7%'}} />
+                {/* <img src={inquiry_mail_icon} alt="Girl in a jacket" width="75" height="75" style = {{marginRight:'7%'}} /> */}
+                <i class='bx bxs-envelope' style={{color:'#ffffff',fontSize:'45px',paddingRight:'10px'}}  ></i>
+              
                 <h5>{inquiry_mail}</h5>
               </div>
 
               <div className=" container-fluid d-inline-flex"> 
-                <img src={phone_numbers_icon} alt="Girl in a jacket" width="75" height="75" style = {{marginRight:'7%'}} />
+                {/* <img src={phone_numbers_icon} alt="Girl in a jacket" width="75" height="75" style = {{marginRight:'7%'}} /> */}
+                <i class='bx bxs-phone' style={{color:'#ffffff',fontSize:'45px',paddingRight:'10px'}}></i>
                 <div >
 
                 {phone_numbers.map(phone => (

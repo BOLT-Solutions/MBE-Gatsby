@@ -49,7 +49,7 @@ import '../components/style/ContactUs.css'
                         <div className="row" data-aos="fade-up" data-aos-delay="100">
                             <div className="col-lg-4">
                                 <div className="info-box mb-4">
-                                    <i className="bx bx-map"></i>
+                                <i class='bx bxs-map'></i>
                                     <h3>Our Address</h3>
                                     <p>{location}</p>
                                 </div>
@@ -57,7 +57,7 @@ import '../components/style/ContactUs.css'
 
                             <div className="col-lg-4 col-md-6">
                                 <div className="info-box  mb-4">
-                                    <i className="bx bx-envelope"></i>
+                                <i class='bx bxs-envelope' style={{color:'#00aeef'}} ></i>
                                     <h3>Email Us</h3>
                                     <p>{email}</p>
                                 </div>
@@ -65,7 +65,7 @@ import '../components/style/ContactUs.css'
 
                             <div className="col-lg-4 col-md-6">
                                 <div className="info-box  mb-4">
-                                    <i className="bx bx-phone-call"></i>
+                                <i class='bx bxs-phone' ></i>
                                     <h3>Call Us</h3>
                                     {phone_numbers.map(phone => (
                                     <p>{phone.phone_number.text}</p>
