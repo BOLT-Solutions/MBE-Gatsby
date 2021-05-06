@@ -79,13 +79,9 @@ const Layout = ({ children }) => {
           <div id="preloader"></div>
           <a href="#" className="back-to-top"><i className="icofont-simple-up"></i></a>
           <footer
-          style={{
-            marginTop: `2rem`,
-          }}
+          
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        
         </footer>
       
     </>
