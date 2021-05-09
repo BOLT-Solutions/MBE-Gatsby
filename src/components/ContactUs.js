@@ -63,7 +63,7 @@ import '../components/style/ContactUs.css'
                                 </div>
                             </div>
 
-                            <div className="col-lg-4 col-md-6">
+                            <div className="col-lg-4 col-md-6" >
                                 <div className="info-box  mb-4">
                                 <i class='bx bxs-phone' ></i>
                                     <h3>Call Us</h3>
@@ -87,38 +87,38 @@ import '../components/style/ContactUs.css'
                                 <form action="forms/contact.php" method="post" role="form" className="php-email-form">
                                     <div className="form-row">
                                         <div className="col form-group">
-                                            <input type="text" name="name" className="form-control" id="name" placeholder="*Name with title" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                            <input type="text" name="name" className="form-control form-input" id="name" placeholder="*Name with title" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                             <div className="validate"></div>
                                         </div>
                                         <div className="col form-group">
-                                            <input type="text" className="form-control" name="position" id="position" placeholder="*Position" data-rule="minlen:3" data-msg="Please enter at least 3 chars" />
+                                            <input type="text" className="form-control form-input" name="position" id="position" placeholder="*Position" data-rule="minlen:3" data-msg="Please enter at least 3 chars" />
                                             <div className="validate"></div>
                                         </div>
                                     </div>
                                     <div className="form-row">
                                         <div className="col form-group">
-                                            <input type="email" className="form-control" name="email" id="email" placeholder="*Email" data-rule="email" data-msg="Please enter a valid email" />
+                                            <input type="email" className="form-control form-input" name="email" id="email" placeholder="*Email" data-rule="email" data-msg="Please enter a valid email" />
                                             <div className="validate"></div>
                                         </div>
                                         <div className="col form-group">
-                                            <input type="text" name="name" className="form-control" id="contactnumber" placeholder="*Contact number" data-rule="minlen:4" data-msg="Please enter at least 4 numbers" />
+                                            <input type="text" name="name" className="form-control form-input " id="contactnumber" placeholder="*Contact number" data-rule="minlen:4" data-msg="Please enter at least 4 numbers" />
                                             <div className="validate"></div>
                                         </div>
                                     </div>
         
                                     <div className="form-row">
                                         <div className="col form-group">
-                                            <input type="text" className="form-control" name="company" id="company" placeholder="*Company" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                            <input type="text" className="form-control form-input" name="company" id="company" placeholder="*Company" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                             <div className="validate"></div>
                                         </div>
                                         <div className="col form-group">
-                                            <input type="text" name="areaofintrest" className="form-control" id="areaofintrest" placeholder="*Area of intrest" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                            <input type="text" name="areaofintrest form-input" className="form-control" id="areaofintrest" placeholder="*Area of intrest" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                             <div className="validate"></div>
                                         </div>
                                     </div>
                                    
                                     <div className="form-group" style={{display: "inline-block" , position: "relative"}}>
-                                        <textarea className="form-control"  style={{display:"block"}} name="message" rows="5" cols="200" data-rule="required" data-msg="Please write something for us" placeholder="*Message"></textarea>
+                                        <textarea className="form-control form-input" style={{display:"block"}} name="message" rows="7" cols="200" data-rule="required" data-msg="Please write something for us" placeholder="*Message"></textarea>
                                         <button type="submit"  style={{position:"absolute" , bottom: "10px" , right: "10px"}} className="align-self-right" onClick={phpValidate}>Send</button>
                                         <div className="validate"></div>
                                     </div>

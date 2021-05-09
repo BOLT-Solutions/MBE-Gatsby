@@ -15,3 +15,17 @@ h3{
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: #00A1ED;
   }
+
+
+.contact .php-email-form {
+  box-shadow: 0 0 0px rgb(214 215 216 / 40%);
+  padding: 30px;
+}
+
+.form-input {
+  box-shadow: 0 0 30px rgb(214 215 216 / 40%) !important;
+}
+
+.info-box{
+  height: 166px !important;
+}
