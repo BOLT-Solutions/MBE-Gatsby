@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Footer from "../components/Footer"
 
 export default function CrushingPage() {
     const { allPrismicCrushingandgrinding } = useStaticQuery(graphql`
@@ -67,9 +68,9 @@ export default function CrushingPage() {
         <Layout>
 
             <div className="background" style={{ background: `url(${banner_image})`, backgroundSize:"cover",height:"60vh" }}></div>
-            <section className="container">
-                <h1 style={{fontSize: '40px'}}><strong>{title}</strong></h1>
-                <div className="d-flex mt-5">
+            <section className="container-fluid">
+                <h1  className="ml-5" style={{fontSize: '40px'}}><strong>{title}</strong></h1>
+                <div className="d-flex mt-5 ml-5">
                     <div className="imgContainer mr-5">
 
                     <img src={icon}/>
@@ -82,19 +83,20 @@ export default function CrushingPage() {
             </section>
 
 
-            <section className="container" >
+            <section className="container-fluid" style={{backgroundColor:"#EDEDED"}} >
 
-             <h1 className="ml-1" style={{fontSize:'40px'}}><strong>{crurshing_products_title}</strong></h1>
+             
         {
             products.map( product => ( 
-                <div className="row" style={{marginTop: '30px'}}>              
+                <div className="row" style={{marginTop: '30px'}}>   
+                <h1 className="ml-3" style={{fontSize:'40px'}}><strong>{crurshing_products_title}</strong></h1>           
                     <div className="d-inline-flex mt-5 row justify-content-around" >
                         <div className="imgContainer mr-5 col-5">
                             <img  src={product.product_image.url} style ={{ width: '100%'}}/>
                         </div>
                         <div className="pl-5 ml5 col-6">
                             <h2 style={{fontSize:'30px'}}><strong>{product.product_title[0].text}</strong></h2>
-                            <p style={{fontSize:'14px' , minHeight:'200px'}}><strong>{product.product_description[0].text}</strong></p>
+                            <p style={{fontSize:'14px' , minHeight:'300px'}}><strong>{product.product_description[0].text}</strong></p>
                             <div className="d-flex justify-content-between" style={{width:'100%'}}>
                                 <a style={{color:'#0BA5ED', fontSize:'17px'}}  href= {product.download_brochure_link.url}  ><strong>Download Brochure</strong></a>
                                 <a style={{color:'#0BA5ED', fontSize:'17px'}}  href= {product.request_info_link.url} ><strong>Request Information</strong></a>
@@ -106,6 +108,9 @@ export default function CrushingPage() {
         }
 
          </section>
+
+
+         <Footer/>
 
         </Layout>
     )

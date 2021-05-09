@@ -3,6 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Footer from "../components/Footer"
 
     export default function SeperationPage() {
         const { allPrismicSeperation } = useStaticQuery(graphql`
@@ -64,13 +65,14 @@ import SEO from "../components/seo"
 
             <div className="background" style={{ background: `url(${header_image})`, backgroundSize:"cover",height:"60vh" }}></div>
 
-            <section className="container">
-                <h1 style={{color:"#962C17" , fontSize: '40px'}}><strong>{title}</strong></h1>
-                <div className="d-flex mt-5">
-                    <div className="imgContainer mr-5" style={{width:"200px"}}>
+            <section className="container-fluid">
+                <h1 className="ml-5" style={{color:"#962C17" , fontSize: '40px'}}><strong>{title}</strong></h1>
+                <div className="d-flex mt-5 ml-5">
 
-                    <img src={icon}/>
+                    <div className="imgContainer mr-5" style={{width:"200px"}}>
+                      <img src={icon}/>
                     </div>
+
                     <div className="pl-5 ml5 d-flex align-content-center" style={{borderLeft:"2px solid #962C17"}}>
 
                        <p style={{fontSize: '25px'}}><strong>{description}</strong></p>
@@ -79,20 +81,20 @@ import SEO from "../components/seo"
             </section>
 
 
-            <section className="container" >
+            <section className="container-fluid" style={{backgroundColor:"#EDEDED"}} >
 
-            <h1 className="ml-1" style={{fontSize:'40px' , color: "#962C17"}}><strong>{separation_products_title}</strong></h1>
+            
                 {
                     separation_products.map( product => ( 
                         <div className="row" style={{marginTop: '30px'}}>              
-                            {/* <h1 className="ml-1" style={{fontSize:'40px'}}><strong>{product.product_title[0].text}</strong></h1> */}
+                        <h1 className="ml-3" style={{fontSize:'40px' , color: "#962C17"}}><strong>{separation_products_title}</strong></h1>
                             <div className="d-inline-flex mt-5 row justify-content-around" >
                                 <div className="imgContainer mr-5 col-5">
                                     <img  src={product.side_image.url} style ={{ width: '100%'}}/>
                                 </div>
                                 <div className="pl-5 ml5 col-6">
                                     <h2 style={{fontSize:'30px'}}><strong>{product.separation_product_title[0].text}</strong></h2>
-                                    <p style={{fontSize:'14px' , minHeight:'200px'}}><strong>{product.seperation_product_description[0].text}</strong></p>
+                                    <p style={{fontSize:'14px' , minHeight:'300px'}}><strong>{product.seperation_product_description[0].text}</strong></p>
                                     <div className="d-flex justify-content-between" style={{width:'100%'}}>
                                         <a style={{color: "#962C17" , fontSize:'17px'}}  href= {product.download_brochure_link.url}  ><strong>Download Brochure</strong></a>
                                         <a style={{color: "#962C17", fontSize:'17px'}}  href= {product.request_info_link.url} ><strong>Request Information</strong></a>
@@ -107,6 +109,7 @@ import SEO from "../components/seo"
 
 
 
+        <Footer/>
 
         </Layout>
     }

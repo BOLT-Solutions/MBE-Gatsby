@@ -80,14 +80,14 @@ useEffect(() => {
 
         <>
         <section id="hero" className="hero homeBanner" >
-                <div className="container">
+                <div className="container-fluid">
                           <div className="row">
-                              <div className="col-md-4 col-lg-4">
+                              <div className="col-md-5 col-lg-5">
                                   <div className="main_logo">
-                                      <img src={logo} style={{ width: '100%' }} />
+                                      <img src={logo} style={{ width: '75%' ,  marginLeft:"15%" }} />
                                   </div>
                               </div>
-                              <div className="col-md-8 col-lg-8">
+                              <div className="col-md-7 col-lg-7">
   
                                   <div className="slider">
                                       <div className="w3-content w3-display-container">
