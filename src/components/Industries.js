@@ -95,7 +95,7 @@ let content_industries=allPrismicIndustries.edges[0].node.data.industries
                 <section id="featured-services" className="featured-services">
                     <div className="container" data-aos="fade-up">
 
-                        <div className="row">
+                        <div className="row align-items-baseline">
                         {
                            content_industries.map((content_industry ,i)=> (
                              <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
@@ -105,7 +105,7 @@ let content_industries=allPrismicIndustries.edges[0].node.data.industries
                                   <div className="icon">
                                       <img src={content_industry.industry_icon.url} className="icoImage" />
                                   </div>
-                                  <p className="description">
+                                  <p className="description" style={{fontSize:'13px'}}>
                                       <span>
                                           {content_industry.first_paragph.text}
                                        </span> 
