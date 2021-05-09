@@ -91,8 +91,8 @@ export default function Products() {
       <section id="products" className="products section-bg">
         <div className="container" data-aos="fade-up">
           <div className="section-title">
-            <h3 style={{ fontSize: "50px" }}>
-              <span>{title_part_one}</span> {title_part_two}
+            <h3 style={{ fontSize: "50px" , color : "#464749" }}>
+              <span style={{ fontSize: "50px" , color:"#00A1ED" }}>{title_part_one}</span> {title_part_two}
             </h3>
             <p>{description}</p>
           </div>
