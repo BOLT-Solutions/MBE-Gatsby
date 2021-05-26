@@ -93,7 +93,7 @@ export default function Services() {
 
       <section id="featured-services" className="featured-services">
         <div className="container" data-aos="fade-up">
-          <div className="row">
+          <div className="row align-items-baseline">
             {content_services.map((content_service, i) => (
               <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                 <div
