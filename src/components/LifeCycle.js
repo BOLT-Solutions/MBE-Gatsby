@@ -6,7 +6,20 @@ import solution2 from "../assets/img/Icons/solution2.png"
 import solution3 from "../assets/img/Icons/solution3.png"
 import AdobeStockPreview2 from "../assets/img/AdobeStock_383254182_Preview.jpeg"
 
+
+//Modal Imports . 
+import HubspotForm from 'react-hubspot-form'
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useState } from "react";
+
 export default function LifeCycle() {
+
+  //Modal event handlers.  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const { allPrismicLifecycle } = useStaticQuery(graphql`
     query Lifecycle {
       allPrismicLifecycle {
@@ -117,7 +130,7 @@ export default function LifeCycle() {
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <p className="request mb-0"  style={{ fontSize: "15px" }}>Request more Information</p>
+                    <p className="request mb-0"  onClick={handleShow}  style={{ fontSize: "15px", border:'none' , background: 'transparent' ,textAlign:'left' }}>Request more Information</p>
 
                     {flag[i] != "true" && (
                       <p  style={{ fontSize: "15px" }}
@@ -146,6 +159,23 @@ export default function LifeCycle() {
           </div>
         </div>
       </section>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <Modal.Body>
+          <HubspotForm
+                                  portalId='19589739'
+                                  formId='04f6756d-7711-4612-9e80-49acb72fe4d2'
+                                  onSubmit={() => console.log('Submit!')}
+                                  onReady={(form) => console.log('Form ready!')}
+                                  loading={<div>Loading...</div>}
+                                  />
+        </Modal.Body>
+      </Modal>
+
+
+
     </>
   )
 }

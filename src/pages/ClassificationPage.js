@@ -5,7 +5,21 @@ import SEO from "../components/seo"
 import "./style.css"
 import Footer from "../components/Footer"
 
+
+//Modal Imports . 
+import HubspotForm from 'react-hubspot-form'
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useState } from "react";
+
+
 export default function ClassificationPage() {
+
+  //Modal event handlers.  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
     const { allPrismicClassification } = useStaticQuery(graphql`
         query ClassificationPage {
             allPrismicClassification {
@@ -109,7 +123,7 @@ export default function ClassificationPage() {
                                     <p style={{fontSize:'14px' , minHeight:'300px'}}><strong>{product.classfication_product_description.text}</strong></p>
                                     <div className="d-flex justify-content-between" style={{width:'100%'}}>
                                         <a style={{color: "#FC9200" , fontSize:'17px'}}  href= {product.download_brochure_link.url}  ><strong>Download Brochure</strong></a>
-                                        <a style={{color: "#FC9200", fontSize:'17px'}}  href= {product.request_information_link.url} ><strong>Request Information</strong></a>
+                                        <a style={{color: "#FC9200", fontSize:'17px'}} onClick={handleShow}><strong>Request Information</strong></a>
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +134,20 @@ export default function ClassificationPage() {
             </section>
 
 
-            
+            <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <Modal.Body>
+          <HubspotForm
+                                  portalId='19589739'
+                                  formId='04f6756d-7711-4612-9e80-49acb72fe4d2'
+                                  onSubmit={() => console.log('Submit!')}
+                                  onReady={(form) => console.log('Form ready!')}
+                                  loading={<div>Loading...</div>}
+                                  />
+        </Modal.Body>
+      </Modal>
+
 
             <Footer/>
 

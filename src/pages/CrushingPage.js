@@ -4,7 +4,21 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/Footer"
 
+
+
+//Modal Imports . 
+import HubspotForm from 'react-hubspot-form'
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useState } from "react";
+
 export default function CrushingPage() {
+
+  //Modal event handlers.  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
     const { allPrismicCrushingandgrinding } = useStaticQuery(graphql`
     query crushingQuery {
         allPrismicCrushingandgrinding {
@@ -99,7 +113,7 @@ export default function CrushingPage() {
                             <p style={{fontSize:'14px' , minHeight:'300px'}}><strong>{product.product_description[0].text}</strong></p>
                             <div className="d-flex justify-content-between" style={{width:'100%'}}>
                                 <a style={{color:'#0BA5ED', fontSize:'17px'}}  href= {product.download_brochure_link.url}  ><strong>Download Brochure</strong></a>
-                                <a style={{color:'#0BA5ED', fontSize:'17px'}}  href= {product.request_info_link.url} ><strong>Request Information</strong></a>
+                                <a style={{color:'#0BA5ED', fontSize:'17px'}}  onClick={handleShow} ><strong>Request Information</strong></a>
                             </div>
                         </div>
                     </div>
@@ -109,6 +123,19 @@ export default function CrushingPage() {
 
          </section>
 
+         <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <Modal.Body>
+          <HubspotForm
+                                  portalId='19589739'
+                                  formId='04f6756d-7711-4612-9e80-49acb72fe4d2'
+                                  onSubmit={() => console.log('Submit!')}
+                                  onReady={(form) => console.log('Form ready!')}
+                                  loading={<div>Loading...</div>}
+                                  />
+        </Modal.Body>
+      </Modal>
 
          <Footer/>
 
