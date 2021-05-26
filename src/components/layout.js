@@ -87,9 +87,10 @@ const Layout = ({ children }) => {
           crossOrigin="anonymous"
           defer
         />
-
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="/bower_components/jquery/dist/jquery.js"></script>
         <script src="/node_modules/jquery/dist/jquery.js"></script>
+        
       </Helmet>
 
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />

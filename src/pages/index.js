@@ -15,6 +15,7 @@ import Process from "../components/Process"
 import Footer from "../components/Footer"
 import $ from "jquery"
 import { useEffect } from "react"
+import Modal from "react-modal";
 
 const onInit = () => {
     console.log("init")
@@ -219,7 +220,7 @@ useEffect(() => {
                   <LifeCycle/>
                   <Products/>
              
-                  <ClientStories/> 
+                  {/* <ClientStories/>  */}
                   <ProductsBrief/>
                   <ContactUs/>
                   <Footer/>

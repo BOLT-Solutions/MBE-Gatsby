@@ -2,6 +2,9 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import phpValidate from "../assets/vendor/php-email-form/validate.js";
+import HubspotForm from 'react-hubspot-form'
+
+
 import '../components/style/ContactUs.css'
     export default function ContactUs() {
         const {allPrismicContactus} = useStaticQuery(graphql`
@@ -38,6 +41,8 @@ import '../components/style/ContactUs.css'
     < >
            <section id="contact" className="contact ">
                     <div className="container" data-aos="fade-up">
+
+
 
                         <div className="section-title">
                             <h2>Contact</h2>
@@ -84,56 +89,27 @@ import '../components/style/ContactUs.css'
                             </div>
 
                             <div className="col-lg-8">
-                                <form action="forms/contact.php" method="post" role="form" className="php-email-form">
-                                    <div className="form-row">
-                                        <div className="col form-group">
-                                            <input type="text" name="name" className="form-control form-input" id="name" placeholder="*Name with title" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                            <div className="validate"></div>
-                                        </div>
-                                        <div className="col form-group">
-                                            <input type="text" className="form-control form-input" name="position" id="position" placeholder="*Position" data-rule="minlen:3" data-msg="Please enter at least 3 chars" />
-                                            <div className="validate"></div>
-                                        </div>
-                                    </div>
-                                    <div className="form-row">
-                                        <div className="col form-group">
-                                            <input type="email" className="form-control form-input" name="email" id="email" placeholder="*Email" data-rule="email" data-msg="Please enter a valid email" />
-                                            <div className="validate"></div>
-                                        </div>
-                                        <div className="col form-group">
-                                            <input type="text" name="name" className="form-control form-input " id="contactnumber" placeholder="*Contact number" data-rule="minlen:4" data-msg="Please enter at least 4 numbers" />
-                                            <div className="validate"></div>
-                                        </div>
-                                    </div>
-        
-                                    <div className="form-row">
-                                        <div className="col form-group">
-                                            <input type="text" className="form-control form-input" name="company" id="company" placeholder="*Company" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                            <div className="validate"></div>
-                                        </div>
-                                        <div className="col form-group">
-                                            <input type="text" name="areaofintrest form-input" className="form-control" id="areaofintrest" placeholder="*Area of intrest" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                            <div className="validate"></div>
-                                        </div>
-                                    </div>
-                                   
-                                    <div className="form-group" style={{display: "inline-block" , position: "relative"}}>
-                                        <textarea className="form-control form-input" style={{display:"block"}} name="message" rows="7" cols="200" data-rule="required" data-msg="Please write something for us" placeholder="*Message"></textarea>
-                                        <button type="submit"  style={{position:"absolute" , bottom: "10px" , right: "10px"}} className="align-self-right" onClick={phpValidate}>Send</button>
-                                        <div className="validate"></div>
-                                    </div>
-                                    <div className="mb-3">
-                                        <div className="loading">Loading</div>
-                                        <div className="error-message"></div>
-                                        <div className="sent-message">Your message has been sent. Thank you!</div>
-                                    </div>
-                                    {/* <div className="text-center"><button type="submit" onClick={phpValidate}>Send Message</button></div> */}
-                                </form>
+                                        <HubspotForm
+                                portalId='19589739'
+                                formId='39345c2b-9362-4ff6-b49c-0c4f3a8330aa'
+                                onSubmit={() => console.log('Submit!')}
+                                onReady={(form) => console.log('Form ready!')}
+                                loading={<div>Loading...</div>}
+                                />
+
                             </div>
 
                         </div>
 
                     </div>
+
+
+               
+                                  
+
+
+
+                    
                 </section>
     </>
 )}
