@@ -20,7 +20,14 @@ body {
     color: #444444;
     line-height: 22pt;
 }
+h1, h2, h3, h4, h5, h6{
+    font-family: "optima" !important;
 
+}
+*{
+    font-family: "optima" !important;
+
+}
 a {
     color: #00AEEF;
 }
@@ -36,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "optima";
+    font-family: "optima"!important;
 }
 
 
