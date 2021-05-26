@@ -2,7 +2,23 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link, useStaticQuery } from "gatsby"
 
+//Modal Imports . 
+import HubspotForm from 'react-hubspot-form'
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useState } from "react";
+
+
+
+
 export default function Process() {
+
+
+  //Modal event handlers.  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const { allPrismicProcess } = useStaticQuery(graphql`
     query Process {
       allPrismicProcess {
@@ -49,10 +65,12 @@ export default function Process() {
   let title = allPrismicProcess.edges[0].node.data.title.text
   let content_Processes = allPrismicProcess.edges[0].node.data.process
 
-  console.log(data)
+
+
 
   return (
     <>
+
       <section
         id="lifecycle"
         className="d-flex align-items-center hero2"
@@ -66,6 +84,7 @@ export default function Process() {
       </section>
 
       <section id="featured-services" className="featured-services">
+
         <div className="container" data-aos="fade-up">
           <div className="row">
             {content_Processes.map(process => (
@@ -87,15 +106,36 @@ export default function Process() {
                     </p>
                   </div>
 
-                  <p className="request mb-0" style={{ fontSize: "15px" }}>
+                  <button className="request mb-0" style={{ fontSize: "15px", border:'none' , background: 'transparent' ,textAlign:'left' }} onClick={handleShow}>
                     Request more Information
-                  </p>
+                  </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+
+      
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <Modal.Body>
+          <HubspotForm
+                                  portalId='19589739'
+                                  formId='04f6756d-7711-4612-9e80-49acb72fe4d2'
+                                  onSubmit={() => console.log('Submit!')}
+                                  onReady={(form) => console.log('Form ready!')}
+                                  loading={<div>Loading...</div>}
+                                  />
+        </Modal.Body>
+      </Modal>
+
+      
+
+
+
     </>
   )
 }
