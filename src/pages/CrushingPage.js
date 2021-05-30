@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/Footer"
-
+import { Helmet } from "react-helmet"
 
 
 //Modal Imports . 
@@ -20,22 +20,21 @@ export default function CrushingPage() {
   const handleShow = () => setShow(true);
 
     const { allPrismicCrushingandgrinding } = useStaticQuery(graphql`
-    query crushingQuery {
+      query crushingQuery {
         allPrismicCrushingandgrinding {
           edges {
             node {
               data {
-                banner_image {
-                  url
+                meta_tags {
+                  meta_content {
+                    text
+                  }
+                  meta_name {
+                    text
+                  }
                 }
-                crurshing_products_title {
+                page_title {
                   text
-                }
-                description {
-                  text
-                }
-                icon {
-                  url
                 }
                 products {
                   download_brochure_link {
@@ -57,16 +56,24 @@ export default function CrushingPage() {
                 title {
                   text
                 }
+                icon {
+                  url
+                }
+                description {
+                  text
+                }
+                crurshing_products_title {
+                  text
+                }
+                banner_image {
+                  url
+                }
               }
             }
           }
         }
-      }
-      
+        }  
     `)
-
-    console.log("******Products*******")
-    console.log(allPrismicCrushingandgrinding)
 
     let banner_image = allPrismicCrushingandgrinding.edges[0].node.data.banner_image.url
     let description = allPrismicCrushingandgrinding.edges[0].node.data.description[0].text
@@ -74,12 +81,26 @@ export default function CrushingPage() {
     let title = allPrismicCrushingandgrinding.edges[0].node.data.title[0].text
     let crurshing_products_title = allPrismicCrushingandgrinding.edges[0].node.data.crurshing_products_title[0].text
     let products = allPrismicCrushingandgrinding.edges[0].node.data.products
-
-
+    let page_title = allPrismicCrushingandgrinding.edges[0].node.data.page_title[0].text
+    let meta_tags = allPrismicCrushingandgrinding.edges[0].node.data.meta_tags
 
 
     return (
-        <Layout>
+      <Layout>
+
+         <Helmet>
+          {
+              meta_tags.map( meta_tag => ( 
+                <meta name={meta_tag.meta_name[0].text} content={meta_tag.meta_content[0].text}></meta>
+              ))
+
+
+
+          }
+
+        <title>{page_title}</title>
+
+       </Helmet>
 
             <div className="background" style={{ background: `url(${banner_image})`, backgroundSize:"cover",height:"60vh" }}></div>
             <section className="container-fluid">
@@ -123,19 +144,19 @@ export default function CrushingPage() {
 
          </section>
 
-         <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-        </Modal.Header>
-        <Modal.Body>
-          <HubspotForm
-                                  portalId='19589739'
-                                  formId='04f6756d-7711-4612-9e80-49acb72fe4d2'
-                                  onSubmit={() => console.log('Submit!')}
-                                  onReady={(form) => console.log('Form ready!')}
-                                  loading={<div>Loading...</div>}
-                                  />
-        </Modal.Body>
-      </Modal>
+          <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+              </Modal.Header>
+              <Modal.Body>
+                <HubspotForm
+                                        portalId='19589739'
+                                        formId='04f6756d-7711-4612-9e80-49acb72fe4d2'
+                                        onSubmit={() => console.log('Submit!')}
+                                        onReady={(form) => console.log('Form ready!')}
+                                        loading={<div>Loading...</div>}
+                                        />
+              </Modal.Body>
+          </Modal>
 
          <Footer/>
 
