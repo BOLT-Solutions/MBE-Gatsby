@@ -29,5 +29,36 @@
         "label" : "Image Carousel"
       }
     }
+  },
+  "SEO" : {
+    "page_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Page_Title"
+      }
+    },
+    "meta_tags" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "meta_name" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "paragraph",
+              "label" : "Meta_Name"
+            }
+          },
+          "meta_content" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "paragraph",
+              "label" : "Meta_Content"
+            }
+          }
+        },
+        "label" : "Meta_Tags"
+      }
+    }
   }
 }
