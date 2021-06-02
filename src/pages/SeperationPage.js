@@ -11,6 +11,7 @@ import HubspotForm from 'react-hubspot-form'
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
+import "./style.css"
 
 
 export default function SeperationPage() {
@@ -103,33 +104,41 @@ export default function SeperationPage() {
     <div className="background" style={{ background: `url(${header_image})`, backgroundSize: "cover", height: "60vh" }}></div>
 
     <section className="container-fluid">
-      <h1 className="ml-5" style={{ color: "#962C17", fontSize: '40px' }}><strong>{title}</strong></h1>
+
+    <div className="imgContainer mr-5 TopIcon"
+>               <img src={icon}/>
+            </div>
+
+      <h1 className="ml-5"  className="PageTitle" style={{ color: "#962C17"}}><strong>{title}</strong></h1>
+
       <div className="d-flex mt-5 ml-5">
 
-        <div className="imgContainer mr-5" style={{ width: "200px" }}>
+        <div className="imgContainer mr-5 SideIcon" style={{ width: "200px" }}>
           <img src={icon} />
         </div>
 
         <div className="pl-5 ml5 d-flex align-content-center" style={{ borderLeft: "2px solid #962C17" }}>
 
-          <p style={{ fontSize: '25px' }}><strong>{description}</strong></p>
+          <p className="PageDescription" ><strong>{description}</strong></p>
+          
         </div>
       </div>
     </section>
 
 
-    <section className="container-fluid" style={{ backgroundColor: "#EDEDED" }} >
+    <section className= "ProductsSection" style={{ backgroundColor: "#EDEDED" }} >
 
+    <h1 className="ml-3"  className ="ProductTitle" style={{color: "#962C17" }}><strong>{separation_products_title}</strong></h1>
 
       {
         separation_products.map(product => (
           <div className="row" style={{ marginTop: '30px' }}>
-            <h1 className="ml-3" style={{ fontSize: '40px', color: "#962C17" }}><strong>{separation_products_title}</strong></h1>
-            <div className="d-inline-flex mt-5 row justify-content-around" >
-              <div className="imgContainer mr-5 col-5">
-                <img src={product.side_image.url} style={{ width: '100%' }} />
+            
+            <div className="mt-5 row  ProductSection" >
+              <div className=" col-md-5 col-sm-12 ">
+                <img src={product.side_image.url} />
               </div>
-              <div className="pl-5 ml5 col-6">
+              <div className="ml5 col-md-6 col-sm-12">
                 <h2 style={{ fontSize: '30px' }}><strong>{product.separation_product_title[0].text}</strong></h2>
                 <p style={{ fontSize: '14px', minHeight: '300px' }}><strong>{product.seperation_product_description[0].text}</strong></p>
                 <div className="d-flex justify-content-between" style={{ width: '100%' }}>

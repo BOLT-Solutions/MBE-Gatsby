@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
@@ -5,7 +6,6 @@ import SEO from "../components/seo"
 import "./style.css"
 import Footer from "../components/Footer"
 import { Helmet } from "react-helmet"
-
 
 //Modal Imports . 
 import HubspotForm from 'react-hubspot-form'
@@ -115,55 +115,70 @@ export default function ClassificationPage() {
             ></div>
 
             <section className="container-fluid">
-                <h1 className="ml-5" style={{ color: "#FC9200", fontSize: '40px' }}>
+
+            <div className="imgContainer mr-5 TopIcon"
+>               <img src={icon}/>
+            </div>
+
+                <h1 className="ml-5"  className="PageTitle" style={{color: "#FC9200"}} >
                     <strong>{title}</strong>
                 </h1>
+
                 <div className="d-flex mt-5 ml-5">
-                    <div
-                        className="imgContainer mr-5"
-                        style={{ width: "200px" }}
-                    >
+
+                    <div className="imgContainer mr-5 SideIcon" style={{ width: "200px" }}>
                         <img src={icon} />
                     </div>
+
                     <div
-                        className="pl-5 ml5 d-flex align-content-center"
+                        className="pl-4 ml4 d-flex align-content-center"
                         style={{ borderLeft: "2px solid #FC9200" }}
                     >
-                        <p style={{ fontSize: '25px' }} >
+                        <p className="PageDescription" >
                             <strong>{description}</strong>
                         </p>
                     </div>
                 </div>
-            </section>
-
-
-            <section className="container-fluid" style={{ backgroundColor: "#EDEDED" }} >
-
-                {
-                    classification_products.map(product => (
-                        <div className="row" style={{ marginTop: '30px' }}>
-                            <h1 className="ml-3" style={{ fontSize: '40px', color: "#FC9200" }}><strong>{classification_products_title}</strong></h1>
-                            <div className="d-inline-flex mt-5 row justify-content-around" >
-                                <div className="imgContainer mr-5 col-5">
-                                    <img src={product.side_image.url} style={{ width: '100%' }} />
-                                </div>
-                                <div className="pl-5 ml5 col-6">
-                                    <h2 style={{ fontSize: '30px' }}><strong>{product.classification_product_title.text}</strong></h2>
-                                    <p style={{ fontSize: '14px', minHeight: '300px' }}><strong>{product.classfication_product_description.text}</strong></p>
-                                    <div className="d-flex justify-content-between" style={{ width: '100%' }}>
-                                        <a style={{ color: "#FC9200", fontSize: '17px' }} href={product.download_brochure_link.url}  ><strong>Download Brochure</strong></a>
-                                        <a style={{ color: "#FC9200", fontSize: '17px' }} onClick={handleShow}><strong>Request Information</strong></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                }
 
             </section>
 
 
-            <Modal show={show} onHide={handleClose}>
+            
+
+            <section className="ProductsSection" style={{ backgroundColor: "#EDEDED" }} >
+
+
+              <h1 className="ml-3" className ="ProductTitle" style={{ color: "#FC9200" }} ><strong>{classification_products_title}</strong></h1>
+
+                    {
+                        classification_products.map(product => (
+
+                            <div className="row " style={{ marginTop: '30px' }}>
+                                  <div className="mt-5 row ProductSection"  >
+
+                                      <div className="col-md-5 col-sm-12 ">
+                                          <img src={product.side_image.url} />
+                                      </div>
+
+                                      <div className="ml5 col-md-6 col-sm-12">
+                                          <h2 style={{ fontSize: '30px' }}><strong>{product.classification_product_title.text}</strong></h2>
+                                          <p style={{ fontSize: '14px', minHeight: '300px' }}><strong>{product.classfication_product_description.text}</strong></p>
+                                          <div className="d-flex justify-content-between" style={{ width: '100%' }}>
+                                              <a style={{ color: "#FC9200", fontSize: '17px' }} href={product.download_brochure_link.url}  ><strong>Download Brochure</strong></a>
+                                              <a style={{ color: "#FC9200", fontSize: '17px' }} onClick={handleShow}><strong>Request Information</strong></a>
+                                          </div>
+                                      </div>
+                                  </div>      
+                              </div>
+
+
+                        ))
+                    }
+
+            </section>
+
+
+            <Modal show={show} onHide={handleClose} centered>
                 <Modal.Header closeButton>
                 </Modal.Header>
                 <Modal.Body>
