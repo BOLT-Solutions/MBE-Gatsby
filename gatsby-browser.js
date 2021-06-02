@@ -12,3 +12,4 @@ import "/src/assets/vendor/icofont/icofont.min.css"
 import "/src/assets/vendor/php-email-form/validate.js"
 
 import 'jquery'
+import 'jquery.easing'

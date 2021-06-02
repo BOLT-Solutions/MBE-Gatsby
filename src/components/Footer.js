@@ -75,7 +75,7 @@ export default function Footer() {
             marginTop: "3%",
           }}
         >
-          <div className="col-5 d-inline-flex justify-content-around">
+          <div className=" col-xl-5 col-12 d-flex justify-content-around">
             <img
               src={mbe_icon}
               alt="Girl in a jacket"
@@ -133,7 +133,7 @@ export default function Footer() {
           </div>
 
           <div
-            className="col-4"
+            className="col-xl-4 col-12"
             style={{ color: "#F7F8F8", fontWeight: "bold", fontSize: "20px" }}
           >
             <div className="container-fluid d-inline-flex">
