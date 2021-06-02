@@ -496,10 +496,10 @@ section {
     flex: 1;
 }
 
-.underHero .link i {
-    color: #F7921D;
-    font-size: 32px;
-    padding: 10px;
+.underHero .link  {
+    background-color: #F7921D;
+    border-radius: 50%;
+    padding: 5px;
 }
 
 .underHero .social-right {
@@ -508,10 +508,45 @@ section {
     align-items: center;
 }
 
+@media (max-width: 992px) {
+  #hero .container-fluid{
+      height: 100%;
+  }
+  #hero .row{
+    height: 100%;
+}
+    .hero .w3-display-container img{
+        object-fit: contain;
+    }
+    .underHero .social-right {
+      margin-top: 20px;
+        justify-content: center !important;
+     
+    }
+    .underHero{
+        height: 25vh;
+    }
+    .hero{
+        height: 75vh;
+
+    }
+    .slider{
+        height: 240px !important;
+
+    }
+  .col-md-7{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+  .main_logo{
+      width: 45%;
+  }
+}
 
 /*--------------------------------------------------------------
 # solutions
 --------------------------------------------------------------*/
+
 
 .solutions {
     /*background: url("../img/icons-07.png") bottom right;*/
