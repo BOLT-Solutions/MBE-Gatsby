@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Footer from "../components/Footer"
 import { Helmet } from "react-helmet"
+import "./style.css"
 
 
 //Modal Imports . 
@@ -103,33 +104,45 @@ export default function CrushingPage() {
        </Helmet>
 
             <div className="background" style={{ background: `url(${banner_image})`, backgroundSize:"cover",height:"60vh" }}></div>
+
             <section className="container-fluid">
-                <h1  className="ml-5" style={{fontSize: '40px'}}><strong>{title}</strong></h1>
+
+            <div className="imgContainer mr-5 TopIcon"
+>               <img src={icon}/>
+            </div>
+
+                <h1  className="ml-5" className="PageTitle" ><strong>{title}</strong></h1>
+
                 <div className="d-flex mt-5 ml-5">
-                    <div className="imgContainer mr-5">
 
-                    <img src={icon}/>
+                    <div className="imgContainer  SideIcon mr-5" style={{ width: "200px" }}>
+                       <img src={icon}/>
                     </div>
+
                     <div className="pl-5 ml5" style={{borderLeft:"2px solid #0BA5ED"}}>
-
-                    <p style={{fontSize: '25px'}}><strong>{description}</strong></p>
+                        <p className="PageDescription" ><strong>{description}</strong></p>
                     </div>
+
                 </div>
+                
             </section>
 
 
-            <section className="container-fluid" style={{backgroundColor:"#EDEDED"}} >
+            <section className="ProductsSection" style={{backgroundColor:"#EDEDED"}} >
 
+            <h1 className="ml-3" className ="ProductTitle" style={{color:'#0BA5ED'}} ><strong>{crurshing_products_title}</strong></h1>   
              
         {
             products.map( product => ( 
                 <div className="row" style={{marginTop: '30px'}}>   
-                <h1 className="ml-3" style={{fontSize:'40px'}}><strong>{crurshing_products_title}</strong></h1>           
+               
                     <div className="d-inline-flex mt-5 row justify-content-around" >
-                        <div className="imgContainer mr-5 col-5">
-                            <img  src={product.product_image.url} style ={{ width: '100%'}}/>
+                      
+                        <div className=" col-md-5 col-sm-12">
+                            <img  src={product.product_image.url}/>
                         </div>
-                        <div className="pl-5 ml5 col-6">
+
+                        <div className="ml5 col-md-6 col-sm-12">
                             <h2 style={{fontSize:'30px'}}><strong>{product.product_title[0].text}</strong></h2>
                             <p style={{fontSize:'14px' , minHeight:'300px'}}><strong>{product.product_description[0].text}</strong></p>
                             <div className="d-flex justify-content-between" style={{width:'100%'}}>
@@ -137,6 +150,7 @@ export default function CrushingPage() {
                                 <a style={{color:'#0BA5ED', fontSize:'17px'}}  onClick={handleShow} ><strong>Request Information</strong></a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             ))

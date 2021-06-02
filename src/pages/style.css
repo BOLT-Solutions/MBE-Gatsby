@@ -1,17 +1,112 @@
-.background{
-    
-}
+
 h1{
     color: #0BA5ED;
 }
+
 p{
     color: #464749;
     font-size: 20px;
     line-height: 1.2;
 }
+
 .imgContainer{
     width: 230px;
 }
+
 img{
     width: 100%;
 }
+
+.PageTitle{
+
+    font-size: 40px ; 
+}
+
+.PageDescription{
+    font-size: 25px;
+}
+
+.TopIcon {
+    display: none;
+}
+
+.ProductTitle{
+    font-size: 40px;
+}
+
+.ProductsSection{
+
+ padding: 50px;
+
+}
+
+.InfoLinksSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.InfoLink{
+    color : #FC9200;
+    font-size: 17px;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .SideIcon {
+
+        display: none;
+    
+    }
+
+    .TopIcon {
+        display: block;
+        width: 100px;
+    }
+
+    .PageTitle{
+        font-size: 30px ; 
+    }
+
+    .PageDescription{
+        font-size: 15px;
+    }
+
+
+    .ProductTitle{
+       display: none;
+    }
+
+    .ProductImage{
+        width: 100%;
+    }
+
+    .ProductSection{
+
+        padding: 15px;
+
+    }
+
+    
+    .ProductsSection{
+
+        padding: 30px;
+    
+    }
+
+    .InfoLinksSection {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .InfoLink{
+        color : #FC9200;
+        font-size: 17px;
+    }
+
+
+}
+
+
+
