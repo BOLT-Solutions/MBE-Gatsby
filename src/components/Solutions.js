@@ -78,6 +78,10 @@ export default function Solutions() {
               <h4>{section_one_title}</h4>
               <p>{first_content} </p>
             </div>
+            <div className=" colm col-md-4 col-lg-4  align-items-stretch mb-5 mb-lg-0 web-content">
+              <h4>{section_two_title}</h4>
+              <p>{section_two_content}</p>
+            </div>
             <div className=" colm col-md-6 col-lg-4 d-flex align-items-stretch  mb-lg-0">
               <a
                 href="#industries"
@@ -117,7 +121,7 @@ export default function Solutions() {
             </div>
           </div>
           <div className="row">
-            <div className=" colm col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div className=" colm col-md-4 col-lg-4  align-items-stretch mb-5 mb-lg-0 mobile-content">
               <h4>{section_two_title}</h4>
               <p>{section_two_content}</p>
             </div>
