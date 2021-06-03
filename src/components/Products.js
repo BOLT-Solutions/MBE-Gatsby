@@ -6,6 +6,7 @@ import products14 from "../assets/img/Icons/products-14.png"
 import products15 from "../assets/img/Icons/products-15.png"
 import AdobeStockPreview2 from "../assets/img/AdobeStock_383254182_Preview.jpeg"
 import { useStaticQuery, graphql } from "gatsby"
+import "./Products.css"
 
 export default function Products() {
   const { allPrismicProducts } = useStaticQuery(graphql`
@@ -177,6 +178,138 @@ export default function Products() {
           </div>
         </div>
       </section>
+
+
+                  
+      <section id="productsMobile" className="products" style={{ backgroundColor: "#EDEDED" }}>
+
+        <div className="container" data-aos="fade-up">
+          
+          <div className="section-title">
+            <h4 style={{ fontSize: "30px" ,  color:"#00A1ED", textAlign:"left" }}>
+              {title_part_one}
+            </h4>
+            <h5 style={{ fontSize: "25px" , color : "#464749" , textAlign:"left" }}>
+              {title_part_two}
+            </h5>
+            <p style={{ fontSize: "20px" , color : "#464749" , textAlign:"left" }} > 
+              {description}
+            </p>
+          </div>
+
+          <div className="row">
+
+            <div
+              className="col-lg-6  pt-lg-0 content d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <ul>
+
+                <a className="itm-link" href="/CrushingPage">
+                  <li className = "d-flex flex-column justify-content-start" >
+                    <div className="d-flex">
+                      <img
+                        style={{ width: "75px", height: "75px" }}
+                        src={first_product_icon}
+                        className="icoImage"
+                      />
+                      <h4
+                          style={{
+                            color: "#00A1ED",
+                            fontWeight: "bold",
+                            alignSelf:"flex-end",
+                            fontSize: "25px",
+                          }}
+                        >
+                          {first_product_title}
+                        </h4>
+                    </div>
+
+                    <div>
+                      <p style={{paddingLeft: "12px" , textAlign:"justify", textJustify:"inner-word"}} >{first_product_description}</p>
+                    </div>
+                  </li>
+                </a>
+
+                <a href="/ClassificationPage" className="itm-link">
+                  <li className = "d-flex flex-column justify-content-start">
+
+                  <div className="d-flex">
+                    <img
+                      style={{ width: "75px", height: "75px" }}
+                      src={second_product_icon}
+                      className="icoImage"
+                    />
+
+                     <h4
+                        style={{
+                          color: "#FC9200",
+                          fontWeight: "bold",
+                          alignSelf:"flex-end",
+                          fontSize: "25px"
+                        }}
+                      >
+                        {second_product_title}
+                      </h4>
+
+                  </div>
+
+                  <div>
+                    
+                    <p style={{paddingLeft: "12px" , textAlign:"justify", textJustify:"inner-word"}}>{second_product_description}</p>
+
+                  </div>
+
+                  </li>
+                </a>
+
+                <a href="/SeperationPage" className="itm-link">
+                  <li className = "d-flex flex-column justify-content-start">
+
+                  <div className="d-flex" >
+
+                    <img
+                      style={{ width: "75px", height: "75px" }}
+                      src={third_product_icon}
+                      className="icoImage"
+                    />
+
+
+                    <h4
+                      style={{
+                        color: "#962C17",
+                        fontWeight: "bold",
+                        alignSelf:"flex-end",
+                        fontSize: "25px"
+                      }}
+                    >
+                      {third_product_title}
+                    </h4>
+
+                  </div>
+
+
+                    <div>
+                   
+                      <p style={{paddingLeft: "12px" , textAlign:"justify", textJustify:"inner-word"}}>{third_product_description}</p>
+                      
+                    </div>
+
+
+                  </li>
+                </a>
+                
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+
     </>
   )
 }
