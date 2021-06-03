@@ -33,7 +33,7 @@ const index = () => {
                   <Services/>
                   <LifeCycle/>
                   <Products/>
-                  <ClientStories/>
+                  {/* <ClientStories/> */}
                   <ProductsBrief/>
                   <ContactUs/>
                   <Footer/>
