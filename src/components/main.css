@@ -714,7 +714,11 @@ section {
   padding-top: 0px;
 }
 .hero2  .container-responsive{
-    display: none;
+    display: none !important;
+}
+#container-responsive{
+  display: none !important;
+
 }
 @media (max-width: 992px) {
   .hero2 .container {
