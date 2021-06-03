@@ -1,9 +1,9 @@
 import * as React from "react"
 import "./main.css"
-import "./layout.css"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import { useEffect } from "react"
+import  logo  from "../assets/img/logo2.png"
 import $ from "jquery"
 
 const onInit = () => {
@@ -205,6 +205,9 @@ const Header = () => {
     <header id="header" className="fixed-top" data-aos="fade">
       <div className="container d-flex align-items-center">
         <nav className="nav-menu d-none d-lg-block">
+          <div className="logo">
+            <img src={logo}/>
+          </div>
           <ul>
             <li className="drop-down">
               <a href="/">Solutions</a>
