@@ -8,11 +8,7 @@ import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
 
-
-
-
 export default function Process() {
-
 
   //Modal event handlers.  
   const [show, setShow] = useState(false);
@@ -65,16 +61,13 @@ export default function Process() {
   let title = allPrismicProcess.edges[0].node.data.title.text
   let content_Processes = allPrismicProcess.edges[0].node.data.process
 
-
-
-
   return (
     <>
 
       <section
-        id="lifecycle"
+        id="process"
         className="d-flex align-items-center hero2"
-        style={{ background: `url(${banner_image})` }}
+        style={{ background: `url(${banner_image})`,backgroundPosition:'center' }}
       >
         <div className="container" data-aos="zoom-out" data-aos-delay="100">
           <h1> {title}</h1>
@@ -83,6 +76,10 @@ export default function Process() {
         </div>
       </section>
 
+      <div className="container container-responsive" data-aos="zoom-out" data-aos-delay="100">
+          <h1> {subtitle}</h1>
+          <p>{description}</p>
+        </div>
       <section id="featured-services" className="featured-services">
 
         <div className="container" data-aos="fade-up">

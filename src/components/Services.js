@@ -1,11 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link, useStaticQuery } from "gatsby"
-import solution1 from "../assets/img/Icons/solution1.png"
-import solution2 from "../assets/img/Icons/solution2.png"
-import solution3 from "../assets/img/Icons/solution3.png"
-import services from "../assets/img/services.jpeg"
-import { useEffect } from "react"
 
 //Modal Imports . 
 import HubspotForm from 'react-hubspot-form'
@@ -92,7 +87,7 @@ export default function Services() {
       <section
         id="services"
         className="d-flex align-items-center hero2"
-        style={{ background: `url(${banner_image})` }}
+        style={{ background: `url(${banner_image})`,backgroundPosition:'center'  }}
       >
         <div className="container" data-aos="zoom-out" data-aos-delay="100">
           <h1>
@@ -102,7 +97,10 @@ export default function Services() {
           <p>{description}</p>
         </div>
       </section>
-
+      <div className="container container-responsive" data-aos="zoom-out" data-aos-delay="100">
+          <h1> {subtitle}</h1>
+          <p>{description}</p>
+        </div>
       <section id="featured-services" className="featured-services">
         <div className="container" data-aos="fade-up">
           <div className="row align-items-baseline">
