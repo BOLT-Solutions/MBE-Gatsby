@@ -158,7 +158,7 @@ export default function CrushingPage() {
 
          </section>
 
-          <Modal show={show} onHide={handleClose}>
+          <Modal show={show} onHide={handleClose} centered>
               <Modal.Header closeButton>
               </Modal.Header>
               <Modal.Body>
