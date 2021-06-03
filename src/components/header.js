@@ -204,13 +204,15 @@ const Header = () => {
   return (
     <header id="header" className="fixed-top" data-aos="fade">
       <div className="container d-flex align-items-center">
-        <nav className="nav-menu d-none d-lg-block">
-          <div className="logo">
-            <img src={logo}/>
+          <div className="logo" style={{width:"83px"}}>
+            <a href="/">
+            <img  src={logo} style={{width:"100%"}}/>
+            </a>
           </div>
+        <nav className="nav-menu d-none d-lg-block">
           <ul>
             <li className="drop-down">
-              <a href="/">Solutions</a>
+              <a >Solutions</a>
               <ul>
                 <li>
                   <a href="/#industries">Industries</a>

@@ -500,7 +500,11 @@ section {
 }
 
 @media (max-width: 992px) {
-  #hero .container-fluid {
+  .hero{
+    padding-top: 75px;
+
+  }
+  #hero .container {
     height: 100%;
   }
   #hero .row {
@@ -529,6 +533,9 @@ section {
   .main_logo {
     width: 45%;
     margin: 0 auto;
+  }
+  .logo{
+    display: none;
   }
 }
 
