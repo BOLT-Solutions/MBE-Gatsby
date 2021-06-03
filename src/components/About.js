@@ -67,16 +67,6 @@ export default function About() {
     let title = allPrismicAboutus.edges[0].node.data.title[0].text
     let subtitle = allPrismicAboutus.edges[0].node.data.subtitle[0].text
 
-
-    console.log(first_paragraph);
-    console.log(second_paragraph);
-    console.log(third_paragraph);
-    console.log(fourth_paragraph);
-    console.log(title);
-    console.log(subtitle);
-
-
-
    return (
    <>
        <section id="about-us" className="about-us-sec">
@@ -104,7 +94,7 @@ export default function About() {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="title center">
+                            <div className="title center sub-title">
                                 {subtitle}
                     </div>
                         </div>
