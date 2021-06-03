@@ -66,7 +66,10 @@ export default function Footer() {
 
   return (
     <>
-      <div className="container-fluid d-flex mainContainer">
+      <div className=" d-flex mainContainer">
+        <div class="container">
+
+        
         <div
           className="row"
           style={{
@@ -182,6 +185,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   )
