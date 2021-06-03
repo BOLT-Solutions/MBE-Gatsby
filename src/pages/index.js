@@ -33,7 +33,6 @@ const IndexPage = () => {
                   <LifeCycle/>
                   <Products/>
 
-                  <ClientStories/> 
                   <ProductsBrief/>
                   <ContactUs/>
                   <Footer/>

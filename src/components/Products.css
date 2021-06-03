@@ -1,0 +1,22 @@
+
+
+#productsMobile{
+   display: none;
+}
+
+@media (max-width: 1024px) {
+
+    
+    #products {
+
+        display: none;
+
+    }
+
+    
+    #productsMobile{
+        display: block;
+    }
+
+
+}
