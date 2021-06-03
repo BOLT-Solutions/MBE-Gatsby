@@ -76,8 +76,6 @@ export default function SeperationPage() {
               }
         `)
 
-  console.log("*******Separation*******");
-  console.log(allPrismicSeperation)
   let description = allPrismicSeperation.edges[0].node.data.description[0].text
   let header_image = allPrismicSeperation.edges[0].node.data.header_image.url
   let icon = allPrismicSeperation.edges[0].node.data.icon.url

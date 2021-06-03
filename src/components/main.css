@@ -696,6 +696,7 @@ section {
   background-size: cover;
   position: relative;
   color: #fff;
+  background-position: center;
 }
 
 .hero2:before {
@@ -712,11 +713,29 @@ section {
   position: relative;
   padding-top: 0px;
 }
-
+.hero2  .container-responsive{
+    display: none;
+}
 @media (max-width: 992px) {
   .hero2 .container {
-    padding-top: 58px;
+    padding-top: 20vh;
   }
+  .hero2{
+    height: 30vh !important;
+
+  }
+  .hero2 .container h2{
+display: none;
+  }
+  .hero2 .container p{
+    display: none;
+      }
+      .hero2  .container-responsive{
+          display: block;
+      }
+      .hero2  .container-responsive h1{
+      font-size: 20px;
+    }
 }
 
 .hero2 h1 {

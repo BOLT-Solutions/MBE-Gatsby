@@ -216,6 +216,7 @@ const Layout = ({ children }) => {
     })
 
     if (typeof window !== undefined) {
+      console.log()
       window.addEventListener("load", onInit)
     }
   })
@@ -226,6 +227,8 @@ const Layout = ({ children }) => {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
         />
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'/>
+
         <link
           rel="stylesheet"
           href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"

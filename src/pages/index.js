@@ -32,8 +32,8 @@ const IndexPage = () => {
                   <Services/>
                   <LifeCycle/>
                   <Products/>
-             
-                  {/* <ClientStories/>  */}
+
+                  <ClientStories/> 
                   <ProductsBrief/>
                   <ContactUs/>
                   <Footer/>
@@ -41,8 +41,6 @@ const IndexPage = () => {
           </Layout>
     </React.StrictMode>
   )
-
-
 }
 
 
