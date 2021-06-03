@@ -188,7 +188,7 @@ const onInit = () => {
     // });
   }
   
-const Header = () => {
+const header_products = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -207,24 +207,22 @@ const Header = () => {
         <nav className="nav-menu d-none d-lg-block">
           <ul>
             <li className="drop-down">
-              <a href="/">Solutions</a>
+              <a href="#solutions">Solutions</a>
               <ul>
+                
                 <li>
-                  <a href="/#industries">Industries</a>
+                  <a href="#industries">Industries</a>
                 </li>
                 <li>
-                  <a href="/#services">Services</a>
+                  <a href="#services">Services</a>
                 </li>
                 <li>
-                  <a href="/#lifecycle">Lifecycle support</a>
-                </li>
-                <li>
-                  <a href="/#process">Process</a>
+                  <a href="#lifecycle">Lifecycle support</a>
                 </li>
               </ul>
             </li>
             <li className="drop-down">
-              <a href="/#products">Products</a>
+              <a href="#products">Products</a>
               <ul>
                 <li>
                   <a href="/CrushingPage">Crushing</a>
@@ -238,13 +236,13 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <a href="/#testimonials">Client stories</a>
+              <a href="#testimonials">Client stories</a>
             </li>
             <li>
-              <a href="/#about-us">About us</a>
+              <a href="#about-us">About us</a>
             </li>
             <li>
-              <a href="/#contact">Contact us</a>
+              <a href="#contact">Contact us</a>
             </li>
           </ul>
         </nav>
@@ -252,4 +250,4 @@ const Header = () => {
     </header>
   )
 }
-export default Header
+export default header_products

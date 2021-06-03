@@ -107,7 +107,7 @@ export default function Industries() {
         </div>
       </section>
 
-      <div className="container container-responsive" data-aos="zoom-out" data-aos-delay="100">
+      <div id="container-responsive" className="container container-responsive" data-aos="zoom-out" data-aos-delay="100">
           <h1> {subtitle}</h1>
           <p>{description}</p>
         </div>

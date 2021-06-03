@@ -18,10 +18,11 @@ import { useEffect } from "react"
 import Modal from "react-modal";
 
 
-const IndexPage = () => {
+const index = () => {
 
   return (
       <React.StrictMode>
+          
           <Layout>
               <main role="main">
                   <HomeBanner />
@@ -32,7 +33,7 @@ const IndexPage = () => {
                   <Services/>
                   <LifeCycle/>
                   <Products/>
-
+<ClientStories/>
                   <ProductsBrief/>
                   <ContactUs/>
                   <Footer/>
@@ -43,5 +44,5 @@ const IndexPage = () => {
 }
 
 
-export default IndexPage
+export default index
 
