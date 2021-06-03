@@ -2,15 +2,6 @@
  * Globals
  */
 /* 
-@font-face {
-  font-family: "optima", "IcoFont";
-  /*    src: url("../assets/vendor/icofont/optima/Linotype\ -\ OptimaLTPro-Black.otf");
-    src: url("../assets/vendor/icofont/optima/Linotype\ -\ OptimaLTPro-BlackItalic.otf");
-    src: url("../assets/vendor/icofont/optima/Linotype\ -\ OptimaLTPro-BoldItalic.otf");
-    src: url("../assets/vendor/icofont/optima/Linotype\ -\ OptimaLTPro-Medium.otf");
-    src: url("../assets/vendor/icofont/icofont.min.css");
-    src: url("../assets/vendor/boxicons/css/boxicons.min.css");*/
-
 
 @font-face {
 font-family: 'optima';
@@ -18,6 +9,7 @@ font-family: 'optima';
   src: local('optima'), url(../assets/vendor/icofont/optima/Linotype\ -\ OptimaLTPro-BlackItalic.otf) format('truetype');
   src: local('optima'), url(../assets/vendor/icofont/optima/Linotype\ -\ OptimaLTPro-BoldItalic.otf) format('truetype');
   src: local('optima'), url(../assets/vendor/icofont/optima/Linotype\ -\ OptimaLTPro-Medium.otf) format('truetype');
+
 }
 
 /*--------------------------------------------------------------
