@@ -203,6 +203,8 @@ const Index = () => {
     useEffect(() => {
 
         if (typeof window !== undefined) {
+      console.log("layout")
+
           window.addEventListener("load", onInit)
         }
       })
