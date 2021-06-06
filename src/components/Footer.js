@@ -101,7 +101,7 @@ export default function Footer() {
           </div>
 
           <div
-            className="col-1"
+            className="col-12 col-xl-1"
             style={{ color: "#F7F8F8", fontWeight: "bold", fontSize: "14px" }}
           >
             <ul className="list-unstyled">

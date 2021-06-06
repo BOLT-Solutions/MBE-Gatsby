@@ -216,8 +216,8 @@ const Layout = ({ children }) => {
     })
 
     if (typeof window !== undefined) {
-      console.log()
-      window.addEventListener("load", onInit)
+
+      // window.addEventListener("load", onInit)
     }
   })
   return (
