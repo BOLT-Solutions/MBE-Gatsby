@@ -1,22 +1,19 @@
 {
   "Main" : {
-    "banner_image" : {
+    "header_image" : {
       "type" : "Image",
       "config" : {
         "constraint" : { },
         "thumbnails" : [ ],
-        "label" : "banner_image"
+        "label" : "header_image"
       }
     },
     "icon" : {
       "type" : "Image",
       "config" : {
-        "constraint" : {
-          "width" : 200,
-          "height" : 200
-        },
+        "constraint" : { },
         "thumbnails" : [ ],
-        "label" : "Icon"
+        "label" : "icon"
       }
     },
     "title" : {
@@ -29,18 +26,18 @@
     "description" : {
       "type" : "StructuredText",
       "config" : {
-        "single" : "paragraph",
+        "multi" : "paragraph",
         "label" : "description"
       }
     },
-    "classification_products_title" : {
+    "separation_products_title" : {
       "type" : "StructuredText",
       "config" : {
         "single" : "heading1",
-        "label" : "classification_products_title"
+        "label" : "separation_products_title"
       }
     },
-    "classification_products" : {
+    "separation_products" : {
       "type" : "Group",
       "config" : {
         "fields" : {
@@ -52,18 +49,18 @@
               "label" : "side_image"
             }
           },
-          "classification_product_title" : {
+          "separation_product_title" : {
             "type" : "StructuredText",
             "config" : {
               "single" : "heading1",
-              "label" : "classification_product_title"
+              "label" : "separation_product_title"
             }
           },
-          "classfication_product_description" : {
+          "seperation_product_description" : {
             "type" : "StructuredText",
             "config" : {
               "multi" : "paragraph",
-              "label" : "classfication_product_description"
+              "label" : "seperation_product_description"
             }
           },
           "download_brochure_link" : {
@@ -73,7 +70,7 @@
             }
           }
         },
-        "label" : "classification_products"
+        "label" : "separation_products"
       }
     }
   },
@@ -92,7 +89,7 @@
           "meta_name" : {
             "type" : "StructuredText",
             "config" : {
-              "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "single" : "paragraph",
               "label" : "Meta_Name"
             }
           },

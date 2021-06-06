@@ -14,6 +14,7 @@ import { useEffect, useState } from "react"
 import "./style.css"
 
 export default function SeperationPage() {
+
     //Modal event handlers.
     const [show, setShow] = useState(false)
     const handleClose = () => setShow(false)
@@ -23,79 +24,93 @@ export default function SeperationPage() {
         query SeperationPage {
             allPrismicSeperation {
                 edges {
-                    node {
-                        data {
-                            description {
-                                text
-                            }
-                            header_image {
-                                url
-                            }
-                            icon {
-                                url
-                            }
-                            meta_tags {
-                                meta_content {
-                                    text
-                                }
-                                meta_name {
-                                    text
-                                }
-                            }
-                            page_title {
-                                text
-                            }
-                            separation_products {
-                                download_brochure_link {
-                                    url
-                                }
-                                separation_product_title {
-                                    text
-                                }
-                                seperation_product_description {
-                                    text
-                                }
-                                side_image {
-                                    url
-                                }
-                            }
-                            separation_products_title {
-                                text
-                            }
-                            title {
-                                text
-                            }
+                  node {
+                    data {
+                      description {
+                        text
+                      }
+                      header_image {
+                        url
+                      }
+                      icon {
+                        url
+                      }
+                      meta_tags {
+                        meta_content {
+                          text
                         }
+                        meta_name {
+                          text
+                        }
+                      }
+                      open_graph_tags {
+                        meta_content {
+                          text
+                        }
+                        meta_property {
+                          text
+                        }
+                      }
+                      page_title {
+                        text
+                      }
+                      separation_products {
+                        download_brochure_link {
+                          url
+                        }
+                        separation_product_title {
+                          text
+                        }
+                        seperation_product_description {
+                          text
+                        }
+                        side_image {
+                          url
+                        }
+                      }
+                      separation_products_title {
+                        text
+                      }
+                      title {
+                        text
+                      }
                     }
+                  }
                 }
-            }
+              }
         }
     `)
 
-    let description =
-        allPrismicSeperation.edges[0].node.data.description[0].text
+    let description = allPrismicSeperation.edges[0].node.data.description.text
     let header_image = allPrismicSeperation.edges[0].node.data.header_image.url
     let icon = allPrismicSeperation.edges[0].node.data.icon.url
-    let title = allPrismicSeperation.edges[0].node.data.title[0].text
-    let separation_products =
-        allPrismicSeperation.edges[0].node.data.separation_products
-    let separation_products_title =
-        allPrismicSeperation.edges[0].node.data.separation_products_title[0]
-            .text
+    let title = allPrismicSeperation.edges[0].node.data.title.text
+    let separation_products = allPrismicSeperation.edges[0].node.data.separation_products
+    let separation_products_title = allPrismicSeperation.edges[0].node.data.separation_products_title.text
     let page_title = allPrismicSeperation.edges[0].node.data.page_title.text
     let meta_tags = allPrismicSeperation.edges[0].node.data.meta_tags
+    let open_graph_tags = allPrismicSeperation.edges[0].node.data.open_graph_tags
 
     return (
         <Layout>
             <Helmet>
+
                 {meta_tags.map(meta_tag => (
                     <meta
-                        name={meta_tag.meta_name[0].text}
-                        content={meta_tag.meta_content[0].text}
+                        name={meta_tag.meta_name.text}
+                        content={meta_tag.meta_content.text}
+                    ></meta>
+                ))}
+
+                {open_graph_tags.map(open_graph_tag => (
+                    <meta
+                        property={open_graph_tag.meta_property.text}
+                        content={open_graph_tag.meta_content.text}
                     ></meta>
                 ))}
 
                 <title>{page_title}</title>
+
             </Helmet>
 
             <div
@@ -164,7 +179,7 @@ export default function SeperationPage() {
                                         <strong>
                                             {
                                                 product
-                                                    .separation_product_title[0]
+                                                    .separation_product_title
                                                     .text
                                             }
                                         </strong>
@@ -178,7 +193,7 @@ export default function SeperationPage() {
                                         <strong>
                                             {
                                                 product
-                                                    .seperation_product_description[0]
+                                                    .seperation_product_description
                                                     .text
                                             }
                                         </strong>

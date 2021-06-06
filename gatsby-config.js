@@ -22,7 +22,7 @@ module.exports = {
                   process: require("./src/schemas/process.json"),
                   products: require("./src/schemas/products.json"),
                   productsbreif: require("./src/schemas/productsbreif.json"),
-                  separation: require("./src/schemas/separation.json"),
+                  seperation: require("./src/schemas/seperation.json"),
                   services: require("./src/schemas/services.json"),
                   solutions: require("./src/schemas/solutions.json"),
                   footer: require("./src/schemas/footer.json"),

@@ -20,57 +20,65 @@ export default function CrushingPage() {
 
     const { allPrismicCrushingandgrinding } = useStaticQuery(graphql`
         query crushingQuery {
-            allPrismicCrushingandgrinding {
-                edges {
+                allPrismicCrushingandgrinding {
+                  edges {
                     node {
-                        data {
-                            meta_tags {
-                                meta_content {
-                                    text
-                                }
-                                meta_name {
-                                    text
-                                }
-                            }
-                            page_title {
-                                text
-                            }
-                            products {
-                                download_brochure_link {
-                                    url
-                                }
-                                product_description {
-                                    text
-                                }
-                                product_image {
-                                    url
-                                }
-                                product_title {
-                                    text
-                                }
-                                request_info_link {
-                                    url
-                                }
-                            }
-                            title {
-                                text
-                            }
-                            icon {
-                                url
-                            }
-                            description {
-                                text
-                            }
-                            crurshing_products_title {
-                                text
-                            }
-                            banner_image {
-                                url
-                            }
+                      data {
+                        banner_image {
+                          url
                         }
+                        crurshing_products_title {
+                          text
+                        }
+                        description {
+                          text
+                        }
+                        icon {
+                          url
+                        }
+                        meta_tags {
+                          meta_content {
+                            text
+                          }
+                          meta_name {
+                            text
+                          }
+                        }
+                        open_graph_tags {
+                          meta_content {
+                            text
+                          }
+                          meta_property {
+                            text
+                          }
+                        }
+                        page_title {
+                          text
+                        }
+                        products {
+                          download_brochure_link {
+                            url
+                          }
+                          product_description {
+                            text
+                          }
+                          product_image {
+                            url
+                          }
+                          product_title {
+                            text
+                          }
+                          request_info_link {
+                            url
+                          }
+                        }
+                        title {
+                          text
+                        }
+                      }
                     }
-                }
-            }
+                  }
+                }      
         }
     `)
 
@@ -87,6 +95,8 @@ export default function CrushingPage() {
     let page_title =
         allPrismicCrushingandgrinding.edges[0].node.data.page_title[0].text
     let meta_tags = allPrismicCrushingandgrinding.edges[0].node.data.meta_tags
+    let open_graph_tags = allPrismicCrushingandgrinding.edges[0].node.data.open_graph_tags
+
 
     return (
         <Layout>
@@ -97,6 +107,14 @@ export default function CrushingPage() {
                         content={meta_tag.meta_content[0].text}
                     ></meta>
                 ))}
+
+                {open_graph_tags.map(open_graph_tag => (
+                    <meta
+                        proper={open_graph_tag.meta_property[0].text}
+                        content={open_graph_tag.meta_content[0].text}
+                    ></meta>
+                ))}
+
 
                 <title>{page_title}</title>
             </Helmet>

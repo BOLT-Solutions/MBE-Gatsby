@@ -22,52 +22,60 @@ export default function ClassificationPage() {
         query ClassificationPage {
             allPrismicClassification {
                 edges {
-                    node {
-                        data {
-                            banner_image {
-                                url
-                            }
-                            classification_products {
-                                classfication_product_description {
-                                    text
-                                }
-                                classification_product_title {
-                                    text
-                                }
-                                download_brochure_link {
-                                    url
-                                }
-                                side_image {
-                                    url
-                                }
-                            }
-                            classification_products_title {
-                                text
-                            }
-                            description {
-                                text
-                            }
-                            icon {
-                                url
-                            }
-                            meta_tags {
-                                meta_content {
-                                    text
-                                }
-                                meta_name {
-                                    text
-                                }
-                            }
-                            page_title {
-                                text
-                            }
-                            title {
-                                text
-                            }
+                  node {
+                    data {
+                      banner_image {
+                        url
+                      }
+                      classification_products {
+                        classfication_product_description {
+                          text
                         }
+                        classification_product_title {
+                          text
+                        }
+                        download_brochure_link {
+                          url
+                        }
+                        side_image {
+                          url
+                        }
+                      }
+                      classification_products_title {
+                        text
+                      }
+                      description {
+                        text
+                      }
+                      icon {
+                        url
+                      }
+                      meta_tags {
+                        meta_content {
+                          text
+                        }
+                        meta_name {
+                          text
+                        }
+                      }
+                      open_graph_tags {
+                        meta_content {
+                          text
+                        }
+                        meta_property {
+                          text
+                        }
+                      }
+                      page_title {
+                        text
+                      }
+                      title {
+                        text
+                      }
                     }
+                  }
                 }
-            }
+              }
         }
     `)
 
@@ -87,14 +95,23 @@ export default function ClassificationPage() {
         allPrismicClassification.edges[0].node.data.classification_products
     let page_title = allPrismicClassification.edges[0].node.data.page_title.text
     let meta_tags = allPrismicClassification.edges[0].node.data.meta_tags
+    let open_graph_tags = allPrismicClassification.edges[0].node.data.open_graph_tags
 
     return (
         <Layout>
             <Helmet>
+
                 {meta_tags.map(meta_tag => (
                     <meta
                         name={meta_tag.meta_name.text}
                         content={meta_tag.meta_content.text}
+                    ></meta>
+                ))}
+
+                {open_graph_tags.map(open_graph_tag => (
+                    <meta
+                        property={open_graph_tag.meta_property.text}
+                        content={open_graph_tag.meta_content.text}
                     ></meta>
                 ))}
 

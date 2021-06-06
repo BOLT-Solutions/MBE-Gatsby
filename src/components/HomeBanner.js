@@ -15,42 +15,51 @@ import { linkedin } from "@fortawesome/free-solid-svg-icons"
 export default function HomeBanner() {
   const { allPrismicHomeheader } = useStaticQuery(graphql`
     query HomeBanner {
-      allPrismicHomeheader {
-        edges {
-          node {
-            data {
-              image_carousel {
-                banner_image {
-                  url
+        allPrismicHomeheader {
+          edges {
+            node {
+              data {
+                image_carousel {
+                  banner_image {
+                    url
+                  }
+                  banner_title {
+                    text
+                  }
+                  read_more_link {
+                    url
+                  }
                 }
-                banner_title {
+                meta_tags {
+                  meta_content {
+                    text
+                  }
+                  meta_name {
+                    text
+                  }
+                }
+                open_graph_tags {
+                  meta_content {
+                    text
+                  }
+                  meta_property {
+                    text
+                  }
+                }
+                page_title {
                   text
                 }
-                read_more_link {
-                  url
-                }
-              }
-              meta_tags {
-                meta_content {
-                  text
-                }
-                meta_name {
-                  text
-                }
-              }
-              page_title {
-                text
               }
             }
           }
         }
-      }
     }
   `)
 
   let image_carousel = allPrismicHomeheader.edges[0].node.data.image_carousel
   let page_title = allPrismicHomeheader.edges[0].node.data.page_title[0].text
   let meta_tags = allPrismicHomeheader.edges[0].node.data.meta_tags
+  let open_graph_tags = allPrismicHomeheader.edges[0].node.data.open_graph_tags
 
   console.log(image_carousel)
 
@@ -99,6 +108,15 @@ export default function HomeBanner() {
             content={meta_tag.meta_content[0].text}
           ></meta>
         ))}
+
+
+        {open_graph_tags.map(open_graph_tag => (
+          <meta
+            property={open_graph_tag.meta_property[0].text}
+            content={open_graph_tag.meta_content[0].text}
+          ></meta>
+        ))}
+
 
         <title>{page_title}</title>
       </Helmet>
