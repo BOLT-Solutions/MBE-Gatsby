@@ -132,11 +132,7 @@ const onInit = () => {
         $(".mobile-nav-overly").toggle()
       })
   
-      $(document).on("click", ".mobile-nav .drop-down > a", function (e) {
-        e.preventDefault()
-        $(this).next().slideToggle(300)
-        $(this).parent().toggleClass("active")
-      })
+
   
       $(document).click(function (e) {
         var container = $(".mobile-nav, .mobile-nav-toggle")
@@ -193,15 +189,15 @@ const Header = () => {
     AOS.init({
       duration: 1000,
       once: true,
-      disable: function() {
-        var maxWidth = 800;
-        return window.innerWidth < maxWidth;
-      }
+        disable: function() {
+    var maxWidth = 800;
+    return window.innerWidth < maxWidth;
+  }
     })
 
     if (typeof window !== undefined) {
-      console.log()
-      window.addEventListener("load", onInit)
+      console.log("header")
+      // window.addEventListener("load", onInit)
     }
   })
 
@@ -233,7 +229,7 @@ const Header = () => {
               </ul>
             </li>
             <li className="drop-down">
-              <a href="/#products">Products</a>
+              <a >Products</a>
               <ul>
                 <li>
                   <a href="/CrushingPage">Crushing</a>

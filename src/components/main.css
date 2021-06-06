@@ -152,7 +152,9 @@ section {
 @media (max-width: 992px) {
   #header {
     padding: 12px 0;
+    display: none;
   }
+
 }
 
 /*--------------------------------------------------------------
@@ -536,6 +538,9 @@ section {
   }
   .logo{
     display: none;
+  }
+  .underHero .stext  {
+   text-align: center;
   }
 }
 
