@@ -5,6 +5,7 @@ import ContactUs from "../components/ContactUs"
 import Solutions from "../components/Solutions"
 import Industries from "../components/Industries"
 import LifeCycle from "../components/LifeCycle"
+import ClientStories from "../components/ClientStories"
 import About from "../components/About"
 import Products from "../components/Products"
 import ProductsBrief from "../components/ProductsBrief"
@@ -219,7 +220,7 @@ const Index = () => {
                   <Services/>
                   <LifeCycle/>
                   <Products/>
-                  {/* <ClientStories/> */}
+                  <ClientStories/>
                   <ProductsBrief/>
                   <ContactUs/>
                   <Footer/>
