@@ -16,7 +16,6 @@ import { useEffect } from "react"
 
 
 const onInit = () => {
-    console.log("init")
     $(window).on("load", function () {
       if ($("#preloader").length) {
         $("#preloader")
@@ -203,7 +202,6 @@ const Index = () => {
     useEffect(() => {
 
         if (typeof window !== undefined) {
-      console.log("layout")
 
           window.addEventListener("load", onInit)
         }

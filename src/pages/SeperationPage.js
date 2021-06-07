@@ -32,6 +32,9 @@ export default function SeperationPage() {
                       header_image {
                         url
                       }
+                      hubspot_form_id {
+                        text
+                      }
                       icon {
                         url
                       }
@@ -90,6 +93,7 @@ export default function SeperationPage() {
     let page_title = allPrismicSeperation.edges[0].node.data.page_title.text
     let meta_tags = allPrismicSeperation.edges[0].node.data.meta_tags
     let open_graph_tags = allPrismicSeperation.edges[0].node.data.open_graph_tags
+    let hubspot_form_id = allPrismicSeperation.edges[0].node.data.hubspot_form_id.text
 
     return (
         <Layout>
@@ -187,7 +191,7 @@ export default function SeperationPage() {
                                     <p
                                         style={{
                                             fontSize: "14px",
-                                            minHeight: "300px",
+                                            minHeight: "200px",
                                         }}
                                     >
                                         <strong>
@@ -236,7 +240,7 @@ export default function SeperationPage() {
                 <Modal.Body>
                     <HubspotForm
                         portalId="19589739"
-                        formId="04f6756d-7711-4612-9e80-49acb72fe4d2"
+                        formId= {hubspot_form_id}
                         onSubmit={() => console.log("Submit!")}
                         onReady={form => console.log("Form ready!")}
                         loading={<div>Loading...</div>}

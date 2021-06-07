@@ -61,8 +61,7 @@ export default function Products() {
     }
   `)
 
-  console.log("******Products*******")
-  console.log(allPrismicProducts)
+
 
   let title_part_one = allPrismicProducts.edges[0].node.data.title_part_one.text
   let title_part_two = allPrismicProducts.edges[0].node.data.title_part_two.text

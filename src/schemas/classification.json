@@ -1,132 +1,139 @@
 {
-  "Main" : {
-    "banner_image" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : { },
-        "thumbnails" : [ ],
-        "label" : "banner_image"
+  "Main": {
+    "banner_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "banner_image"
       }
     },
-    "icon" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : {
-          "width" : 200,
-          "height" : 200
+    "icon": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 200,
+          "height": 200
         },
-        "thumbnails" : [ ],
-        "label" : "Icon"
+        "thumbnails": [],
+        "label": "Icon"
       }
     },
-    "title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "label" : "title"
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "title"
       }
     },
-    "description" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "description"
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "description"
       }
     },
-    "classification_products_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "label" : "classification_products_title"
+    "classification_products_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "classification_products_title"
       }
     },
-    "classification_products" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "side_image" : {
-            "type" : "Image",
-            "config" : {
-              "constraint" : { },
-              "thumbnails" : [ ],
-              "label" : "side_image"
+    "classification_products": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "side_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "side_image"
             }
           },
-          "classification_product_title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading1",
-              "label" : "classification_product_title"
+          "classification_product_title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1",
+              "label": "classification_product_title"
             }
           },
-          "classfication_product_description" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "paragraph",
-              "label" : "classfication_product_description"
+          "classfication_product_description": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "classfication_product_description"
             }
           },
-          "download_brochure_link" : {
-            "type" : "Link",
-            "config" : {
-              "label" : "download_brochure_link"
+          "download_brochure_link": {
+            "type": "Link",
+            "config": {
+              "label": "download_brochure_link"
             }
           }
         },
-        "label" : "classification_products"
+        "label": "classification_products"
+      }
+    },
+    "hubspot_form_id": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Hubspot_Form_ID"
       }
     }
   },
-  "SEO" : {
-    "page_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "label" : "Page_Title"
+  "SEO": {
+    "page_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Page_Title"
       }
     },
-    "meta_tags" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "meta_name" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
-              "label" : "Meta_Name"
+    "meta_tags": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "meta_name": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "label": "Meta_Name"
             }
           },
-          "meta_content" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "paragraph",
-              "label" : "Meta_Content"
+          "meta_content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Content"
             }
           }
         },
-        "label" : "Meta_Tags"
+        "label": "Meta_Tags"
       }
     },
-    "open_graph_tags" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "meta_property" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "paragraph",
-              "label" : "Meta_Property"
+    "open_graph_tags": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "meta_property": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Property"
             }
           },
-          "meta_content" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "paragraph",
-              "label" : "Meta_Content"
+          "meta_content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Content"
             }
           }
         },
-        "label" : "Open_Graph_Tags"
+        "label": "Open_Graph_Tags"
       }
     }
   }

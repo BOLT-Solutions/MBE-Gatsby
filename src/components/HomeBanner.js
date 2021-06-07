@@ -61,17 +61,14 @@ export default function HomeBanner() {
   let meta_tags = allPrismicHomeheader.edges[0].node.data.meta_tags
   let open_graph_tags = allPrismicHomeheader.edges[0].node.data.open_graph_tags
 
-  console.log(image_carousel)
 
   let slideIndex = 1
 
   const plusDivs = n => {
-    console.log(n, slideIndex)
+
     showDivs((slideIndex += n))
   }
   const currentDiv = n => {
-    console.log(n)
-
     showDivs((slideIndex = n))
   }
   const showDivs = n => {
@@ -90,7 +87,7 @@ export default function HomeBanner() {
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" w3-grey", "")
     }
-    console.log("test", x[slideIndex - 1])
+
     if (x[slideIndex - 1] !== undefined) {
       x[slideIndex - 1].style.display = "block"
       dots[slideIndex - 1].className += " w3-grey"
@@ -141,16 +138,14 @@ export default function HomeBanner() {
                       style={{ width: "100%" }}
                     />
                   ))}
-                  {/* <img className="mySlides" src={slide2} style={{ width: '100%' }} />
-                                          <img className="mySlides" src={slide3} style={{ width: '100%' }} /> */}
+                
                   <div
                     className="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
                     style={{ width: "100%" }}
                   >
-                    {/* <div className="w3-left w3-hover-text-khaki" onClick={() => { plusDivs(-1) }}>&#10094;</div>
-                                              <div className="w3-right w3-hover-text-khaki" onClick={() => { plusDivs(1) }}>&#10095;</div> */}
+                   
                     {image_carousel.map((image, index) => (
-                      // <img className="mySlides" src={image.banner_image.url} style={{ width: '100%' }} />
+
                       <span
                         className="w3-badge demo w3-border w3-transparent p-0 mx-1"
                         onClick={() => {
