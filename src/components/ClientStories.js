@@ -6,7 +6,7 @@ import loadable from '@loadable/component'
 
 // note: you don't need the whole path to node_modules.. just the package name
 const onInit = () => {
-    console.log('inti carousel')
+
         // const OwlCarousel =React.lazy("react-owl-carousel") 
         if (typeof window !== undefined) {
            const OwlCarousel=  loadable(() => import('react-owl-carousel'));

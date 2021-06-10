@@ -1,116 +1,145 @@
 {
-  "Main" : {
-    "banner_image" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : { },
-        "thumbnails" : [ ],
-        "label" : "banner_image"
+  "Main": {
+    "banner_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "banner_image"
       }
     },
-    "icon" : {
-      "type" : "Image",
-      "config" : {
-        "constraint" : {
-          "width" : 200,
-          "height" : 200
+    "icon": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 200,
+          "height": 200
         },
-        "thumbnails" : [ ],
-        "label" : "Icon"
+        "thumbnails": [],
+        "label": "Icon"
       }
     },
-    "title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "label" : "title"
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "title"
       }
     },
-    "description" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "description"
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "description"
       }
     },
-    "crurshing_products_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "label" : "crurshing_products_title"
+    "crurshing_products_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "crurshing_products_title"
       }
     },
-    "products" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "product_image" : {
-            "type" : "Image",
-            "config" : {
-              "constraint" : { },
-              "thumbnails" : [ ],
-              "label" : "product_image"
+    "products": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "product_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "product_image"
             }
           },
-          "product_title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading3",
-              "label" : "product_title"
+          "product_title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading3",
+              "label": "product_title"
             }
           },
-          "product_description" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "paragraph",
-              "label" : "product_description"
+          "product_description": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "product_description"
             }
           },
-          "download_brochure_link" : {
-            "type" : "Link",
-            "config" : {
-              "label" : "download_brochure_link"
+          "download_brochure_link": {
+            "type": "Link",
+            "config": {
+              "label": "download_brochure_link"
             }
           },
-          "request_info_link" : {
-            "type" : "Link",
-            "config" : {
-              "label" : "request_info_link"
+          "request_info_link": {
+            "type": "Link",
+            "config": {
+              "label": "request_info_link"
             }
           }
         },
-        "label" : "products"
+        "label": "products"
+      }
+    },
+    "hubspot_form_id": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Hubspot_Form_ID"
       }
     }
   },
-  "SEO" : {
-    "page_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "label" : "Page_title"
+  "SEO": {
+    "page_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Page_title"
       }
     },
-    "meta_tags" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "meta_name" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "heading2",
-              "label" : "Meta_Name"
+    "meta_tags": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "meta_name": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "heading2",
+              "label": "Meta_Name"
             }
           },
-          "meta_content" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "paragraph",
-              "label" : "Meta_Content"
+          "meta_content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Content"
             }
           }
         },
-        "label" : "Meta_Tags"
+        "label": "Meta_Tags"
+      }
+    },
+    "open_graph_tags": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "meta_property": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Property"
+            }
+          },
+          "meta_content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Content"
+            }
+          }
+        },
+        "label": "Open_Graph_Tags"
       }
     }
   }

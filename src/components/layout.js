@@ -17,7 +17,6 @@ import { useEffect } from "react"
 import $ from "jquery"
 
 const onInit = () => {
-  console.log("init")
   $(window).on("load", function () {
     if ($("#preloader").length) {
       $("#preloader")

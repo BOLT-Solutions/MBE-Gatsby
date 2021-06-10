@@ -52,8 +52,6 @@ export default function About() {
   }
         `)
 
-    console.log("*********AboutUs************");
-    console.log(allPrismicAboutus);
 
     let first_paragraph = allPrismicAboutus.edges[0].node.data.first_paragraph[0].text
     let second_paragraph = allPrismicAboutus.edges[0].node.data.second_paragraph[0].text

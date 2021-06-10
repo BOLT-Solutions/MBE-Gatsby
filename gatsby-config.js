@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/MBE-Gatsby`,
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -16,13 +17,13 @@ module.exports = {
                   classification: require("./src/schemas/classification.json"),
                   clientstories: require("./src/schemas/clientstories.json"),
                   contactus: require("./src/schemas/contactus.json"),
-                  curshingandgrinding: require("./src/schemas/crushingandgrinding.json"),
+                  crushingandgrinding: require("./src/schemas/crushingandgrinding.json"),
                   industries: require("./src/schemas/industries.json"),
                   lifecycle: require("./src/schemas/lifecycle.json"),
                   process: require("./src/schemas/process.json"),
                   products: require("./src/schemas/products.json"),
                   productsbreif: require("./src/schemas/productsbreif.json"),
-                  separation: require("./src/schemas/separation.json"),
+                  seperation: require("./src/schemas/seperation.json"),
                   services: require("./src/schemas/services.json"),
                   solutions: require("./src/schemas/solutions.json"),
                   footer: require("./src/schemas/footer.json"),
@@ -61,6 +62,7 @@ module.exports = {
           productionOnly: true,
       },
     },
+  
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

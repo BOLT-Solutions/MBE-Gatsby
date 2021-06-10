@@ -75,6 +75,13 @@
         },
         "label": "classification_products"
       }
+    },
+    "hubspot_form_id": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Hubspot_Form_ID"
+      }
     }
   },
   "SEO": {
@@ -105,6 +112,28 @@
           }
         },
         "label": "Meta_Tags"
+      }
+    },
+    "open_graph_tags": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "meta_property": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Property"
+            }
+          },
+          "meta_content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Content"
+            }
+          }
+        },
+        "label": "Open_Graph_Tags"
       }
     }
   }

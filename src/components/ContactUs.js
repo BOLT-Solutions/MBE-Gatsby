@@ -9,11 +9,14 @@ import '../components/style/ContactUs.css'
     export default function ContactUs() {
         const {allPrismicContactus} = useStaticQuery(graphql`
             query ContactUs {
-                allPrismicContactus {
+                  allPrismicContactus {
                     edges {
                       node {
                         data {
                           email {
+                            text
+                          }
+                          hubspot_form_id {
                             text
                           }
                           location {
@@ -34,7 +37,7 @@ import '../components/style/ContactUs.css'
             let email =allPrismicContactus.edges[0].node.data.email.text
             let location =allPrismicContactus.edges[0].node.data.location.text
             let phone_numbers =allPrismicContactus.edges[0].node.data.phone_numbers
-        
+            let hubspot_form_id =allPrismicContactus.edges[0].node.data.hubspot_form_id.text
         
     return (
 
@@ -91,7 +94,7 @@ import '../components/style/ContactUs.css'
                             <div className="col-lg-8">
                                         <HubspotForm
                                 portalId='19589739'
-                                formId='39345c2b-9362-4ff6-b49c-0c4f3a8330aa'
+                                formId= {hubspot_form_id}
                                 onSubmit={() => console.log('Submit!')}
                                 onReady={(form) => console.log('Form ready!')}
                                 loading={<div>Loading...</div>}

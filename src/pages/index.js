@@ -5,6 +5,7 @@ import ContactUs from "../components/ContactUs"
 import Solutions from "../components/Solutions"
 import Industries from "../components/Industries"
 import LifeCycle from "../components/LifeCycle"
+import ClientStories from "../components/ClientStories"
 import About from "../components/About"
 import Products from "../components/Products"
 import ProductsBrief from "../components/ProductsBrief"
@@ -16,7 +17,6 @@ import { useEffect } from "react"
 
 
 const onInit = () => {
-    console.log("init")
     $(window).on("load", function () {
       if ($("#preloader").length) {
         $("#preloader")
@@ -203,7 +203,6 @@ const Index = () => {
     useEffect(() => {
 
         if (typeof window !== undefined) {
-      console.log("layout")
 
           window.addEventListener("load", onInit)
         }
@@ -221,7 +220,7 @@ const Index = () => {
                   <Services/>
                   <LifeCycle/>
                   <Products/>
-                  {/* <ClientStories/> */}
+                  <ClientStories/>
                   <ProductsBrief/>
                   <ContactUs/>
                   <Footer/>

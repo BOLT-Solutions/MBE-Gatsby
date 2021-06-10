@@ -54,16 +54,6 @@ export default function Footer() {
   let mbe_icon = allPrismicFooter.edges[0].node.data.mbe_icon.url
   let description = allPrismicFooter.edges[0].node.data.description.text
 
-  // console.log('******Footer*******')
-  // console.log(inquiry_mail_icon)
-  // console.log(inquiry_mail)
-  // console.log(address_icon)
-  // console.log(address)
-  // console.log(phone_numbers_icon)
-  // console.log(phone_numbers)
-  // console.log(mbe_icon)
-  // console.log(description)
-
   return (
     <>
       <div className=" d-flex mainContainer">

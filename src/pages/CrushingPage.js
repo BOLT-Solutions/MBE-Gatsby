@@ -14,7 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { useEffect, useState } from "react"
 
 const onInit = () => {
-    console.log("init")
+
     $(window).on("load", function () {
       if ($("#preloader").length) {
         $("#preloader")
@@ -200,7 +200,6 @@ export default function CrushingPage() {
     useEffect(() => {
     
         if (typeof window !== undefined) {
-            console.log("crushing init")
 
           window.addEventListener("load", onInit)
         }
@@ -213,83 +212,105 @@ export default function CrushingPage() {
 
     const { allPrismicCrushingandgrinding } = useStaticQuery(graphql`
         query crushingQuery {
-            allPrismicCrushingandgrinding {
-                edges {
-                    node {
-                        data {
-                            meta_tags {
-                                meta_content {
-                                    text
-                                }
-                                meta_name {
-                                    text
-                                }
-                            }
-                            page_title {
-                                text
-                            }
-                            products {
-                                download_brochure_link {
-                                    url
-                                }
-                                product_description {
-                                    text
-                                }
-                                product_image {
-                                    url
-                                }
-                                product_title {
-                                    text
-                                }
-                                request_info_link {
-                                    url
-                                }
-                            }
-                            title {
-                                text
-                            }
-                            icon {
-                                url
-                            }
-                            description {
-                                text
-                            }
-                            crurshing_products_title {
-                                text
-                            }
-                            banner_image {
-                                url
-                            }
-                        }
+          allPrismicCrushingandgrinding {
+            edges {
+              node {
+                data {
+                  banner_image {
+                    url
+                  }
+                  crurshing_products_title {
+                    text
+                  }
+                  description {
+                    text
+                  }
+                  hubspot_form_id {
+                    text
+                  }
+                  icon {
+                    url
+                  }
+                  meta_tags {
+                    meta_content {
+                      text
                     }
+                    meta_name {
+                      text
+                    }
+                  }
+                  open_graph_tags {
+                    meta_content {
+                      text
+                    }
+                    meta_property {
+                      text
+                    }
+                  }
+                  page_title {
+                    text
+                  }
+                  products {
+                    download_brochure_link {
+                      url
+                    }
+                    product_description {
+                      text
+                    }
+                    product_image {
+                      url
+                    }
+                    product_title {
+                      text
+                    }
+                    request_info_link {
+                      url
+                    }
+                  }
+                  title {
+                    text
+                  }
                 }
+              }
             }
+          }
         }
     `)
 
     let banner_image =
         allPrismicCrushingandgrinding.edges[0].node.data.banner_image.url
     let description =
-        allPrismicCrushingandgrinding.edges[0].node.data.description[0].text
+        allPrismicCrushingandgrinding.edges[0].node.data.description.text
     let icon = allPrismicCrushingandgrinding.edges[0].node.data.icon.url
-    let title = allPrismicCrushingandgrinding.edges[0].node.data.title[0].text
+    let title = allPrismicCrushingandgrinding.edges[0].node.data.title.text
     let crurshing_products_title =
         allPrismicCrushingandgrinding.edges[0].node.data
-            .crurshing_products_title[0].text
+            .crurshing_products_title.text
     let products = allPrismicCrushingandgrinding.edges[0].node.data.products
     let page_title =
-        allPrismicCrushingandgrinding.edges[0].node.data.page_title[0].text
+        allPrismicCrushingandgrinding.edges[0].node.data.page_title.text
     let meta_tags = allPrismicCrushingandgrinding.edges[0].node.data.meta_tags
+    let open_graph_tags = allPrismicCrushingandgrinding.edges[0].node.data.open_graph_tags
+    let hubspot_form_id = allPrismicCrushingandgrinding.edges[0].node.data.hubspot_form_id.text
+
 
     return (
         <Layout>
             <Helmet>
                 {meta_tags.map(meta_tag => (
                     <meta
-                        name={meta_tag.meta_name[0].text}
-                        content={meta_tag.meta_content[0].text}
+                        name={meta_tag.meta_name.text}
+                        content={meta_tag.meta_content.text}
                     ></meta>
                 ))}
+
+                {open_graph_tags.map(open_graph_tag => (
+                    <meta
+                        proper={open_graph_tag.meta_property.text}
+                        content={open_graph_tag.meta_content.text}
+                    ></meta>
+                ))}
+
 
                 <title>{page_title}</title>
             </Helmet>
@@ -354,17 +375,17 @@ export default function CrushingPage() {
                             <div className="ml5 col-md-6 col-sm-12">
                                 <h2 style={{ fontSize: "30px" }}>
                                     <strong>
-                                        {product.product_title[0].text}
+                                        {product.product_title.text}
                                     </strong>
                                 </h2>
                                 <p
                                     style={{
                                         fontSize: "14px",
-                                        minHeight: "300px",
+                                        minHeight: "200px",
                                     }}
                                 >
                                     <strong>
-                                        {product.product_description[0].text}
+                                        {product.product_description.text}
                                     </strong>
                                 </p>
                                 <div
@@ -404,7 +425,7 @@ export default function CrushingPage() {
                 <Modal.Body>
                     <HubspotForm
                         portalId="19589739"
-                        formId="04f6756d-7711-4612-9e80-49acb72fe4d2"
+                        formId= {hubspot_form_id}
                         onSubmit={() => console.log("Submit!")}
                         onReady={form => console.log("Form ready!")}
                         loading={<div>Loading...</div>}

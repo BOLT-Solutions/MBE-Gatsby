@@ -1,33 +1,40 @@
 {
-  "Main" : {
-    "location" : {
-      "type" : "StructuredText",
-      "config" : {
-        "multi" : "paragraph",
-        "label" : "location"
+  "Main": {
+    "location": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "location"
       }
     },
-    "email" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "email"
+    "email": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "email"
       }
     },
-    "phone_numbers" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "phone_number" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
-              "label" : "phone_number",
-              "placeholder" : "phone_ number"
+    "phone_numbers": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "phone_number": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+              "label": "phone_number",
+              "placeholder": "phone_ number"
             }
           }
         },
-        "label" : "phone_numbers"
+        "label": "phone_numbers"
+      }
+    },
+    "hubspot_form_id": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Hubspot_Form_ID"
       }
     }
   }
