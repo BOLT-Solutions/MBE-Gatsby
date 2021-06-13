@@ -6,6 +6,7 @@ import Footer from "../components/Footer"
 import { Helmet } from "react-helmet"
 import "./style.css"
 import $ from "jquery"
+import { withPreview } from "gatsby-source-prismic"
 
 //Modal Imports .
 import HubspotForm from "react-hubspot-form"
@@ -195,7 +196,7 @@ const onInit = () => {
     // });
   }
   
-export default function CrushingPage() {
+ function CrushingPage() {
     
     useEffect(() => {
     
@@ -437,3 +438,4 @@ export default function CrushingPage() {
         </Layout>
     )
 }
+export default withPreview(CrushingPage)

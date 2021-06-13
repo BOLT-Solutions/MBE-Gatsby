@@ -1,85 +1,97 @@
 {
-  "Main" : {
-    "image_carousel" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "banner_image" : {
-            "type" : "Image",
-            "config" : {
-              "constraint" : { },
-              "thumbnails" : [ ],
-              "label" : "banner_image"
+  "Main": {
+    "image_carousel": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "banner_image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "banner_image"
             }
           },
-          "banner_title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading2",
-              "label" : "banner_title"
+          "banner_title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading2",
+              "label": "banner_title"
             }
           },
-          "read_more_link" : {
-            "type" : "Link",
-            "config" : {
-              "label" : "read_more_link"
+          "read_more_link": {
+            "type": "Link",
+            "config": {
+              "label": "read_more_link"
             }
           }
         },
-        "label" : "Image Carousel"
+        "label": "Image Carousel"
+      }
+    },
+    "instagramlink": {
+      "type": "Link",
+      "config": {
+        "label": "instagramLink"
+      }
+    },
+    "telegramlink": {
+      "type": "Link",
+      "config": {
+        "label": "telegramLink"
       }
     }
   },
-  "SEO" : {
-    "page_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "label" : "Page_Title"
+  "SEO": {
+    "page_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Page_Title"
       }
     },
-    "meta_tags" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "meta_name" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "paragraph",
-              "label" : "Meta_Name"
+    "meta_tags": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "meta_name": {
+            "type": "StructuredText",
+            "config": {
+              "single": "paragraph",
+              "label": "Meta_Name"
             }
           },
-          "meta_content" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "paragraph",
-              "label" : "Meta_Content"
+          "meta_content": {
+            "type": "StructuredText",
+            "config": {
+              "single": "paragraph",
+              "label": "Meta_Content"
             }
           }
         },
-        "label" : "Meta_Tags"
+        "label": "Meta_Tags"
       }
     },
-    "open_graph_tags" : {
-      "type" : "Group",
-      "config" : {
-        "fields" : {
-          "meta_property" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "paragraph",
-              "label" : "Meta_Property"
+    "open_graph_tags": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "meta_property": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Property"
             }
           },
-          "meta_content" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "paragraph",
-              "label" : "Meta_Content"
+          "meta_content": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph",
+              "label": "Meta_Content"
             }
           }
         },
-        "label" : "Open_Graph_Tags"
+        "label": "Open_Graph_Tags"
       }
     }
   }
