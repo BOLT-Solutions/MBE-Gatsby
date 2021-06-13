@@ -14,6 +14,7 @@ import Process from "../components/Process"
 import Footer from "../components/Footer"
 import $ from "jquery"
 import { useEffect } from "react"
+import { withPreview } from 'gatsby-source-prismic'
 
 
 const onInit = () => {
@@ -213,7 +214,6 @@ const Index = () => {
           <Layout>
               <main role="main">
                   <HomeBanner />
-                  <About/>
                   <Process/>
                   <Solutions/>
                   <Industries id="industries"/>
@@ -223,6 +223,7 @@ const Index = () => {
                   <ClientStories/>
                   <ProductsBrief/>
                   <ContactUs/>
+                  <About/>
                   <Footer/>
               </main>
           </Layout>
@@ -231,5 +232,5 @@ const Index = () => {
 }
 
 
-export default Index
+export default withPreview(Index)
 

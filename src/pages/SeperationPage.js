@@ -12,8 +12,9 @@ import Modal from "react-bootstrap/Modal"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useEffect, useState } from "react"
 import "./style.css"
+import { withPreview } from "gatsby-source-prismic"
 
-export default function SeperationPage() {
+function SeperationPage() {
 
     //Modal event handlers.
     const [show, setShow] = useState(false)
@@ -252,3 +253,4 @@ export default function SeperationPage() {
         </Layout>
     )
 }
+export default withPreview(SeperationPage)

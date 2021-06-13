@@ -11,8 +11,12 @@ import HubspotForm from "react-hubspot-form"
 import Modal from "react-bootstrap/Modal"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useEffect, useState } from "react"
+import { withPreview } from "gatsby-source-prismic"
 
-export default function ClassificationPage() {
+
+
+
+ function ClassificationPage() {
     //Modal event handlers.
     const [show, setShow] = useState(false)
     const handleClose = () => setShow(false)
@@ -256,3 +260,5 @@ export default function ClassificationPage() {
         </Layout>
     )
 }
+
+export default withPreview(ClassificationPage)

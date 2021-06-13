@@ -59,31 +59,30 @@ export default function Footer() {
       <div className=" d-flex mainContainer">
         <div class="container">
 
-        
         <div
-          className="row"
+          className="d-flex"
           style={{
             justifyContent: "space-around",
-            padding: " 15px",
+         
             marginTop: "3%",
           }}
         >
           <div className=" col-xl-5 col-12 d-flex justify-content-around">
             <img
               src={mbe_icon}
-              alt="Girl in a jacket"
+              alt="mbe"
               width="100"
               height="100"
               style={{ width: "102px" }}
             />
             <p
               style={{
-                width: " 65%",
+              
                 height: " 250px",
-                fontSize: "14px",
+                fontSize: "12px",
                 color: "#F7F8F8",
                 fontWeight: "bold",
-                lineHeight: "1.6",
+                lineHeight: "1.8",
               }}
             >
               {description}
@@ -91,27 +90,15 @@ export default function Footer() {
           </div>
 
           <div
-            className="col-12 col-xl-1"
+            className="col-12 col-xl-2"
             style={{ color: "#F7F8F8", fontWeight: "bold", fontSize: "14px" }}
           >
             <ul className="list-unstyled">
               <li>
-                <a href="#industries">Industries</a>
+                <a href="#solutions">Solutions</a>
               </li>
               <li>
-                <a href="#services">Services</a>
-              </li>
-              <li>
-                <a href="#lifecycle">Lifecycle support</a>
-              </li>
-              <li>
-                <a href="/CrushingPage">Crushing</a>
-              </li>
-              <li>
-                <a href="/ClassificationPage">Classification</a>
-              </li>
-              <li>
-                <a href="/SeperationPage">Segregation</a>
+                <a href="#products">Products</a>
               </li>
               <li>
                 <a href="#testimonials">Client stories</a>
@@ -122,6 +109,7 @@ export default function Footer() {
               <li>
                 <a href="#contact">Contact us</a>
               </li>
+              
             </ul>
           </div>
 

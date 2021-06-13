@@ -6,7 +6,7 @@ import slide1 from "../assets/img/slide/slide-1.jpg"
 import slide2 from "../assets/img/slide/slide-2.jpg"
 import slide3 from "../assets/img/slide/slide-3.jpg"
 import "./layout.css"
-import mbeText16 from "../assets/img/MBE-text-16.png"
+import mbeText16 from "../assets/img/underHero.png"
 import { Helmet } from "react-helmet"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCoffee } from "@fortawesome/free-solid-svg-icons"
@@ -15,44 +15,50 @@ import { linkedin } from "@fortawesome/free-solid-svg-icons"
 export default function HomeBanner() {
   const { allPrismicHomeheader } = useStaticQuery(graphql`
     query HomeBanner {
-        allPrismicHomeheader {
-          edges {
-            node {
-              data {
-                image_carousel {
-                  banner_image {
-                    url
-                  }
-                  banner_title {
-                    text
-                  }
-                  read_more_link {
-                    url
-                  }
+      allPrismicHomeheader {
+        edges {
+          node {
+            data {
+              image_carousel {
+                banner_image {
+                  url
                 }
-                meta_tags {
-                  meta_content {
-                    text
-                  }
-                  meta_name {
-                    text
-                  }
-                }
-                open_graph_tags {
-                  meta_content {
-                    text
-                  }
-                  meta_property {
-                    text
-                  }
-                }
-                page_title {
+                banner_title {
                   text
                 }
+                read_more_link {
+                  url
+                }
+              }
+              instagramlink {
+                url
+              }
+              meta_tags {
+                meta_content {
+                  text
+                }
+                meta_name {
+                  text
+                }
+              }
+              open_graph_tags {
+                meta_content {
+                  text
+                }
+                meta_property {
+                  text
+                }
+              }
+              page_title {
+                text
+              }
+              telegramlink {
+                url
               }
             }
           }
         }
+      }
     }
   `)
 
@@ -60,8 +66,11 @@ export default function HomeBanner() {
   let page_title = allPrismicHomeheader.edges[0].node.data.page_title[0].text
   let meta_tags = allPrismicHomeheader.edges[0].node.data.meta_tags
   let open_graph_tags = allPrismicHomeheader.edges[0].node.data.open_graph_tags
+  let instagramlink = allPrismicHomeheader.edges[0].node.data.instagramlink.url
+  let telegramlink = allPrismicHomeheader.edges[0].node.data.telegramlink.url
 
-
+console.log(instagramlink)
+console.log(telegramlink)
   let slideIndex = 1
 
   const plusDivs = n => {
@@ -118,8 +127,6 @@ export default function HomeBanner() {
         <title>{page_title}</title>
       </Helmet>
 <div id="homeBanner">
-
-
       <section id="hero" className="hero ">
         <div className="container">
           <div className="row">
@@ -169,10 +176,10 @@ export default function HomeBanner() {
               <img src={mbeText16} />
             </div>
             <div className="col-md social-right">
-              <a className="link mr-3" href="#">
+              <a className="link mr-3" href={instagramlink} target="_blank">
                 <img style={{width:'25px'}} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABVklEQVRIS+2WsS5EQRiFv/MAgkKjolXRk/AEaCUSGwUlnQ5PIDodEomSFxBCL1TafQSS7Y/MZm3u/XfXLpmbldhpbu6dufPdOf+ZOVcMqWlIXP4W2PYWMAXcSXquQpWOFdt+AhYLsE1JV7nhJbDtHeAsQN4kzVUNPgSOAqQhaaxq8BLwGCDXkjYqBafJbe8CB8A0cANsS2pUDs4N6DVf1n1sex4Yb8FeJb0PBLa9DNyHwceSmoazna7JgO0mSbbXgBNgJrx7C+xLqscPiNvpx2CgBpx/U6IEXYirzwFOck708cappL2SUsWb30gdgB+FGhe76pJmqwDXJF20fNCtXKlrsih3DqkvJaVQaTfbyVSrQY0VSQ9fz3KA1yUlUBHc4X4gO7g0Ya9tNwLnqPFI6q5n+shc0VzpsE+ZGs/ZZqzZTrEXo+8lJs8g47L+CPRJqFL3/wN/AkiwCS5DL29KAAAAAElFTkSuQmCC" />
               </a>
-              <a  className="link" href="#">
+              <a  className="link" href={telegramlink} target="_blank">
               <img style={{width:'25px'}} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAB3UlEQVRIS+1V0VECUQzcrUCsQO3ADsQKtAOlArEDrECoQK1ArUDpQDqQDrSCOHuTe/PuvTt4gKcfmhmGmSPcJrubhPil4C/h4h+4F+bN7BjAGYAZyQ+B9Ea1mQ0AXAAYAzj0jq5JTnsBNrNzB9R3Gt8LbGbq6AqAwOru2mQ7Jfm6U8dOpXS7BDBMUD4BTADcxs9JBmk31tiNUncnHdOYAZCOjwBkqjrmJEOBRcAdRkkBF24kufYuAVWuHC2jVbES2I1S09k1aqJ1SnLibLwAaGNiRPK+E9iNojGQdquMonfMlUfy3cxEo+htA1XukfIyYKdTf0yN0tapuhzXHZiZihS9nayQbBQUqHZaBbwuHhy02kAFoBUzsbEyjb1rzaI+6nwvqmLptFZz6KDSTLKsixt5IE4qMZeKkDYyUNXlhqBKD4sj03hdyRGgtJKebSux6zX7cdEZ1SXgZvbkl6YkXTlLktl0FC2QGMHMpPFJKSqAZ5IZOz8BHC5SsbnaujIzi56PfGE0jkHyv8xY22osYC2QIck3d7iOgbQ/SIuNL9KuHWukAmjids21dnsdC5LxhQo/bKPxIB2NxHy6QFoWWj6Ni7RTxyVu9kOj/d1YOr0DlxS3MdUlLy3J+XvAX204px8c9gpDAAAAAElFTkSuQmCC"/>                  </a>
             </div>
           </div>

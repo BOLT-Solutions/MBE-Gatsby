@@ -458,8 +458,12 @@ a:hover {
   background: #00aeef;
   padding-top: 150px;
   padding-bottom: 0;
+  height: 85vh;
 }
+.underHero{
+  height: 15vh;
 
+}
 .underHero,
 .push {
   background: #fff;
