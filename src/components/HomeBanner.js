@@ -8,11 +8,11 @@ import slide3 from "../assets/img/slide/slide-3.jpg"
 import "./layout.css"
 import mbeText16 from "../assets/img/underHero.png"
 import { Helmet } from "react-helmet"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
-import { linkedin } from "@fortawesome/free-solid-svg-icons"
 
-export default function HomeBanner() {
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
+import { withPreview } from "gatsby-source-prismic"
+
+function HomeBanner() {
   const { allPrismicHomeheader } = useStaticQuery(graphql`
     query HomeBanner {
       allPrismicHomeheader {
@@ -63,14 +63,14 @@ export default function HomeBanner() {
   `)
 
   let image_carousel = allPrismicHomeheader.edges[0].node.data.image_carousel
-  let page_title = allPrismicHomeheader.edges[0].node.data.page_title[0].text
+  let page_title = allPrismicHomeheader.edges[0].node.data.page_title.text
   let meta_tags = allPrismicHomeheader.edges[0].node.data.meta_tags
   let open_graph_tags = allPrismicHomeheader.edges[0].node.data.open_graph_tags
   let instagramlink = allPrismicHomeheader.edges[0].node.data.instagramlink.url
   let telegramlink = allPrismicHomeheader.edges[0].node.data.telegramlink.url
 
-console.log(instagramlink)
-console.log(telegramlink)
+// console.log(instagramlink)
+console.log(allPrismicHomeheader)
   let slideIndex = 1
 
   const plusDivs = n => {
@@ -110,16 +110,16 @@ console.log(telegramlink)
       <Helmet>
         {meta_tags.map(meta_tag => (
           <meta
-            name={meta_tag.meta_name[0].text}
-            content={meta_tag.meta_content[0].text}
+            name={meta_tag.meta_name.text}
+            content={meta_tag.meta_content.text}
           ></meta>
         ))}
 
 
         {open_graph_tags.map(open_graph_tag => (
           <meta
-            property={open_graph_tag.meta_property[0].text}
-            content={open_graph_tag.meta_content[0].text}
+            property={open_graph_tag.meta_property.text}
+            content={open_graph_tag.meta_content.text}
           ></meta>
         ))}
 
@@ -190,3 +190,5 @@ console.log(telegramlink)
     </>
   )
 }
+
+export default withPrismicPreview( HomeBanner)

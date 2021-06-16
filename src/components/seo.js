@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { pages } from "../../gatsby-node"
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -87,5 +88,5 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
-export default SEO
+export default withPrismicPreview(SEO)
 

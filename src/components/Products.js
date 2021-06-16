@@ -7,8 +7,9 @@ import products15 from "../assets/img/Icons/products-15.png"
 import AdobeStockPreview2 from "../assets/img/AdobeStock_383254182_Preview.jpeg"
 import { useStaticQuery, graphql } from "gatsby"
 import "./Products.css"
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
-export default function Products() {
+ function Products() {
   const { allPrismicProducts } = useStaticQuery(graphql`
     query ProductsQuery {
       allPrismicProducts {
@@ -312,3 +313,5 @@ export default function Products() {
     </>
   )
 }
+
+export default withPrismicPreview(Products)

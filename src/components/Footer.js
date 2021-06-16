@@ -1,8 +1,9 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "../components/style/footer.css"
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
-export default function Footer() {
+function Footer() {
   const { allPrismicFooter } = useStaticQuery(graphql`
     query footerQuery {
       allPrismicFooter {
@@ -83,6 +84,7 @@ export default function Footer() {
                 color: "#F7F8F8",
                 fontWeight: "bold",
                 lineHeight: "1.8",
+                paddingLeft: "10px"
               }}
             >
               {description}
@@ -168,3 +170,5 @@ export default function Footer() {
     </>
   )
 }
+
+export default withPrismicPreview(Footer)

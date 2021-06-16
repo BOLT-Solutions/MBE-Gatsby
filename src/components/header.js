@@ -5,6 +5,7 @@ import "aos/dist/aos.css"
 import { useEffect } from "react"
 import  logo  from "../assets/img/logo2.png"
 import $ from "jquery"
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
 const onInit = () => {
     console.log("init")
@@ -257,4 +258,4 @@ const Header = () => {
     </header>
   )
 }
-export default Header
+export default withPrismicPreview(Header)

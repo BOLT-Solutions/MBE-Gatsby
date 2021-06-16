@@ -7,8 +7,9 @@ import HubspotForm from 'react-hubspot-form'
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 
-export default function Services() {
+function Services() {
 
   //Modal event handlers.  
   const [show, setShow] = useState(false);
@@ -176,3 +177,5 @@ export default function Services() {
     </>
   )
 }
+
+export default withPrismicPreview(Services)

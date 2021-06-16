@@ -5,8 +5,9 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import solution1 from "../assets/img/Icons/solution1.png"
 import solution2 from "../assets/img/Icons/solution2.png"
 import solution3 from "../assets/img/Icons/solution3.png"
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
-export default function Solutions() {
+ function Solutions() {
   const { allPrismicSolutions } = useStaticQuery(graphql`
     query Solutions {
       allPrismicSolutions {
@@ -168,3 +169,4 @@ export default function Solutions() {
     </>
   )
 }
+export default withPrismicPreview(Solutions)

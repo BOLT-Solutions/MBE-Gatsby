@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { useEffect } from "react"
 import loadable from '@loadable/component'
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
 // note: you don't need the whole path to node_modules.. just the package name
 const onInit = () => {
@@ -88,4 +89,4 @@ return<>
 </>
 }
 
-export default ClientStories
+export default withPrismicPreview(ClientStories)

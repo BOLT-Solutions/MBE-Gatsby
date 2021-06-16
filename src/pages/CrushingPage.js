@@ -13,6 +13,7 @@ import HubspotForm from "react-hubspot-form"
 import Modal from "react-bootstrap/Modal"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useEffect, useState } from "react"
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
 const onInit = () => {
 
@@ -438,4 +439,10 @@ const onInit = () => {
         </Layout>
     )
 }
-export default withPreview(CrushingPage)
+export default withPrismicPreview(CrushingPage,
+    [
+           {
+             repositoryName: 'mbecontent.prismic.io',
+             linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
+          },
+    ])

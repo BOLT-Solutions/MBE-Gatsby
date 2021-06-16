@@ -7,8 +7,3 @@ import 'jquery'
 import 'jquery.easing'
 import * as React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { PreviewStoreProvider } from 'gatsby-source-prismic'
-
-export const wrapRootElement = ({ element }) => (
-  <PreviewStoreProvider initialEnabled={true}>{element}</PreviewStoreProvider>
-)

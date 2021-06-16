@@ -12,6 +12,7 @@ import Modal from "react-bootstrap/Modal"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useEffect, useState } from "react"
 import { withPreview } from "gatsby-source-prismic"
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
 
 
@@ -261,4 +262,10 @@ import { withPreview } from "gatsby-source-prismic"
     )
 }
 
-export default withPreview(ClassificationPage)
+export default withPrismicPreview(ClassificationPage,
+    [
+           {
+             repositoryName: 'mbecontent.prismic.io',
+             linkResolver: (doc) => `/${doc.id}`,
+          },
+    ])

@@ -7,8 +7,9 @@ import HubspotForm from 'react-hubspot-form'
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 
-export default function Process() {
+ function Process() {
 
   //Modal event handlers.  
   const [show, setShow] = useState(false);
@@ -140,3 +141,5 @@ const mystyle = {
   backgroundAttachment: "fixed",
   backgroundSize: "cover",
 }
+
+export default withPrismicPreview(Process)

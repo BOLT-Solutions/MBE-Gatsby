@@ -13,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { useEffect, useState } from "react"
 import "./style.css"
 import { withPreview } from "gatsby-source-prismic"
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
 function SeperationPage() {
 
@@ -253,4 +254,9 @@ function SeperationPage() {
         </Layout>
     )
 }
-export default withPreview(SeperationPage)
+export default withPrismicPreview(SeperationPage,
+    [
+           {
+             repositoryName: 'mbecontent.prismic.io',
+          },
+    ])

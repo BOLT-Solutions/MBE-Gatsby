@@ -6,7 +6,8 @@ import HubspotForm from 'react-hubspot-form'
 
 
 import '../components/style/ContactUs.css'
-    export default function ContactUs() {
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
+   function ContactUs() {
         const {allPrismicContactus} = useStaticQuery(graphql`
             query ContactUs {
                   allPrismicContactus {
@@ -117,3 +118,5 @@ import '../components/style/ContactUs.css'
     </>
 )}
 
+
+export default withPrismicPreview(ContactUs)

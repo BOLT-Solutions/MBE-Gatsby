@@ -4,8 +4,9 @@ import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import { RichText } from 'prismic-reactjs'
 import logo from '../assets/img/logo (2).png';
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
-export default function ProductsBrief() {
+ function ProductsBrief() {
 
   const {allPrismicProductsbreif} = useStaticQuery(graphql`
   query productsBreif {
@@ -58,20 +59,4 @@ export default function ProductsBrief() {
     </>
   )}
 
-
-
-
-// export default function ProductsBrief() {
-//   const {prismicData} = useStaticQuery(graphql`
- 
-// `)
-
-
- 
-
-//    return (
-
-//    <>
-       
-//    </>
-// )}
+  export default withPrismicPreview(ProductsBrief)
