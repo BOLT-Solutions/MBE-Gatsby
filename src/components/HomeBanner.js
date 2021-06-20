@@ -104,7 +104,7 @@ console.log(allPrismicHomeheader)
   }
   useEffect(() => {
     showDivs(slideIndex)
-  })
+  })  
   return (
     <>
       <Helmet>

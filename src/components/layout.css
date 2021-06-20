@@ -659,7 +659,7 @@ section {
 .hero2 {
     width: 100%;
     margin-top: 0px;
-    height: 50vh;
+    /* height: 50vh; */
     background: url("/assets/img/hero-bg.jpg") top left;
     background-size: cover !important;
     position: relative;

@@ -53,18 +53,17 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
   }
         `)
 
-
-    let first_paragraph = allPrismicAboutus.edges[0].node.data.first_paragraph.text
-    let second_paragraph = allPrismicAboutus.edges[0].node.data.second_paragraph.text
-    let third_paragraph = allPrismicAboutus.edges[0].node.data.third_paragraph.text
-    let fourth_paragraph = allPrismicAboutus.edges[0].node.data.fourth_paragraph.text
-    let first_image = allPrismicAboutus.edges[0].node.data.first_image.url
-    let second_image = allPrismicAboutus.edges[0].node.data.second_image.url
-    let third_image = allPrismicAboutus.edges[0].node.data.third_image.url
-    let fourth_image = allPrismicAboutus.edges[0].node.data.fourth_image.url
-    let fifth_image = allPrismicAboutus.edges[0].node.data.fifth_image.url
-    let title = allPrismicAboutus.edges[0].node.data.title.text
-    let subtitle = allPrismicAboutus.edges[0].node.data.subtitle.text
+let first_paragraph = allPrismicAboutus.edges[0].node.data.first_paragraph[0].text
+let second_paragraph = allPrismicAboutus.edges[0].node.data.second_paragraph[0].text
+let third_paragraph = allPrismicAboutus.edges[0].node.data.third_paragraph[0].text
+let fourth_paragraph = allPrismicAboutus.edges[0].node.data.fourth_paragraph[0].text
+let first_image = allPrismicAboutus.edges[0].node.data.first_image.url
+let second_image = allPrismicAboutus.edges[0].node.data.second_image.url
+let third_image = allPrismicAboutus.edges[0].node.data.third_image.url
+let fourth_image = allPrismicAboutus.edges[0].node.data.fourth_image.url
+let fifth_image = allPrismicAboutus.edges[0].node.data.fifth_image.url
+let title = allPrismicAboutus.edges[0].node.data.title[0].text
+let subtitle = allPrismicAboutus.edges[0].node.data.subtitle[0].text
 
    return (
    <>

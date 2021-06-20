@@ -68,7 +68,7 @@ function Footer() {
             marginTop: "3%",
           }}
         >
-          <div className=" col-xl-5 col-12 d-flex justify-content-around">
+          <div className=" col-md-5 col-12 d-flex justify-content-around">
             <img
               src={mbe_icon}
               alt="mbe"
@@ -92,7 +92,7 @@ function Footer() {
           </div>
 
           <div
-            className="col-12 col-xl-2"
+            className="col-12 col-md-2"
             style={{ color: "#F7F8F8", fontWeight: "bold", fontSize: "14px" }}
           >
             <ul className="list-unstyled">
@@ -116,7 +116,7 @@ function Footer() {
           </div>
 
           <div
-            className="col-xl-4 col-12"
+            className="col-md-4 col-12"
             style={{ color: "#F7F8F8", fontWeight: "bold", fontSize: "20px" }}
           >
             <div className="container-fluid d-inline-flex">

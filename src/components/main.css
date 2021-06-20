@@ -455,20 +455,64 @@ a:hover {
 --------------------------------------------------------------*/
 
 .hero {
-  background: #00aeef;
-  padding-top: 150px;
-  padding-bottom: 0;
-  height: 85vh;
+  background: #00AEEF;
+  padding-top: 55px;
+  padding-bottom: 36px !important;
 }
-.underHero{
-  height: 15vh;
 
+.underHero,
+.push {
+  background: #fff;
+  color: #5D5E60;
+  /* border-bottom: 1px solid #00AEEF; */
+  flex-shrink: 0;
+  padding: 20px 0;
 }
+
+  .underHero .stext img {
+      width: 250px;
+  }
+
+  .underHero p {
+      font-weight: 600;
+      font-size: 18px;
+      color: #6B6B6E;
+  }
+
+  .underHero .subtext {
+      font-weight: 600;
+      color: #6B6B6E;
+  }
+
+section {
+  display: flex;
+  flex: 1;
+}
+
+.underHero .link i {
+  color: #F7921D;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.underHero .social-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 
+.hero {
+  background: #00aeef;
+   padding: 60px 0;
+}
+
+
 .underHero,
 .push {
   background: #fff;
   color: #5d5e60;
-  /* border-bottom: 1px solid #00AEEF; */
+  /* border-bottom: 1px solid #00AEEF; 
   flex-shrink: 0;
   padding: 20px 0;
 }
@@ -503,8 +547,8 @@ section {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
+} */
+/* 
 @media (max-width: 992px) {
   .hero{
     padding-top: 75px;
@@ -546,8 +590,41 @@ section {
   .underHero .stext  {
    text-align: center;
   }
+} */
+
+/*  */
+/* 
+@media (min-width: 768 )and( min-height:1024px) {
+
+  .hero{
+    height: 45vh !important;
+
+  }
+  .underHero {
+    height: auto;
+  }
+
 }
 
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+  }
+
+}
+
+@media (max-height: 500px) {
+  .hero {
+    height: 120vh;
+  }
+}
+
+@media (max-height: 1024) {
+  .hero {
+    height: 40vh;
+  }
+} */
 /*--------------------------------------------------------------
 # solutions
 --------------------------------------------------------------*/
@@ -729,7 +806,7 @@ display: flex;
 .hero2 {
   width: 100%;
   margin-top: 0px;
-  height: 50vh;
+  /* height: 50vh; */
   /* background: url("../img/hero-bg.jpg") top left; */
   background-size: cover;
   position: relative;
