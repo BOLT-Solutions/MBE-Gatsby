@@ -375,7 +375,7 @@ const onInit = () => {
                             </div>
 
                             <div className="ml5 col-md-6 col-sm-12">
-                                <h2 style={{ fontSize: "30px" }}>
+                                <h2 style={{ fontSize: "25px" }}>
                                     <strong>
                                         {product.product_title.text}
                                     </strong>
