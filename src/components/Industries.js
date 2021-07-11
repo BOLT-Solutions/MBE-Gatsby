@@ -107,11 +107,11 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
           <p>{description} </p>
         </div>
       </section>
-
+{/* 
       <div id="container-responsive" className="container container-responsive" data-aos="zoom-out" data-aos-delay="100">
           <h1> {subtitle}</h1>
           <p>{description}</p>
-        </div>
+        </div> */}
       <section id="featured-services" className="featured-services">
         <div className="container" data-aos="fade-up">
           <div className="row align-items-baseline">
@@ -143,7 +143,7 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <button className="request mb-0" onClick={handleShow}  > Request more Information</button>
+                    <button className="request mb-0" onClick={handleShow}> Request more Information</button>
 
                     {flag[i] != "true" && (
                       <p  style={{marginTop:'23px'}}

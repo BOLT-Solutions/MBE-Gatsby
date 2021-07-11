@@ -98,10 +98,10 @@ function Services() {
           <p>{description}</p>
         </div>
       </section>
-      <div className="container container-responsive" data-aos="zoom-out" data-aos-delay="100" >
+      {/* <div className="container container-responsive" data-aos="zoom-out" data-aos-delay="100" >
           <h1> {subtitle}</h1>
           <p>{description}</p>
-        </div>
+        </div> */}
       <section id="featured-services" className="featured-services">
         <div className="container" data-aos="fade-up">
           <div className="row align-items-baseline">
