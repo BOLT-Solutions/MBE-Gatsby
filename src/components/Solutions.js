@@ -145,7 +145,7 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
                 </p>
               </a>
             </div>
-            <div className="colm col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div className="colm col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
               <a
                 href="#lifecycle"
                 className="icon-box"

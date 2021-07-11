@@ -133,38 +133,42 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
                       />
                     </div>
                     <p className="description" style={{ fontSize: "13px" }}>
-                      <span>{content_industry.first_paragph.text}</span>
-                      <span> {content_industry.second_paragraph.text}</span>
-                      {flag[i] == "true" && (
-                        <p style={{ lineHeight: "1.5",fontSize: "13px" }}>
-                      <span>{content_industry.see_more_paragraph.text}</span>    
-                        </p>
-                      )}
+                                <span>{content_industry.first_paragph.text}</span>
+                                <span className=""> {content_industry.second_paragraph.text}
+                                    {flag[i] != "true" && (
+                                        <span style={{ textDecoration: "underline", color: "#007bff"}}
+                                            className="request mb-0 d-inline-block"
+                                            onClick={() => {
+                                                seeMoreContent(i)
+                                            }}
+                                        >
+                                            See more
+                                        </span>
+                                    )}
+                                    {flag[i] == "true" && (
+                                        <span style={{ lineHeight: "1.5", fontSize: "13px" }} className="d-inline-block">
+                                            <span>{content_industry.see_more_paragraph.text}</span>
+                                        </span>
+                                    )}
+                                    {flag[i] == "true" && (
+                                        <span style={{ textDecoration: "underline", color: "#007bff" }}
+                                            className="request mb-0 d-inline-block"
+                                            onClick={() => {
+                                                seeLessContent(i)
+                                            }}
+                                        >
+                                            See less
+                                        </span>
+                                    )}
+                                </span>
+                               
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
                     <button className="request mb-0" onClick={handleShow}> Request more Information</button>
 
-                    {flag[i] != "true" && (
-                      <p  style={{marginTop:'23px'}}
-                        className="request mb-0"
-                        onClick={() => {
-                          seeMoreContent(i)
-                        }}
-                      >
-                        See more
-                      </p>
-                    )}
-                    {flag[i] == "true" && (
-                      <p style={{marginTop:'23px'}}
-                        className="request mb-0"
-                        onClick={() => {
-                          seeLessContent(i)
-                        }}
-                      >
-                        See less
-                      </p>
-                    )}
+                  
+                  
                   </div>
                 </div>
               </div>

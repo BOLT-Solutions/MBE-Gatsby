@@ -124,34 +124,38 @@ function Services() {
                     </div>
                     <p className="description">
                       <span>{content_service.service_description.text}</span>
-                      {flag[i] == "true" && (
-                        <p style={{ fontSize: "13px" }}><span>{content_service.see_more_paragraph.text}</span></p>
-                      )}
+
+                                {flag[i] == "true" && (
+                                    <span className="d-inline-block" style={{ fontSize: "13px", display: "inline-block" }}>
+                                        <span className="d-inline" >{content_service.see_more_paragraph.text}</span>
+                                    </span>
+                                )}
+
+                                {flag[i] != "true" && (
+                                    <span style={{ textDecoration: "underline", color: "#007bff" }}
+                                        className="request mb-0 d-inline-block"
+                                        onClick={() => {
+                                            seeMoreContent(i)
+                                        }}
+                                    >
+                                        See more
+                                    </span>
+                                )}
+                                {flag[i] == "true" && (
+                                    <span style={{ textDecoration: "underline", color: "#007bff" }}
+                                        className="request mb-0 d-inline-block"
+                                        onClick={() => {
+                                            seeLessContent(i)
+                                        }}
+                                    >
+                                        See less
+                                    </span>
+                                )}
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
                     <button className="request mb-0"  onClick={handleShow} >Request more Information</button>
 
-                    {flag[i] != "true" && (
-                      <p style={{marginTop:'23px'}}
-                        className="request mb-0"
-                        onClick={() => {
-                          seeMoreContent(i)
-                        }}
-                      >
-                        See more
-                      </p>
-                    )}
-                    {flag[i] == "true" && (
-                      <p style={{marginTop:'23px'}}
-                        className="request mb-0"
-                        onClick={() => {
-                          seeLessContent(i)
-                        }}
-                      >
-                        See less
-                      </p>
-                    )}
                   </div>
                 </div>
               </div>

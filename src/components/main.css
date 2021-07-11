@@ -1026,7 +1026,6 @@ display: flex;
 
 .featured-services .description span {
   font-weight: 600;
-  display: block;
 }
 
 .featured-services .icon-box:hover .title a,
