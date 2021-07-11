@@ -130,10 +130,10 @@ function Services() {
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <button className="request mb-0"  onClick={handleShow}  style={{ fontSize: "15px", border:'none' , background: 'transparent' ,textAlign:'left' }}>Request more Information</button>
+                    <button className="request mb-0"  onClick={handleShow} >Request more Information</button>
 
                     {flag[i] != "true" && (
-                      <p style={{ fontSize: "15px" }}
+                      <p style={{marginTop:'23px'}}
                         className="request mb-0"
                         onClick={() => {
                           seeMoreContent(i)
@@ -143,7 +143,7 @@ function Services() {
                       </p>
                     )}
                     {flag[i] == "true" && (
-                      <p style={{ fontSize: "15px" }}
+                      <p style={{marginTop:'23px'}}
                         className="request mb-0"
                         onClick={() => {
                           seeLessContent(i)
