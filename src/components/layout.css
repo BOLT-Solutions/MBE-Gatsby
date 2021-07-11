@@ -804,18 +804,19 @@ section {
         }
 
             .hero2 h1 {
-                font-size: 28px;
-                line-height: 36px;
+                font-size: 25px;
+                line-height: 26px;
             }
 
             .hero2 h2 {
                 font-size: 18px;
-                line-height: 24px;
-                margin-bottom: 30px;
+                line-height: 1.2;
+                margin-bottom: 15px;
             }
 
             .hero2 .btn-get-started,
             .hero2 .btn-watch-video {
+                line-height: 1.3;
                 font-size: 13px;
             }
     }
