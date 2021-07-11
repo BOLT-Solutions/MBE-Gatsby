@@ -100,10 +100,10 @@ function LifeCycle() {
           <p>{description}</p>
         </div>
       </section>
-      <div className="container container-responsive" data-aos="zoom-out" data-aos-delay="100">
+      {/* <div className="container container-responsive" data-aos="zoom-out" data-aos-delay="100">
           <h1> {subtitle}</h1>
           <p>{description}</p>
-        </div>
+        </div> */}
       <section id="featured-services" className="featured-services">
         <div className="container" data-aos="fade-up">
           <div className="row align-items-baseline">
@@ -134,10 +134,10 @@ function LifeCycle() {
                     </p>
                   </div>
                   <div className="d-flex justify-content-between">
-                    <p className="request mb-0"  onClick={handleShow}  style={{ fontSize: "15px", border:'none' , background: 'transparent' ,textAlign:'left' }}>Request more Information</p>
+                    <button className="request mb-0"  onClick={handleShow} >Request more Information</button>
 
                     {flag[i] != "true" && (
-                      <p  style={{ fontSize: "15px" }}
+                      <p  style={{marginTop:'23px'}}
                         className="request mb-0"
                         onClick={() => {
                           seeMoreContent(i)
@@ -147,7 +147,7 @@ function LifeCycle() {
                       </p>
                     )}
                     {flag[i] == "true" && (
-                      <p  style={{ fontSize: "15px" }}
+                      <p  style={{marginTop:'23px'}}
                         className="request mb-0"
                         onClick={() => {
                           seeLessContent(i)

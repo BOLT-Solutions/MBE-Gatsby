@@ -2,6 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { graphql, Link, useStaticQuery } from "gatsby"
 
+
 //Modal Imports . 
 import HubspotForm from 'react-hubspot-form'
 import Modal from "react-bootstrap/Modal";
@@ -77,10 +78,10 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
         </div>
       </section>
 
-      <div className="container container-responsive" data-aos="zoom-out" data-aos-delay="100">
+      {/* <div className="container container-responsive" data-aos="zoom-out" data-aos-delay="100">
           <h1> {subtitle}</h1>
           <p>{description}</p>
-        </div>
+        </div> */}
       <section id="featured-services" className="featured-services">
 
         <div className="container" data-aos="fade-up">
@@ -104,7 +105,7 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
                     </p>
                   </div>
 
-                  <button className="request mb-0" style={{ fontSize: "15px", border:'none' , background: 'transparent' ,textAlign:'left' }} onClick={handleShow}>
+                  <button className="request mb-0"  onClick={handleShow}>
                     Request more Information
                   </button>
                 </div>

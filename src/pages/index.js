@@ -220,7 +220,7 @@ const Index = () => {
                   <LifeCycle/>
                   <Process/>
                   <Products/>
-                  <ClientStories/>
+                  {/* <ClientStories/> */}
                   <ProductsBrief/>
                   <ContactUs/>
                   <About/>

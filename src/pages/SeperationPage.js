@@ -181,7 +181,7 @@ function SeperationPage() {
                                     <img src={product.side_image.url} />
                                 </div>
                                 <div className="ml5 col-md-6 col-sm-12">
-                                    <h2 style={{ fontSize: "30px" }}>
+                                    <h2 style={{ fontSize: "25px" }}>
                                         <strong>
                                             {
                                                 product
