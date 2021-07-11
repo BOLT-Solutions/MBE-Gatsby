@@ -37,10 +37,10 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
     return (
     <>
           <section id="graph" className="graph">
-                      <div className="container" data-aos="zoom-out" data-aos-delay="100">
+                      <div className="container-xl" data-aos="zoom-out" data-aos-delay="100">
                           <div className="row">
                               <div className="col-md-6 left-txt" data-aos="zoom-out">
-                                  <img src={logo} className="logo-graph" />
+                                  <img src={logo} className="logo-graph mb-3" />
                                   <p>
                                   {first_paragraph}
                           </p>

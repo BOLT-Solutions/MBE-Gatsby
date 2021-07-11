@@ -58,7 +58,7 @@ function Footer() {
   return (
     <>
       <div className=" d-flex mainContainer">
-        <div class="container">
+              <div class="container-md">
 
         <div
           className="d-flex"
@@ -68,7 +68,7 @@ function Footer() {
             marginTop: "3%",
           }}
         >
-          <div className=" col-md-5 col-12 d-flex justify-content-around">
+          <div className=" col-lg-5 col-12 d-flex justify-content-around">
             <img
               src={mbe_icon}
               alt="mbe"
@@ -76,15 +76,15 @@ function Footer() {
               height="100"
               style={{ width: "102px" }}
             />
-            <p
+            <p className="py-3"
               style={{
               
-                height: " 250px",
                 fontSize: "12px",
                 color: "#F7F8F8",
                 fontWeight: "bold",
                 lineHeight: "1.8",
-                paddingLeft: "10px"
+                paddingLeft: "10px",
+
               }}
             >
               {description}
@@ -92,7 +92,7 @@ function Footer() {
           </div>
 
           <div
-            className="col-12 col-md-2"
+            className="col-3 col-lg-2 p-0"
             style={{ color: "#F7F8F8", fontWeight: "bold", fontSize: "14px" }}
           >
             <ul className="list-unstyled">
@@ -116,7 +116,7 @@ function Footer() {
           </div>
 
           <div
-            className="col-md-4 col-12"
+            className="col-lg-4 col-9 p-0"
             style={{ color: "#F7F8F8", fontWeight: "bold", fontSize: "20px" }}
           >
             <div className="container-fluid d-inline-flex">
@@ -125,7 +125,7 @@ function Footer() {
                 class="bx bxs-map"
                 style={{
                   color: "#ffffff",
-                  fontSize: "45px",
+                 
                   paddingRight: "10px",
                 }}
               ></i>
@@ -139,7 +139,7 @@ function Footer() {
                 class="bx bxs-envelope"
                 style={{
                   color: "#ffffff",
-                  fontSize: "45px",
+                
                   paddingRight: "10px",
                 }}
               ></i>
@@ -153,7 +153,7 @@ function Footer() {
                 class="bx bxs-phone"
                 style={{
                   color: "#ffffff",
-                  fontSize: "45px",
+                
                   paddingRight: "10px",
                 }}
               ></i>

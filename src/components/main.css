@@ -727,8 +727,9 @@ display: flex;
 }
 .solutions .icon-box {
   margin-bottom: 10px;
-  padding: 30px;
+  padding: 20px;
   padding-top: 0;
+  padding-bottom: 0;
   position: relative;
   overflow: hidden;
   /* background: #fff; */
@@ -736,7 +737,7 @@ display: flex;
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
-  min-height: 371px;
+  /*min-height: 371px;*/
 }
 
 .solutions .icon-box::before {

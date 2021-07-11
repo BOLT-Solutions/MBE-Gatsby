@@ -50,6 +50,7 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
       }
     }
   `)
+     console.log(allPrismicSolutions)
   let first_content = allPrismicSolutions.edges[0].node.data.first_content.text
   let section_one_title =
     allPrismicSolutions.edges[0].node.data.section_one_title.text
@@ -79,7 +80,7 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
               <h4>{section_one_title}</h4>
               <p>{first_content} </p>
             </div>
-            <div className=" colm col-md-4 col-lg-4  align-items-stretch mb-5 mb-lg-0 web-content">
+            <div className=" colm col-md-6 col-lg-4  align-items-stretch mb-5 mb-lg-0 web-content">
               <h4>{section_two_title}</h4>
               <p>{section_two_content}</p>
             </div>
@@ -122,11 +123,11 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
             </div>
           </div>
           <div className="row">
-            <div className=" colm col-md-4 col-lg-4  align-items-stretch mb-5 mb-lg-0 mobile-content">
+            <div className=" colm col-md-6 col-lg-4  align-items-stretch mb-5 mb-lg-0 mobile-content">
               <h4>{section_two_title}</h4>
               <p>{section_two_content}</p>
             </div>
-            <div className=" colm col-md-4 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div className=" colm col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
               <a
                 href="#services"
                 className="icon-box"

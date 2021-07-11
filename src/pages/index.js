@@ -214,11 +214,11 @@ const Index = () => {
           <Layout>
               <main role="main">
                   <HomeBanner />
-                  <Process/>
                   <Solutions/>
                   <Industries id="industries"/>
                   <Services/>
                   <LifeCycle/>
+                  <Process/>
                   <Products/>
                   <ClientStories/>
                   <ProductsBrief/>
