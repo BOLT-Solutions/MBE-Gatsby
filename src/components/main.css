@@ -841,7 +841,7 @@ display: flex;
     /* padding-top: 20vh; */
   }
   .hero2{
-    height: 31vh !important;
+    height: 38vh !important;
 
   }
   .hero2 .container h2{
@@ -961,6 +961,9 @@ display: flex;
 /*--------------------------------------------------------------
 # industeries => Featured Services
 --------------------------------------------------------------*/
+
+
+
 
 .featured-services .icon-box {
   padding: 30px;

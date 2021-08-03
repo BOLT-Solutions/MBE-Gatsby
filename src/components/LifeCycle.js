@@ -106,7 +106,7 @@ function LifeCycle() {
         </div> */}
       <section id="featured-services" className="featured-services">
         <div className="container" data-aos="fade-up">
-          <div className="row align-items-baseline">
+          <div className="row align-items-center justify-content-around">
             {content_cycle.map((cycle, i) => (
               <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                 <div

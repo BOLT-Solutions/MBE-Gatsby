@@ -15,38 +15,6 @@
         "label": "first_image"
       }
     },
-    "second_image": {
-      "type": "Image",
-      "config": {
-        "constraint": {},
-        "thumbnails": [],
-        "label": "second_image"
-      }
-    },
-    "third_image": {
-      "type": "Image",
-      "config": {
-        "constraint": {},
-        "thumbnails": [],
-        "label": "third_image"
-      }
-    },
-    "fourth_image": {
-      "type": "Image",
-      "config": {
-        "constraint": {},
-        "thumbnails": [],
-        "label": "fourth_image"
-      }
-    },
-    "fifth_image": {
-      "type": "Image",
-      "config": {
-        "constraint": {},
-        "thumbnails": [],
-        "label": "fifth_image"
-      }
-    },
     "subtitle": {
       "type": "StructuredText",
       "config": {

@@ -13,32 +13,20 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
       edges {
         node {
           data {
-            fifth_image {
-              url
-            }
             first_image {
               url
-            }
-            fourth_image {
-              url
-            }
-            fourth_paragraph {
-              text
             }
             first_paragraph {
               text
             }
-            second_image {
-              url
+            fourth_paragraph {
+              text
             }
             second_paragraph {
               text
             }
             subtitle {
               text
-            }
-            third_image {
-              url
             }
             third_paragraph {
               text
@@ -58,10 +46,6 @@ let second_paragraph = allPrismicAboutus.edges[0].node.data.second_paragraph[0].
 let third_paragraph = allPrismicAboutus.edges[0].node.data.third_paragraph[0].text
 let fourth_paragraph = allPrismicAboutus.edges[0].node.data.fourth_paragraph[0].text
 let first_image = allPrismicAboutus.edges[0].node.data.first_image.url
-let second_image = allPrismicAboutus.edges[0].node.data.second_image.url
-let third_image = allPrismicAboutus.edges[0].node.data.third_image.url
-let fourth_image = allPrismicAboutus.edges[0].node.data.fourth_image.url
-let fifth_image = allPrismicAboutus.edges[0].node.data.fifth_image.url
 let title = allPrismicAboutus.edges[0].node.data.title[0].text
 let subtitle = allPrismicAboutus.edges[0].node.data.subtitle[0].text
 
@@ -75,10 +59,10 @@ let subtitle = allPrismicAboutus.edges[0].node.data.subtitle[0].text
                     </div>
                         </div>
                         <div className="row images" style={{justifyContent: 'space-around'}}>
-                            <div className="col-md-6 col-lg-2 ">
-                                <img src={first_image} className="responsive" />
+                            <div className="col-md-12 col-lg-12 ">
+                                <img src={first_image}  style={{ maxWidth: "100%", maxHeight: "100%" ,objectFit:"contain" }} />
                             </div>
-                            <div className="col-md-6 col-lg-2 ">
+                            {/* <div className="col-md-6 col-lg-2 ">
                                 <img src={second_image} className="responsive" />
                             </div>
                             <div className="col-md-6 col-lg-2 ">
@@ -89,10 +73,10 @@ let subtitle = allPrismicAboutus.edges[0].node.data.subtitle[0].text
                             </div>
                             <div className="col-md-6 col-lg-2 ">
                                 <img src={fifth_image} className="responsive" />
-                            </div>
+                            </div> */}
                         </div>
                         <div className="row">
-                            <div className="title center sub-title">
+                            <div className="title center sub-title" style={{marginTop: "15px"}}>
                                 {subtitle}
                     </div>
                         </div>

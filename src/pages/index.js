@@ -220,10 +220,11 @@ const Index = () => {
                   <LifeCycle/>
                   <Process/>
                   <Products/>
-                  {/* <ClientStories/> */}
-                  <ProductsBrief/>
-                  <ContactUs/>
+                  <ClientStories/>
+                  {/* <ProductsBrief/> */}
                   <About/>
+                  <ContactUs/>
+            
                   <Footer/>
               </main>
           </Layout>

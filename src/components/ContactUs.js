@@ -51,8 +51,8 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
                         <div className="section-title">
 
                             <h3><span>Contact Us</span></h3>
-                            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.
-                    </p>
+                            {/* <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.
+                    </p> */}
                         </div>
 
                         <div className="row" data-aos="fade-up" data-aos-delay="100">

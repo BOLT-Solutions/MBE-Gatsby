@@ -2,8 +2,18 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "../components/style/footer.css"
 import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
+import Modal from "react-bootstrap/Modal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useState } from "react";
 
 function Footer() {
+
+  //Modal event handlers.  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   const { allPrismicFooter } = useStaticQuery(graphql`
     query footerQuery {
       allPrismicFooter {
@@ -111,6 +121,12 @@ function Footer() {
               <li>
                 <a href="#contact">Contact us</a>
               </li>
+              <li>
+                <a  onClick={handleShow} >Imprint</a>
+              </li>
+              <li>
+                <a href="PrivacyPolicyPage" >Privacy Policy</a>
+              </li>
               
             </ul>
           </div>
@@ -167,6 +183,44 @@ function Footer() {
         </div>
       </div>
       </div>
+
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <Modal.Body>
+          
+          <div className="container d-flex align-items-center" style={{width: "100%"}}>
+            <div className="row">
+              <div className="col-sm-12 col-md-4">
+                <p style={{fontSize:"15px"}} >MBE Coal & Minerals Technology Holding GmbH</p>
+                <p style={{fontSize:"15px"}}>Gottfried-Hagen-Straße 20</p>
+                <p style={{fontSize:"15px"}}>D – 51105 Köln
+                    Telephone +49 / (0) 221 / 99892 – 700
+                    Telefax +49 / (0) 221 / 99892 – 709
+                    Internet www.mbe-cmt.com
+                </p>
+              </div>
+              <div className="col-sm-12 col-md-4">
+                <p style={{fontSize:"15px"}}>Principal Place of Business: Köln</p>
+                <p style={{fontSize:"15px"}}>Commercial Register Köln: HRB 76786</p>
+                <p style={{fontSize:"15px"}}>VAT-Id.-No. DE 285 831 681</p>
+                <p style={{fontSize:"15px"}}>Tax No. 218/5726/1596 Managing Director: Dr.-Ing. Ernst Wolf</p>
+              </div>
+              <div className="col-sm-12 col-md-4">
+                <p style={{fontSize:"15px"}}>Bank account: Commerzbank AG</p>
+                <p style={{fontSize:"15px"}}>Account No. 502553100
+                    IBAN: DE26 3704 0044 0502 5531 00
+                    BIC/SWIFT-Code: COBADEFFXXX
+                    Member of VDMA Germany</p>
+              </div>
+            </div>
+          </div>
+
+        </Modal.Body>
+      </Modal>
+
+
+
     </>
   )
 }
