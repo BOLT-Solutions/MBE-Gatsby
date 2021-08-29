@@ -107,25 +107,25 @@ function Footer() {
           >
             <ul className="list-unstyled">
               <li>
-                <a href="#solutions">Solutions</a>
+                <a href="/#solutions">Solutions</a>
               </li>
               <li>
-                <a href="#products">Products</a>
+                <a href="/#products">Products</a>
               </li>
               <li>
-                <a href="#testimonials">Client stories</a>
+                <a href="/#testimonials">Client stories</a>
               </li>
               <li>
-                <a href="#about-us">About us</a>
+                <a href="/#about-us">About us</a>
               </li>
               <li>
-                <a href="#contact">Contact us</a>
+                <a href="/#contact">Contact us</a>
               </li>
               <li>
                 <a  onClick={handleShow} >Imprint</a>
               </li>
               <li>
-                <a href="PrivacyPolicyPage" >Privacy Policy</a>
+                <a href="/PrivacyPolicyPage" >Privacy Policy</a>
               </li>
               
             </ul>
