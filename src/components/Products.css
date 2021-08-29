@@ -1,20 +1,20 @@
 
 
-#productsMobile{
+.productsMobile{
    display: none;
 }
 
 @media (max-width: 1024px) {
 
     
-    #products {
+    .productsPC {
 
         display: none;
 
     }
 
     
-    #productsMobile{
+    .productsMobile{
         display: block;
     }
 

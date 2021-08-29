@@ -1335,9 +1335,7 @@ display: flex;
   #about-us .responsive {
     display: none;
   }
-  #about-us .images {
-    display: none;
-  }
+
   .sub-title {
     font-size: 17px !important;
   }

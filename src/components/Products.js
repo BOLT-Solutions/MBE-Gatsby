@@ -88,8 +88,8 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
   let side_image = allPrismicProducts.edges[0].node.data.side_image.url
 
   return (
-    <>
-      <section id="products" className="products section-bg">
+    <div  id="products">
+      <section className="products productsPC section-bg">
         <div className="container" data-aos="fade-up">
           <div className="section-title">
             <h3 style={{ fontSize: "50px" , color : "#464749" }}>
@@ -181,7 +181,7 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
 
                   
-      <section id="productsMobile" className="products" style={{ backgroundColor: "#EDEDED" }}>
+      <section className="products productsMobile" style={{ backgroundColor: "#EDEDED" }}>
 
         <div className="container" data-aos="fade-up">
           
@@ -207,8 +207,8 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
               <ul>
 
                 <a className="itm-link" href="/CrushingPage">
-                  <li className = "d-flex flex-column justify-content-start" >
-                    <div className="d-flex">
+                  <li className = "d-flex flex-column justify-content-start " >
+                    <div className="d-flex flex-nowrap">
                       <img
                         style={{ width: "75px", height: "75px" }}
                         src={first_product_icon}
@@ -310,7 +310,7 @@ import { withPrismicPreview } from "gatsby-plugin-prismic-previews"
 
 
 
-    </>
+    </div>
   )
 }
 

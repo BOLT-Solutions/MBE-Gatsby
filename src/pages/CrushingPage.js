@@ -356,6 +356,7 @@ const onInit = () => {
             </section>
 
             <section
+              className="ProductsSection"
                 style={{ backgroundColor: "#EDEDED" }}
             >
                 <div className="container">
@@ -369,7 +370,7 @@ const onInit = () => {
 
                 {products.map(product => (
                     <div className="row" style={{ marginTop: "30px" }}>
-                        <div className="d-inline-flex mt-5 row justify-content-around">
+                        <div className="mt-5 row ProductSection">
                             <div className=" col-md-5 col-sm-12">
                                 <img src={product.product_image.url} />
                             </div>

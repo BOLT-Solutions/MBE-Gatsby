@@ -160,7 +160,7 @@ function Footer() {
                 }}
               ></i>
 
-              <h5>{inquiry_mail}</h5>
+              <h5 ><a href = {`mailto: ${inquiry_mail}`}>{inquiry_mail}</a></h5>
             </div>
 
             <div className=" container-fluid d-inline-flex">
